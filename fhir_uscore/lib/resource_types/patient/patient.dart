@@ -13,11 +13,11 @@ class PatientUsCore extends Resource {
     Narrative? text,
     List<FhirExtension>? extension_,
     required List<Identifier> identifier,
-    Boolean? active,
+    FhirBoolean? active,
     required List<HumanName> name,
     List<ContactPoint>? telecom,
     required FhirCode gender,
-    Date? birthDate,
+    FhirDate? birthDate,
     List<Address>? address,
     List<PatientCommunication>? communication,
   }) =>
@@ -49,7 +49,7 @@ class PatientUsCore extends Resource {
     List<HumanName>? name,
     List<ContactPoint>? telecom,
     required FhirCode gender,
-    Date? birthDate,
+    FhirDate? birthDate,
     List<Address>? address,
     List<PatientCommunication>? communication,
   }) {
@@ -136,11 +136,11 @@ class PatientUsCore extends Resource {
   Narrative? get text => _patient.text;
   List<FhirExtension>? get extension_ => _patient.extension_;
   List<Identifier>? get identifier => _patient.identifier;
-  Boolean? get active => _patient.active;
+  FhirBoolean? get active => _patient.active;
   List<HumanName>? get name => _patient.name;
   List<ContactPoint>? get telecom => _patient.telecom;
   FhirCode? get gender => _patient.gender;
-  Date? get birthDate => _patient.birthDate;
+  FhirDate? get birthDate => _patient.birthDate;
   List<Address>? get address => _patient.address;
   List<PatientCommunication>? get communication => _patient.communication;
 }
@@ -151,7 +151,7 @@ class PatientCommunicationUsCore {
   factory PatientCommunicationUsCore({
     String? id,
     required CodeableConcept language,
-    Boolean? preferred,
+    FhirBoolean? preferred,
   }) =>
       PatientCommunicationUsCore._(PatientCommunication(
           id: id, language: language, preferred: preferred));
@@ -160,5 +160,5 @@ class PatientCommunicationUsCore {
   PatientCommunication get value => _patientCommunication;
   String? get id => _patientCommunication.id;
   CodeableConcept? get language => _patientCommunication.language;
-  Boolean? get preferred => _patientCommunication.preferred;
+  FhirBoolean? get preferred => _patientCommunication.preferred;
 }

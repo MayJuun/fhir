@@ -21,7 +21,7 @@ class CareTeamUsCore extends Resource {
         meta: meta,
         text: text,
         name: name,
-        status: Code(codeFromCareTeamStatus[status]),
+        status: FhirCode(codeFromCareTeamStatus[status]),
         subject: subject,
         participant: participant,
       ));

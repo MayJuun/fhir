@@ -16,7 +16,7 @@ class DocumentReferenceUsCore extends Resource {
     required CodeableConcept type,
     List<CodeableConcept>? category,
     Reference? subject,
-    Instant? date,
+    FhirInstant? date,
     List<Reference>? author,
     Reference? custodian,
     required List<DocumentReferenceContent> content,
@@ -46,7 +46,7 @@ class DocumentReferenceUsCore extends Resource {
     required CodeableConcept type,
     List<CodeableConcept>? category,
     required Reference subject,
-    Instant? date,
+    FhirInstant? date,
     List<Reference>? author,
     Reference? custodian,
     required Attachment documentReferenceContentAttachment,
@@ -60,7 +60,7 @@ class DocumentReferenceUsCore extends Resource {
           Coding(
             system: FhirUri(
                 'http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category'),
-            code: Code('clinical-note'),
+            code: FhirCode('clinical-note'),
             display: 'Clinical Note',
           ),
         ],
@@ -108,7 +108,7 @@ class DocumentReferenceUsCore extends Resource {
   CodeableConcept? get type => _documentReference.type;
   List<CodeableConcept>? get category => _documentReference.category;
   Reference? get subject => _documentReference.subject;
-  Instant? get date => _documentReference.date;
+  FhirInstant? get date => _documentReference.date;
   List<Reference>? get author => _documentReference.author;
   Reference? get custodian => _documentReference.custodian;
   List<DocumentReferenceContent> get content => _documentReference.content;

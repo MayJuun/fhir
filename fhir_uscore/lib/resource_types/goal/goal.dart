@@ -66,12 +66,12 @@ class GoalTargetUsCore {
 
   factory GoalTargetUsCore({
     String? id,
-    Date? dueDate,
+    FhirDate? dueDate,
   }) =>
       GoalTargetUsCore._(GoalTarget(id: id, dueDate: dueDate));
 
   GoalTarget _goalTarget;
   GoalTarget get value => _goalTarget;
   String? get id => _goalTarget.id;
-  Date? get dueDate => _goalTarget.dueDate;
+  FhirDate? get dueDate => _goalTarget.dueDate;
 }

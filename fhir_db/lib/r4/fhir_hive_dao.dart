@@ -12,34 +12,36 @@ class FhirHiveDao {
   }
 
   /// Singleton Accessor
-  FhirHiveDb get instance => _fhirHiveDb;
+  FhirHiveDb get fhirHiveDb => _fhirHiveDb;
 
   /// The actual database
   late FhirHiveDb _fhirHiveDb;
 
   /// Singleton Instance
-  static final FhirHiveDao _provider = FhirHiveDao._();
+  static final FhirHiveDao _fhirHiveDao = FhirHiveDao._();
 
   /// Singleton factory
-  factory FhirHiveDao() => _provider;
+  factory FhirHiveDao() => _fhirHiveDao;
 
   /// Initalizes the database, configure its path, and return it
-  Future<FhirHiveDb> getDatabaseInstance() async {
+  Future<FhirHiveDb> init() async {
     await _fhirHiveDb.initDb();
     return _fhirHiveDb;
   }
 
   /// get list of resourceTypes stored in DB
-  Set<R4ResourceType> getTypes(String? password) => instance.types;
+  Set<R4ResourceType> getTypes(String? password) => fhirHiveDb.types;
 
   /// keeps track of the resourceTypes that are currently in the db
   Future<bool> _addResourceType(
-          String? password, R4ResourceType resourceType) async =>
-      instance.addType(resourceType);
+    String? password,
+    R4ResourceType resourceType,
+  ) async =>
+      fhirHiveDb.addType(resourceType);
 
   /// Saves a [Resource] to the local Db, [password] is optional (but after set,
-  /// it must always be used everytime), will update the FhirFhirFhirMeta fields of the
-  /// [Resource] and adds an id if none is already given.
+  /// it must always be used everytime), will update the FhirFhirFhirMeta fields
+  /// of the [Resource] and adds an id if none is already given.
   Future<Resource> save(String? password, Resource? resource) async {
     if (resource != null) {
       if (resource.resourceType != null) {
@@ -47,11 +49,9 @@ class FhirHiveDao {
 
         return resource.id == null
             ? await _insert(password, resource)
-            : (await find(null,
-                        resourceType: resource.resourceType, id: resource.id))
-                    .isEmpty
-                ? await _insert(password, resource)
-                : await _update(password, resource);
+            : await fhirHiveDb.exists(resource.resourceType!, resource.id!)
+                ? await _update(password, resource)
+                : await _insert(password, resource);
       } else {
         throw const FormatException('ResourceType cannot be null');
       }
@@ -73,11 +73,14 @@ class FhirHiveDao {
     if (resource.resourceTypeString != null) {
       if (resource.id != null) {
         final dbResource =
-            await _fhirHiveDb.read(resource.resourceType!, resource.id!);
+            await _fhirHiveDb.get(resource.resourceType!, resource.id!);
         if (dbResource != null) {
           final oldResource = dbResource;
           await _fhirHiveDb.saveHistory(oldResource);
-          final newResource = resource.updateVersion(oldMeta: oldResource.meta);
+          final oldMeta = oldResource['meta'] == null
+              ? null
+              : FhirMeta.fromJson(oldResource['meta']);
+          final newResource = resource.updateVersion(oldMeta: oldMeta);
           await _fhirHiveDb.save(newResource);
           return newResource;
         } else {
@@ -110,27 +113,26 @@ class FhirHiveDao {
     List? field,
     String? value,
   }) async {
-    if ((resource != null && resource.resourceType != null) ||
-        (resourceType != null && id != null) ||
-        (resourceType != null && field != null && value != null)) {
-      bool Function(Resource) finder;
-      if (resource != null) {
-        finder = (Resource finderResource) => finderResource.id == resource.id;
-      } else if (resourceType != null && id != null) {
-        finder = (Resource finderResource) => finderResource.id == id;
-      } else {
-        finder = (Resource finderResource) {
-          dynamic result = finderResource.toJson();
-          for (final key in field!) {
-            result = result[key];
-          }
-          return result.toString() == value;
-        };
-      }
-      return _search(
-        resource?.resourceType ?? resourceType!,
-        finder,
-      );
+    /// if we're just trying to match a resource
+    if (resource != null &&
+        resource.resourceType != null &&
+        (resource.id != null || id != null)) {
+      final newResource =
+          await fhirHiveDb.get(resource.resourceType!, resource.id!);
+      return newResource == null ? [] : [Resource.fromJson(newResource)];
+    } else if (resourceType != null && id != null) {
+      final newResource = await fhirHiveDb.get(resourceType, id);
+      return newResource == null ? [] : [Resource.fromJson(newResource)];
+    } else if (resourceType != null && field != null && value != null) {
+      bool Function(Map<String, dynamic>) finder =
+          (Map<String, dynamic> finderResource) {
+        dynamic result = finderResource;
+        for (final key in field) {
+          result = result[key];
+        }
+        return result.toString() == value;
+      };
+      return _search(resourceType, finder);
     } else {
       throw const FormatException('Must have either: '
           '\n1) a resource with a resourceType'
@@ -140,7 +142,7 @@ class FhirHiveDao {
   }
 
   /// returns all resources of a specific type
-  Future<List<Resource>> getResourceType(
+  Future<List<Resource>> getAllResourcesByType(
     String? password, {
     List<R4ResourceType>? resourceTypes,
     List<String>? resourceTypeStrings,
@@ -150,30 +152,34 @@ class FhirHiveDao {
     if (resource?.resourceType != null) {
       typeList.add(resource!.resourceType!);
     }
-    if (resourceTypes != null) {
-      if (resourceTypes.isNotEmpty) {
-        typeList.addAll(resourceTypes);
-      }
+    if (resourceTypes != null && resourceTypes.isNotEmpty) {
+      typeList.addAll(resourceTypes);
     }
     if (resourceTypeStrings != null) {
       for (final type in resourceTypeStrings) {
-        if (resourceTypeFromStringMap[type] != null) {
-          typeList.add(resourceTypeFromStringMap[type]!);
+        final resourceType = resourceTypeFromStringMap[type];
+        if (resourceType != null) {
+          typeList.add(resourceType);
         }
       }
     }
 
     final List<Resource> resourceList = [];
     for (final type in typeList) {
-      final newResources = await _fhirHiveDb.readAllOneType(type);
-      resourceList.addAll(newResources);
+      final newResources = await _fhirHiveDb.getAllResourcesOfType(type);
+      resourceList.addAll(newResources.map((e) => Resource.fromJson(e)));
     }
     return resourceList;
   }
 
   /// returns all resources in the [db], including historical versions
-  Future<List<Resource>> getAll(String? password) async =>
-      _fhirHiveDb.readAll();
+  Future<List<Resource>> getAllCurrentResources(String? password) async =>
+      (await _fhirHiveDb.getAllCurrentResources())
+          .map((e) => Resource.fromJson(e))
+          .toList();
+
+  // TODO(Dokotela): getAllResources including historical versions
+  // TODO(Dokotela): getHistoricalVersions - of a single resource
 
   /// Delete specific resource
   Future<bool> delete(
@@ -181,26 +187,16 @@ class FhirHiveDao {
     Resource? resource,
     R4ResourceType? resourceType,
     String? id,
-    bool Function(Resource)? finder,
+    bool Function(Map<String, dynamic>)? finder,
   ) async {
-    if ((resource != null && resource.resourceType != null) ||
-        (resourceType != null && id != null) ||
-        (resourceType != null && finder != null)) {
-      if (resource != null) {
-        resourceType = resource.resourceType;
-        finder = (Resource searchResource) => searchResource.id == resource.id;
-      } else if (resourceType != null && id != null) {
-        finder = (Resource searchResource) => searchResource.id == id;
-      }
-
-      if (resourceType != null && finder != null) {
-        return _fhirHiveDb.delete(resourceType, finder);
-      } else {
-        throw const FormatException('Must have either: '
-            '\n1) a resource with a resourceType'
-            '\n2) a resourceType and an Id'
-            '\n3) a resourceType, a specific field, and the value of interest');
-      }
+    if (resource != null &&
+        resource.resourceType != null &&
+        resource.id != null) {
+      return await _fhirHiveDb.deleteById(resource.resourceType!, resource.id!);
+    } else if (resourceType != null && id != null) {
+      return await _fhirHiveDb.deleteById(resourceType, id);
+    } else if (resourceType != null && finder != null) {
+      return _fhirHiveDb.delete(resourceType, finder);
     } else {
       throw const FormatException('Must have either: '
           '\n1) a resource with a resourceType'
@@ -219,10 +215,12 @@ class FhirHiveDao {
   }) async {
     if (resourceType != null || resource?.resourceType != null) {
       resourceType ??= resource?.resourceType;
-      return _fhirHiveDb.deleteType(resourceType!);
+      return _fhirHiveDb.deleteSingleType(resourceType!);
     }
     return false;
   }
+
+  Future<bool> clear(String? password) async => deleteAllResources(password);
 
   /// Deletes all resources, including historical versions
   Future<bool> deleteAllResources(String? password) async {
@@ -234,8 +232,6 @@ class FhirHiveDao {
     }
     return true;
   }
-
-  Future<bool> clear(String? password) async => deleteAllResources(password);
 
   /// remove the resourceType from the list of types stored in the db
   Future<bool> removeResourceTypes(
@@ -254,7 +250,9 @@ class FhirHiveDao {
   /// ultimate search function, must pass in finder
   Future<List<Resource>> _search(
     R4ResourceType resourceType,
-    bool Function(Resource) finder,
+    bool Function(Map<String, dynamic>) finder,
   ) async =>
-      _fhirHiveDb.search(resourceType, finder);
+      (await _fhirHiveDb.search(resourceType, finder))
+          .map((e) => Resource.fromJson(e))
+          .toList();
 }

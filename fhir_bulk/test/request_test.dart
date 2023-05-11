@@ -39,8 +39,8 @@ void requestTest() {
       final request = BulkRequest.patient(
           base: Uri.parse('http://hapi.fhir.org/baseR4'),
           types: [
-            WhichResource(R4ResourceType.Practitioner, Id('abcdef')),
-            WhichResource(R4ResourceType.Organization, Id('ghijkl')),
+            WhichResource(R4ResourceType.Practitioner, FhirId('abcdef')),
+            WhichResource(R4ResourceType.Organization, FhirId('ghijkl')),
           ]);
       final response = await request.request(headers: {'test': 'header'});
       expect((response[0] as OperationOutcome).issue[0].details?.text,
@@ -52,8 +52,8 @@ void requestTest() {
           base: Uri.parse('http://hapi.fhir.org/baseR4'),
           since: FhirDateTime('2021-01-01'),
           types: [
-            WhichResource(R4ResourceType.Practitioner, Id('abcdef')),
-            WhichResource(R4ResourceType.Organization, Id('ghijkl')),
+            WhichResource(R4ResourceType.Practitioner, FhirId('abcdef')),
+            WhichResource(R4ResourceType.Organization, FhirId('ghijkl')),
           ]);
       final response = await request.request(headers: {'test': 'header'});
       expect((response[0] as OperationOutcome).issue[0].details?.text,
@@ -65,7 +65,7 @@ void requestTest() {
     test('Basic Group Bulk Request', () async {
       final request = BulkRequest.group(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
-        id: Id('12345'),
+        id: FhirId('12345'),
       );
       final response = await request.request(headers: {'test': 'header'});
       expect((response[0] as OperationOutcome).issue[0].details?.text,

@@ -41,7 +41,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('unknown'),
+        code: FhirCode('unknown'),
         display: 'Unknown',
       ),
     ],
@@ -51,7 +51,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('asked-unknown'),
+        code: FhirCode('asked-unknown'),
         display: 'Asked But Unknown',
       ),
     ],
@@ -61,7 +61,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('temp-unknown'),
+        code: FhirCode('temp-unknown'),
         display: 'Temporarily Unknown',
       ),
     ],
@@ -71,7 +71,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('not-asked'),
+        code: FhirCode('not-asked'),
         display: 'Not Asked',
       ),
     ],
@@ -81,7 +81,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('asked-declined'),
+        code: FhirCode('asked-declined'),
         display: 'Asked But Declined',
       ),
     ],
@@ -91,7 +91,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('masked'),
+        code: FhirCode('masked'),
         display: 'Masked',
       ),
     ],
@@ -101,7 +101,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('not-applicable'),
+        code: FhirCode('not-applicable'),
         display: 'Not Applicable',
       ),
     ],
@@ -111,7 +111,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('unsupported'),
+        code: FhirCode('unsupported'),
         display: 'Unsupported',
       ),
     ],
@@ -121,7 +121,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('as-text'),
+        code: FhirCode('as-text'),
         display: 'As Text',
       ),
     ],
@@ -131,7 +131,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('error'),
+        code: FhirCode('error'),
         display: 'Error',
       ),
     ],
@@ -141,7 +141,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('not-a-number'),
+        code: FhirCode('not-a-number'),
         display: 'Not a Number (NaN)',
       ),
     ],
@@ -151,7 +151,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('negative-infinity'),
+        code: FhirCode('negative-infinity'),
         display: 'Negative Infinity (NINF)',
       ),
     ],
@@ -161,7 +161,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('positive-infinity'),
+        code: FhirCode('positive-infinity'),
         display: 'Positive Infinity (PINF)',
       ),
     ],
@@ -171,7 +171,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('not-performed'),
+        code: FhirCode('not-performed'),
         display: 'Not Performed',
       ),
     ],
@@ -181,7 +181,7 @@ final codeableConceptFromObservationDataAbsentReason = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/data-absent-reason'),
-        code: Code('not-permitted'),
+        code: FhirCode('not-permitted'),
         display: 'Not Permitted',
       ),
     ],
@@ -212,7 +212,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('current_every_day_smoker'),
+        code: FhirCode('current_every_day_smoker'),
         display: 'Current every day smoker',
       ),
     ],
@@ -222,7 +222,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('current_some_day_smoker'),
+        code: FhirCode('current_some_day_smoker'),
         display: 'Current some day smoker',
       ),
     ],
@@ -232,7 +232,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('former_smoker'),
+        code: FhirCode('former_smoker'),
         display: 'Former smoker',
       ),
     ],
@@ -242,7 +242,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('never_smoker'),
+        code: FhirCode('never_smoker'),
         display: 'Never smoker',
       ),
     ],
@@ -252,7 +252,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('smoker_current_status_unknown'),
+        code: FhirCode('smoker_current_status_unknown'),
         display: 'Smoker, current status unknown',
       ),
     ],
@@ -262,7 +262,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('unknown_if_ever_smoked'),
+        code: FhirCode('unknown_if_ever_smoked'),
         display: 'Unknown if ever smoked',
       ),
     ],
@@ -272,7 +272,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('current_heavy_tobacco_smoker'),
+        code: FhirCode('current_heavy_tobacco_smoker'),
         display: 'Current Heavy tobacco smoker',
       ),
     ],
@@ -282,7 +282,7 @@ final codeableConceptFromSmokingStatus = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('current_light_tobacco_smoker'),
+        code: FhirCode('current_light_tobacco_smoker'),
         display: 'Current Light tobacco smoker',
       ),
     ],
@@ -313,56 +313,56 @@ final codeableConceptFromBodySiteForBp = {
   BodySiteForBp.right_arm: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('368209003'),
+      code: FhirCode('368209003'),
       display: 'Right upper arm structure (body structure)',
     ),
   ], text: 'Right Arm'),
   BodySiteForBp.right_forearm: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('64262003'),
+      code: FhirCode('64262003'),
       display: 'Structure of right forearm (body structure)',
     ),
   ], text: 'Right Forearm'),
   BodySiteForBp.left_arm: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('368208006'),
+      code: FhirCode('368208006'),
       display: 'Left upper arm structure (body structure)',
     ),
   ], text: 'Left Arm'),
   BodySiteForBp.left_forearm: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('66480008'),
+      code: FhirCode('66480008'),
       display: 'Structure of left forearm (body structure)',
     ),
   ], text: 'Left Forearm'),
   BodySiteForBp.right_thigh: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('11207009'),
+      code: FhirCode('11207009'),
       display: 'Structure of right thigh (body structure)',
     ),
   ], text: 'Right Thigh'),
   BodySiteForBp.right_calf: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('32696007'),
+      code: FhirCode('32696007'),
       display: 'Structure of right lower leg (body structure)',
     ),
   ], text: 'Right Calf'),
   BodySiteForBp.left_thigh: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('61396006'),
+      code: FhirCode('61396006'),
       display: 'Structure of left thigh (body structure)',
     ),
   ], text: 'Left Thigh'),
   BodySiteForBp.left_calf: CodeableConcept(coding: [
     Coding(
       system: FhirUri('http://snomed.info/sct'),
-      code: Code('48979004'),
+      code: FhirCode('48979004'),
       display: 'Structure of left lower leg (body structure)',
     ),
   ], text: 'Left Calf'),

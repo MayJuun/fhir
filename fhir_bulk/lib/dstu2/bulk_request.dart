@@ -87,7 +87,7 @@ class BulkRequest with _$BulkRequest {
         if (type.resourceType != null) {
           typeString += typeString.length == 1 ? '_type=' : ',';
           typeString +=
-              '${ResourceUtils.resourceTypeToStringMap[type.resourceType]}${type.id != null ? "/${type.id}" : ""}';
+              '${resourceTypeToStringMap[type.resourceType]}${type.id != null ? "/${type.id}" : ""}';
         }
       }
     }
@@ -164,7 +164,7 @@ class BulkRequest with _$BulkRequest {
         issue: [
           OperationOutcomeIssue(
             severity: IssueSeverity.error,
-            code: Code('unknown'),
+            code: FhirCode('unknown'),
             details: CodeableConcept(text: 'Failed to make restful request'),
             diagnostics: '\nStatus Code: $statusCode -'
                 ' ${_errorCodes[statusCode]}'
@@ -186,7 +186,7 @@ class BulkRequest with _$BulkRequest {
           issue: [
             OperationOutcomeIssue(
               severity: IssueSeverity.error,
-              code: Code('value'),
+              code: FhirCode('value'),
               details: CodeableConcept(text: issue),
               diagnostics: diagnostics,
             ),

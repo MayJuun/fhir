@@ -2,25 +2,24 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/r4.dart';
+import 'package:fhir/r4/resource/resource.dart';
 import 'package:hive/hive.dart';
-
-import 'hive_data.dart';
 
 class FhirHiveDb {
   bool initialized = false;
   Set<R4ResourceType> types = {};
-  StreamController? streamController;
+  // StreamController? streamController;
 
   /// To initialize the database as a whole. Configure the path, set initialized
   /// to true, register all of the ResourceTypeAdapters, and then assign the
   /// set of all of the types to the variable types
   Future<void> initDb() async {
-    streamController = StreamController();
+    // streamController = StreamController();
     Hive.init('.');
     initialized = true;
     registerResourceTypes();
-    final Box<List<R4ResourceType>> typesBox = await Hive.openBox('types');
+    final Box<List<R4ResourceType>> typesBox =
+        await Hive.openBox<List<R4ResourceType>>('types');
     types = typesBox.get('types')?.toSet() ?? <R4ResourceType>{};
   }
 
@@ -52,7 +51,8 @@ class FhirHiveDb {
         return true;
       } else {
         await ensureInit;
-        final Box<List<R4ResourceType>> box = Hive.box('types');
+        final Box<List<R4ResourceType>> box =
+            Hive.box<List<R4ResourceType>>('types');
         final resourceSet = box.get('types')?.toSet() ?? <R4ResourceType>{};
         resourceSet.add(resourceType);
         box.put('types', resourceSet.toList());
@@ -69,7 +69,7 @@ class FhirHiveDb {
       final Box<Map<String, dynamic>> box =
           await getBox(resource.resourceType!);
       box.put(resource.id, resource.toJson());
-      sinkDataToStream(resource.resourceType!);
+      // sinkDataToStream(resource.resourceType!);
       return true;
     } catch (e, s) {
       log('Error: $e, Stack at time of Error: $s');
@@ -77,36 +77,48 @@ class FhirHiveDb {
     }
   }
 
-  Future<Resource?> read(R4ResourceType resourceType, String id) async {
+  Future<bool> exists(R4ResourceType resourceType, String id) async {
+    if (!types.contains(resourceType)) {
+      return false;
+    } else {
+      await ensureInit;
+      final Box<Map<String, dynamic>> box = await getBox(resourceType);
+      return box.containsKey(id);
+    }
+  }
+
+  Future<Map<String, dynamic>?> get(
+      R4ResourceType resourceType, String id) async {
     await ensureInit;
     final Box<Map<String, dynamic>> box = await getBox(resourceType);
-    final boxData = box.get(id);
-    return boxData == null ? null : Resource.fromJson(boxData);
+    final resourceMap = box.get(id);
+    return resourceMap;
   }
 
-  Future<void> sinkDataToStream(R4ResourceType resourceType) async {
-    final List<Resource> resources = await readAllOneType(resourceType);
-    streamController?.sink
-        .add(HiveData(isInitialized: initialized, resources: resources));
-  }
+  // Future<void> sinkDataToStream(R4ResourceType resourceType) async {
+  //   final List<Resource> resources = await readAllOneType(resourceType);
+  //   streamController?.sink
+  //       .add(HiveData(isInitialized: initialized, resources: resources));
+  // }
 
-  Future<List<Resource>> readAllOneType(R4ResourceType resourceType) async {
+  Future<Iterable<Map<String, dynamic>>> getAllResourcesOfType(
+      R4ResourceType resourceType) async {
     await ensureInit;
     final Box<Map<String, dynamic>> box = await getBox(resourceType);
-    return box.values.map((e) => Resource.fromJson(e)).toList();
+    return box.values;
   }
 
-  Future<List<Resource>> readAll() async {
+  Future<List<Map<String, dynamic>>> getAllCurrentResources() async {
     await ensureInit;
-    final allResources = <Resource>[];
+    final allResources = <Map<String, dynamic>>[];
     for (final type in types) {
       final Box<Map<String, dynamic>> box = await getBox(type);
-      allResources.addAll(box.values.map((e) => Resource.fromJson(e)));
+      allResources.addAll(box.values);
     }
     return allResources;
   }
 
-  Future<bool> saveHistory(Resource resource) async {
+  Future<bool> saveHistory(Map<String, dynamic> resource) async {
     try {
       await ensureInit;
       Box<Map<String, dynamic>> box;
@@ -115,9 +127,9 @@ class FhirHiveDb {
       } else {
         box = Hive.box('history');
       }
-      box.put(
-          '${resource.resourceTypeString}/${resource.id}/${resource.meta?.versionId}',
-          resource.toJson());
+      await box.put(
+          '${resource["resourceType"]}/${resource["id"]}/${resource["meta"]?["versionId"]}',
+          resource);
       return true;
     } catch (e, s) {
       log('Error: $e, Stack at time of Error: $s');
@@ -125,17 +137,27 @@ class FhirHiveDb {
     }
   }
 
+  Future<bool> deleteById(R4ResourceType resourceType, String id) async {
+    try {
+      final Box<Map<String, dynamic>> box = await getBox(resourceType);
+      await box.delete(id);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   Future<bool> delete(
     R4ResourceType resourceType,
-    bool Function(Resource) finder,
+    bool Function(Map<String, dynamic>) finder,
   ) async {
     try {
       final Box<Map<String, dynamic>> box = await getBox(resourceType);
-      final resource = box.values
-          .firstWhereOrNull((element) => finder(Resource.fromJson(element)));
-      if (resource != null) {
-        await box.delete(resource['id']);
-        sinkDataToStream(resourceType);
+      final resourceId =
+          box.values.firstWhereOrNull((element) => finder(element))?['id'];
+      if (resourceId != null) {
+        await box.delete(resourceId);
+        // sinkDataToStream(resourceType);
       }
       return true;
     } catch (e) {
@@ -143,7 +165,7 @@ class FhirHiveDb {
     }
   }
 
-  Future<bool> deleteType(R4ResourceType resourceType) async {
+  Future<bool> deleteSingleType(R4ResourceType resourceType) async {
     try {
       final Box<Map<String, dynamic>> box = await getBox(resourceType);
       await box.clear();
@@ -153,17 +175,17 @@ class FhirHiveDb {
     }
   }
 
-  Future<List<Resource>> search(
+  Future<Iterable<Map<String, dynamic>>> search(
     R4ResourceType resourceType,
-    bool Function(Resource) finder,
+    bool Function(Map<String, dynamic>) finder,
   ) async {
     if (!initialized) {
       await initDb();
     }
     final Box<Map<String, dynamic>> box = await getBox(resourceType);
     final boxData = box.toMap();
-    boxData.removeWhere((key, value) => !finder(Resource.fromJson(value)));
-    return boxData.values.map((e) => Resource.fromJson(e)).toList();
+    boxData.removeWhere((key, value) => !finder(value));
+    return boxData.values;
   }
 
   void registerResourceTypes() {

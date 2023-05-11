@@ -25,7 +25,7 @@ mixin _$BulkRequest {
     required TResult Function(Uri base, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         patient,
-    required TResult Function(Uri base, Id id, FhirDateTime? since,
+    required TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
@@ -38,7 +38,7 @@ mixin _$BulkRequest {
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult? Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
@@ -51,7 +51,7 @@ mixin _$BulkRequest {
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
@@ -253,7 +253,7 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
     required TResult Function(Uri base, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         patient,
-    required TResult Function(Uri base, Id id, FhirDateTime? since,
+    required TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
@@ -269,7 +269,7 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult? Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
@@ -285,7 +285,7 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
@@ -366,7 +366,7 @@ abstract class _$$_BulkGroupRequestCopyWith<$Res>
   @useResult
   $Res call(
       {Uri base,
-      Id id,
+      FhirId id,
       FhirDateTime? since,
       List<WhichResource>? types,
       Client? client});
@@ -397,7 +397,7 @@ class __$$_BulkGroupRequestCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
@@ -429,7 +429,7 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
   @override
   final Uri base;
   @override
-  final Id id;
+  final FhirId id;
   @override
   final FhirDateTime? since;
   final List<WhichResource>? _types;
@@ -478,7 +478,7 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
     required TResult Function(Uri base, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         patient,
-    required TResult Function(Uri base, Id id, FhirDateTime? since,
+    required TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
@@ -494,7 +494,7 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult? Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
@@ -510,7 +510,7 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
@@ -562,7 +562,7 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
 abstract class _BulkGroupRequest extends BulkRequest {
   const factory _BulkGroupRequest(
       {required final Uri base,
-      required final Id id,
+      required final FhirId id,
       final FhirDateTime? since,
       final List<WhichResource>? types,
       final Client? client}) = _$_BulkGroupRequest;
@@ -570,7 +570,7 @@ abstract class _BulkGroupRequest extends BulkRequest {
 
   @override
   Uri get base;
-  Id get id;
+  FhirId get id;
   @override
   FhirDateTime? get since;
   @override
@@ -696,7 +696,7 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
     required TResult Function(Uri base, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         patient,
-    required TResult Function(Uri base, Id id, FhirDateTime? since,
+    required TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
@@ -712,7 +712,7 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult? Function(Uri base, Id id, FhirDateTime? since,
+    TResult? Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult? Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
@@ -728,7 +728,7 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
         patient,
-    TResult Function(Uri base, Id id, FhirDateTime? since,
+    TResult Function(Uri base, FhirId id, FhirDateTime? since,
             List<WhichResource>? types, Client? client)?
         group,
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,

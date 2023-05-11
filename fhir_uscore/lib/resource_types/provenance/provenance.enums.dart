@@ -33,7 +33,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('transmitter'),
+        code: FhirCode('transmitter'),
         display: 'Transmitter',
       ),
     ],
@@ -43,7 +43,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('enterer'),
+        code: FhirCode('enterer'),
         display: 'Enterer',
       ),
     ],
@@ -53,7 +53,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('performer'),
+        code: FhirCode('performer'),
         display: 'Performer',
       ),
     ],
@@ -63,7 +63,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('author'),
+        code: FhirCode('author'),
         display: 'Author',
       ),
     ],
@@ -73,7 +73,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('verifier'),
+        code: FhirCode('verifier'),
         display: 'Verifier',
       ),
     ],
@@ -83,7 +83,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('legal'),
+        code: FhirCode('legal'),
         display: 'Legal Authenticator',
       ),
     ],
@@ -93,7 +93,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('attester'),
+        code: FhirCode('attester'),
         display: 'Attester',
       ),
     ],
@@ -103,7 +103,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('informant'),
+        code: FhirCode('informant'),
         display: 'Informant',
       ),
     ],
@@ -113,7 +113,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('custodian'),
+        code: FhirCode('custodian'),
         display: 'Custodian',
       ),
     ],
@@ -123,7 +123,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('assembler'),
+        code: FhirCode('assembler'),
         display: 'Assembler',
       ),
     ],
@@ -133,7 +133,7 @@ final codeableConceptFromProvenanceAgentParticipantType = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/provenance-participant-type'),
-        code: Code('composer'),
+        code: FhirCode('composer'),
         display: 'Composer',
       ),
     ],

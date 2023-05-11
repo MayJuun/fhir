@@ -40,7 +40,7 @@ class ProvenanceUsCore extends Resource {
   FhirMeta? get meta => _provenance.meta;
   Narrative? get text => _provenance.text;
   List<Reference> get target => _provenance.target;
-  Instant? get recorded => _provenance.recorded;
+  FhirInstant? get recorded => _provenance.recorded;
   List<ProvenanceAgent> get agent => _provenance.agent;
 }
 

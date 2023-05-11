@@ -2992,7 +2992,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('101Y00000X'),
+        code: FhirCode('101Y00000X'),
         display: 'Counselor',
       ),
     ],
@@ -3001,7 +3001,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('101YA0400X'),
+        code: FhirCode('101YA0400X'),
         display: 'Addiction (Substance Use Disorder)',
       ),
     ],
@@ -3010,7 +3010,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('101YM0800X'),
+        code: FhirCode('101YM0800X'),
         display: 'Mental Health',
       ),
     ],
@@ -3019,7 +3019,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('101YP1600X'),
+        code: FhirCode('101YP1600X'),
         display: 'Pastoral',
       ),
     ],
@@ -3028,7 +3028,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('101YP2500X'),
+        code: FhirCode('101YP2500X'),
         display: 'Professional',
       ),
     ],
@@ -3037,7 +3037,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('101YS0200X'),
+        code: FhirCode('101YS0200X'),
         display: 'School',
       ),
     ],
@@ -3046,7 +3046,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('102L00000X'),
+        code: FhirCode('102L00000X'),
         display: 'Psychoanalyst',
       ),
     ],
@@ -3055,7 +3055,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('102X00000X'),
+        code: FhirCode('102X00000X'),
         display: 'Poetry Therapist',
       ),
     ],
@@ -3064,7 +3064,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103G00000X'),
+        code: FhirCode('103G00000X'),
         display: 'Clinical Neuropsychologist',
       ),
     ],
@@ -3073,7 +3073,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103GC0700X'),
+        code: FhirCode('103GC0700X'),
         display: 'Clinical',
       ),
     ],
@@ -3082,7 +3082,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103K00000X'),
+        code: FhirCode('103K00000X'),
         display: 'Behavioral Analyst',
       ),
     ],
@@ -3091,7 +3091,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103T00000X'),
+        code: FhirCode('103T00000X'),
         display: 'Psychologist',
       ),
     ],
@@ -3100,7 +3100,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TA0700X'),
+        code: FhirCode('103TA0700X'),
         display: 'Adult Development & Aging',
       ),
     ],
@@ -3109,7 +3109,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TB0200X'),
+        code: FhirCode('103TB0200X'),
         display: 'Cognitive & Behavioral',
       ),
     ],
@@ -3118,7 +3118,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TC1900X'),
+        code: FhirCode('103TC1900X'),
         display: 'Counseling',
       ),
     ],
@@ -3127,7 +3127,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TC2200X'),
+        code: FhirCode('103TC2200X'),
         display: 'Clinical Child & Adolescent',
       ),
     ],
@@ -3136,7 +3136,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TE1000X'),
+        code: FhirCode('103TE1000X'),
         display: 'Educational',
       ),
     ],
@@ -3145,7 +3145,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TE1100X'),
+        code: FhirCode('103TE1100X'),
         display: 'Exercise & Sports',
       ),
     ],
@@ -3154,7 +3154,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TF0000X'),
+        code: FhirCode('103TF0000X'),
         display: 'Family',
       ),
     ],
@@ -3163,7 +3163,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TF0200X'),
+        code: FhirCode('103TF0200X'),
         display: 'Forensic',
       ),
     ],
@@ -3172,7 +3172,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TH0004X'),
+        code: FhirCode('103TH0004X'),
         display: 'Health',
       ),
     ],
@@ -3181,7 +3181,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TH0100X'),
+        code: FhirCode('103TH0100X'),
         display: 'Health Service',
       ),
     ],
@@ -3190,7 +3190,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TM1700X'),
+        code: FhirCode('103TM1700X'),
         display: 'Men & Masculinity',
       ),
     ],
@@ -3200,7 +3200,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TM1800X'),
+        code: FhirCode('103TM1800X'),
         display: 'Mental Retardation & Developmental Disabilities',
       ),
     ],
@@ -3209,7 +3209,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TP0016X'),
+        code: FhirCode('103TP0016X'),
         display: 'Prescribing (Medical)',
       ),
     ],
@@ -3218,7 +3218,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TP0814X'),
+        code: FhirCode('103TP0814X'),
         display: 'Psychoanalysis',
       ),
     ],
@@ -3227,7 +3227,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TP2700X'),
+        code: FhirCode('103TP2700X'),
         display: 'Psychotherapy',
       ),
     ],
@@ -3236,7 +3236,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TP2701X'),
+        code: FhirCode('103TP2701X'),
         display: 'Group Psychotherapy',
       ),
     ],
@@ -3245,7 +3245,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TR0400X'),
+        code: FhirCode('103TR0400X'),
         display: 'Rehabilitation',
       ),
     ],
@@ -3254,7 +3254,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('103TW0100X'),
+        code: FhirCode('103TW0100X'),
         display: 'Women',
       ),
     ],
@@ -3263,7 +3263,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('104100000X'),
+        code: FhirCode('104100000X'),
         display: 'Social Worker',
       ),
     ],
@@ -3272,7 +3272,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('106E00000X'),
+        code: FhirCode('106E00000X'),
         display: 'Assistant Behavior Analyst',
       ),
     ],
@@ -3281,7 +3281,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('106H00000X'),
+        code: FhirCode('106H00000X'),
         display: 'Marriage & Family Therapist',
       ),
     ],
@@ -3290,7 +3290,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('106S00000X'),
+        code: FhirCode('106S00000X'),
         display: 'Behavior Technician',
       ),
     ],
@@ -3299,7 +3299,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-2'),
+        code: FhirCode('base-2'),
         display: 'Chiropractic Providers',
       ),
     ],
@@ -3308,7 +3308,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111N00000X'),
+        code: FhirCode('111N00000X'),
         display: 'Chiropractor',
       ),
     ],
@@ -3317,7 +3317,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NI0013X'),
+        code: FhirCode('111NI0013X'),
         display: 'Independent Medical Examiner',
       ),
     ],
@@ -3326,7 +3326,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NI0900X'),
+        code: FhirCode('111NI0900X'),
         display: 'Internist',
       ),
     ],
@@ -3335,7 +3335,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NN0400X'),
+        code: FhirCode('111NN0400X'),
         display: 'Neurology',
       ),
     ],
@@ -3344,7 +3344,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NN1001X'),
+        code: FhirCode('111NN1001X'),
         display: 'Nutrition',
       ),
     ],
@@ -3353,7 +3353,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NP0017X'),
+        code: FhirCode('111NP0017X'),
         display: 'Pediatric Chiropractor',
       ),
     ],
@@ -3362,7 +3362,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NR0200X'),
+        code: FhirCode('111NR0200X'),
         display: 'Radiology',
       ),
     ],
@@ -3371,7 +3371,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NS0005X'),
+        code: FhirCode('111NS0005X'),
         display: 'Sports Physician',
       ),
     ],
@@ -3380,7 +3380,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NT0100X'),
+        code: FhirCode('111NT0100X'),
         display: 'Thermography',
       ),
     ],
@@ -3389,7 +3389,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NX0100X'),
+        code: FhirCode('111NX0100X'),
         display: 'Occupational Health',
       ),
     ],
@@ -3398,7 +3398,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('111NX0800X'),
+        code: FhirCode('111NX0800X'),
         display: 'Orthopedic',
       ),
     ],
@@ -3407,7 +3407,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-3'),
+        code: FhirCode('base-3'),
         display: 'Dental Providers',
       ),
     ],
@@ -3416,7 +3416,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('122300000X'),
+        code: FhirCode('122300000X'),
         display: 'Dentist',
       ),
     ],
@@ -3425,7 +3425,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223D0001X'),
+        code: FhirCode('1223D0001X'),
         display: 'Dental Public Health',
       ),
     ],
@@ -3434,7 +3434,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223D0004X'),
+        code: FhirCode('1223D0004X'),
         display: 'Dentist Anesthesiologist',
       ),
     ],
@@ -3443,7 +3443,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223E0200X'),
+        code: FhirCode('1223E0200X'),
         display: 'Endodontics',
       ),
     ],
@@ -3452,7 +3452,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223G0001X'),
+        code: FhirCode('1223G0001X'),
         display: 'General Practice',
       ),
     ],
@@ -3461,7 +3461,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223P0106X'),
+        code: FhirCode('1223P0106X'),
         display: 'Oral and Maxillofacial Pathology',
       ),
     ],
@@ -3470,7 +3470,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223P0221X'),
+        code: FhirCode('1223P0221X'),
         display: 'Pediatric Dentistry',
       ),
     ],
@@ -3479,7 +3479,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223P0300X'),
+        code: FhirCode('1223P0300X'),
         display: 'Periodontics',
       ),
     ],
@@ -3488,7 +3488,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223P0700X'),
+        code: FhirCode('1223P0700X'),
         display: 'Prosthodontics',
       ),
     ],
@@ -3497,7 +3497,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223S0112X'),
+        code: FhirCode('1223S0112X'),
         display: 'Oral and Maxillofacial Surgery',
       ),
     ],
@@ -3506,7 +3506,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223X0008X'),
+        code: FhirCode('1223X0008X'),
         display: 'Oral and Maxillofacial Radiology',
       ),
     ],
@@ -3516,7 +3516,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1223X0400X'),
+        code: FhirCode('1223X0400X'),
         display: 'Orthodontics and Dentofacial Orthopedics',
       ),
     ],
@@ -3525,7 +3525,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('122400000X'),
+        code: FhirCode('122400000X'),
         display: 'Denturist',
       ),
     ],
@@ -3534,7 +3534,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('124Q00000X'),
+        code: FhirCode('124Q00000X'),
         display: 'Dental Hygienist',
       ),
     ],
@@ -3543,7 +3543,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('125J00000X'),
+        code: FhirCode('125J00000X'),
         display: 'Dental Therapist',
       ),
     ],
@@ -3552,7 +3552,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('125K00000X'),
+        code: FhirCode('125K00000X'),
         display: 'Advanced Practice Dental Therapist',
       ),
     ],
@@ -3561,7 +3561,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('125Q00000X'),
+        code: FhirCode('125Q00000X'),
         display: 'Oral Medicinist',
       ),
     ],
@@ -3570,7 +3570,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('126800000X'),
+        code: FhirCode('126800000X'),
         display: 'Dental Assistant',
       ),
     ],
@@ -3579,7 +3579,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('126900000X'),
+        code: FhirCode('126900000X'),
         display: 'Dental Laboratory Technician',
       ),
     ],
@@ -3588,7 +3588,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-4'),
+        code: FhirCode('base-4'),
         display: 'Dietary & Nutritional Service Providers',
       ),
     ],
@@ -3597,7 +3597,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('132700000X'),
+        code: FhirCode('132700000X'),
         display: 'Dietary Manager',
       ),
     ],
@@ -3606,7 +3606,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('133N00000X'),
+        code: FhirCode('133N00000X'),
         display: 'Nutritionist',
       ),
     ],
@@ -3615,7 +3615,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('133NN1002X'),
+        code: FhirCode('133NN1002X'),
         display: 'Nutrition, Education',
       ),
     ],
@@ -3624,7 +3624,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('133V00000X'),
+        code: FhirCode('133V00000X'),
         display: 'Dietitian, Registered',
       ),
     ],
@@ -3633,7 +3633,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('133VN1004X'),
+        code: FhirCode('133VN1004X'),
         display: 'Nutrition, Pediatric',
       ),
     ],
@@ -3642,7 +3642,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('133VN1005X'),
+        code: FhirCode('133VN1005X'),
         display: 'Nutrition, Renal',
       ),
     ],
@@ -3651,7 +3651,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('133VN1006X'),
+        code: FhirCode('133VN1006X'),
         display: 'Nutrition, Metabolic',
       ),
     ],
@@ -3660,7 +3660,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('136A00000X'),
+        code: FhirCode('136A00000X'),
         display: 'Dietetic Technician, Registered',
       ),
     ],
@@ -3669,7 +3669,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-5'),
+        code: FhirCode('base-5'),
         display: 'Emergency Medical Service Providers',
       ),
     ],
@@ -3678,7 +3678,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('146D00000X'),
+        code: FhirCode('146D00000X'),
         display: 'Personal Emergency Response Attendant',
       ),
     ],
@@ -3687,7 +3687,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('146L00000X'),
+        code: FhirCode('146L00000X'),
         display: 'Emergency Medical Technician, Paramedic',
       ),
     ],
@@ -3697,7 +3697,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('146M00000X'),
+        code: FhirCode('146M00000X'),
         display: 'Emergency Medical Technician, Intermediate',
       ),
     ],
@@ -3706,7 +3706,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('146N00000X'),
+        code: FhirCode('146N00000X'),
         display: 'Emergency Medical Technician, Basic',
       ),
     ],
@@ -3715,7 +3715,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-6'),
+        code: FhirCode('base-6'),
         display: 'Eye and Vision Services Providers',
       ),
     ],
@@ -3724,7 +3724,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('152W00000X'),
+        code: FhirCode('152W00000X'),
         display: 'Optometrist',
       ),
     ],
@@ -3733,7 +3733,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('152WC0802X'),
+        code: FhirCode('152WC0802X'),
         display: 'Corneal and Contact Management',
       ),
     ],
@@ -3742,7 +3742,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('152WL0500X'),
+        code: FhirCode('152WL0500X'),
         display: 'Low Vision Rehabilitation',
       ),
     ],
@@ -3751,7 +3751,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('152WP0200X'),
+        code: FhirCode('152WP0200X'),
         display: 'Pediatrics',
       ),
     ],
@@ -3760,7 +3760,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('152WS0006X'),
+        code: FhirCode('152WS0006X'),
         display: 'Sports Vision',
       ),
     ],
@@ -3769,7 +3769,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('152WV0400X'),
+        code: FhirCode('152WV0400X'),
         display: 'Vision Therapy',
       ),
     ],
@@ -3778,7 +3778,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('152WX0102X'),
+        code: FhirCode('152WX0102X'),
         display: 'Occupational Vision',
       ),
     ],
@@ -3787,7 +3787,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156F00000X'),
+        code: FhirCode('156F00000X'),
         display: 'Technician/Technologist',
       ),
     ],
@@ -3796,7 +3796,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FC0800X'),
+        code: FhirCode('156FC0800X'),
         display: 'Contact Lens',
       ),
     ],
@@ -3805,7 +3805,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FC0801X'),
+        code: FhirCode('156FC0801X'),
         display: 'Contact Lens Fitter',
       ),
     ],
@@ -3814,7 +3814,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FX1100X'),
+        code: FhirCode('156FX1100X'),
         display: 'Ophthalmic',
       ),
     ],
@@ -3823,7 +3823,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FX1101X'),
+        code: FhirCode('156FX1101X'),
         display: 'Ophthalmic Assistant',
       ),
     ],
@@ -3832,7 +3832,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FX1201X'),
+        code: FhirCode('156FX1201X'),
         display: 'Optometric Assistant',
       ),
     ],
@@ -3841,7 +3841,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FX1202X'),
+        code: FhirCode('156FX1202X'),
         display: 'Optometric Technician',
       ),
     ],
@@ -3850,7 +3850,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FX1700X'),
+        code: FhirCode('156FX1700X'),
         display: 'Ocularist',
       ),
     ],
@@ -3859,7 +3859,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FX1800X'),
+        code: FhirCode('156FX1800X'),
         display: 'Optician',
       ),
     ],
@@ -3868,7 +3868,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('156FX1900X'),
+        code: FhirCode('156FX1900X'),
         display: 'Orthoptist',
       ),
     ],
@@ -3877,7 +3877,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-7'),
+        code: FhirCode('base-7'),
         display: 'Nursing Service Providers',
       ),
     ],
@@ -3886,7 +3886,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163W00000X'),
+        code: FhirCode('163W00000X'),
         display: 'Registered Nurse',
       ),
     ],
@@ -3895,7 +3895,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WA2000X'),
+        code: FhirCode('163WA2000X'),
         display: 'Administrator',
       ),
     ],
@@ -3904,7 +3904,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WC0200X'),
+        code: FhirCode('163WC0200X'),
         display: 'Critical Care Medicine',
       ),
     ],
@@ -3913,7 +3913,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WC0400X'),
+        code: FhirCode('163WC0400X'),
         display: 'Case Management',
       ),
     ],
@@ -3922,7 +3922,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WC1400X'),
+        code: FhirCode('163WC1400X'),
         display: 'College Health',
       ),
     ],
@@ -3931,7 +3931,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WC1500X'),
+        code: FhirCode('163WC1500X'),
         display: 'Community Health',
       ),
     ],
@@ -3940,7 +3940,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WC1600X'),
+        code: FhirCode('163WC1600X'),
         display: 'Continuing Education/Staff Development',
       ),
     ],
@@ -3949,7 +3949,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WC2100X'),
+        code: FhirCode('163WC2100X'),
         display: 'Continence Care',
       ),
     ],
@@ -3958,7 +3958,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WC3500X'),
+        code: FhirCode('163WC3500X'),
         display: 'Cardiac Rehabilitation',
       ),
     ],
@@ -3967,7 +3967,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WD0400X'),
+        code: FhirCode('163WD0400X'),
         display: 'Diabetes Educator',
       ),
     ],
@@ -3976,7 +3976,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WD1100X'),
+        code: FhirCode('163WD1100X'),
         display: 'Dialysis, Peritoneal',
       ),
     ],
@@ -3985,7 +3985,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WE0003X'),
+        code: FhirCode('163WE0003X'),
         display: 'Emergency',
       ),
     ],
@@ -3994,7 +3994,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WE0900X'),
+        code: FhirCode('163WE0900X'),
         display: 'Enterostomal Therapy',
       ),
     ],
@@ -4003,7 +4003,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WF0300X'),
+        code: FhirCode('163WF0300X'),
         display: 'Flight',
       ),
     ],
@@ -4012,7 +4012,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WG0100X'),
+        code: FhirCode('163WG0100X'),
         display: 'Gastroenterology',
       ),
     ],
@@ -4021,7 +4021,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WG0600X'),
+        code: FhirCode('163WG0600X'),
         display: 'Gerontology',
       ),
     ],
@@ -4030,7 +4030,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WH0200X'),
+        code: FhirCode('163WH0200X'),
         display: 'Home Health',
       ),
     ],
@@ -4039,7 +4039,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WH0500X'),
+        code: FhirCode('163WH0500X'),
         display: 'Hemodialysis',
       ),
     ],
@@ -4048,7 +4048,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WH1000X'),
+        code: FhirCode('163WH1000X'),
         display: 'Hospice',
       ),
     ],
@@ -4057,7 +4057,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WI0500X'),
+        code: FhirCode('163WI0500X'),
         display: 'Infusion Therapy',
       ),
     ],
@@ -4066,7 +4066,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WI0600X'),
+        code: FhirCode('163WI0600X'),
         display: 'Infection Control',
       ),
     ],
@@ -4075,7 +4075,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WL0100X'),
+        code: FhirCode('163WL0100X'),
         display: 'Lactation Consultant',
       ),
     ],
@@ -4084,7 +4084,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WM0102X'),
+        code: FhirCode('163WM0102X'),
         display: 'Maternal Newborn',
       ),
     ],
@@ -4093,7 +4093,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WM0705X'),
+        code: FhirCode('163WM0705X'),
         display: 'Medical-Surgical',
       ),
     ],
@@ -4102,7 +4102,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WM1400X'),
+        code: FhirCode('163WM1400X'),
         display: 'Nurse Massage Therapist (NMT)',
       ),
     ],
@@ -4111,7 +4111,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WN0002X'),
+        code: FhirCode('163WN0002X'),
         display: 'Neonatal Intensive Care',
       ),
     ],
@@ -4120,7 +4120,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WN0003X'),
+        code: FhirCode('163WN0003X'),
         display: 'Neonatal, Low-Risk',
       ),
     ],
@@ -4129,7 +4129,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WN0300X'),
+        code: FhirCode('163WN0300X'),
         display: 'Nephrology',
       ),
     ],
@@ -4138,7 +4138,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WN0800X'),
+        code: FhirCode('163WN0800X'),
         display: 'Neuroscience',
       ),
     ],
@@ -4147,7 +4147,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WN1003X'),
+        code: FhirCode('163WN1003X'),
         display: 'Nutrition Support',
       ),
     ],
@@ -4156,7 +4156,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WP0000X'),
+        code: FhirCode('163WP0000X'),
         display: 'Pain Management',
       ),
     ],
@@ -4165,7 +4165,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WP0807X'),
+        code: FhirCode('163WP0807X'),
         display: 'Psych/Mental Health, Child & Adolescent',
       ),
     ],
@@ -4174,7 +4174,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WP0808X'),
+        code: FhirCode('163WP0808X'),
         display: 'Psych/Mental Health',
       ),
     ],
@@ -4183,7 +4183,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WP0809X'),
+        code: FhirCode('163WP0809X'),
         display: 'Psych/Mental Health, Adult',
       ),
     ],
@@ -4192,7 +4192,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WP1700X'),
+        code: FhirCode('163WP1700X'),
         display: 'Perinatal',
       ),
     ],
@@ -4201,7 +4201,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WP2201X'),
+        code: FhirCode('163WP2201X'),
         display: 'Ambulatory Care',
       ),
     ],
@@ -4210,7 +4210,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WR0006X'),
+        code: FhirCode('163WR0006X'),
         display: 'Registered Nurse First Assistant',
       ),
     ],
@@ -4219,7 +4219,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WR1000X'),
+        code: FhirCode('163WR1000X'),
         display: 'Reproductive Endocrinology/Infertility',
       ),
     ],
@@ -4228,7 +4228,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WS0121X'),
+        code: FhirCode('163WS0121X'),
         display: 'Plastic Surgery',
       ),
     ],
@@ -4237,7 +4237,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WU0100X'),
+        code: FhirCode('163WU0100X'),
         display: 'Urology',
       ),
     ],
@@ -4246,7 +4246,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WW0000X'),
+        code: FhirCode('163WW0000X'),
         display: 'Wound Care',
       ),
     ],
@@ -4255,7 +4255,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WW0101X'),
+        code: FhirCode('163WW0101X'),
         display: 'Women\'s Health Care, Ambulatory',
       ),
     ],
@@ -4264,7 +4264,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WX0002X'),
+        code: FhirCode('163WX0002X'),
         display: 'Obstetric, High-Risk',
       ),
     ],
@@ -4273,7 +4273,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WX0003X'),
+        code: FhirCode('163WX0003X'),
         display: 'Obstetric, Inpatient',
       ),
     ],
@@ -4282,7 +4282,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WX0601X'),
+        code: FhirCode('163WX0601X'),
         display: 'Otorhinolaryngology & Head-Neck',
       ),
     ],
@@ -4291,7 +4291,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('163WX1500X'),
+        code: FhirCode('163WX1500X'),
         display: 'Ostomy Care',
       ),
     ],
@@ -4300,7 +4300,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('167G00000X'),
+        code: FhirCode('167G00000X'),
         display: 'Licensed Psychiatric Technician',
       ),
     ],
@@ -4309,7 +4309,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-8'),
+        code: FhirCode('base-8'),
         display: 'Other Service Providers',
       ),
     ],
@@ -4318,7 +4318,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('170100000X'),
+        code: FhirCode('170100000X'),
         display: 'Medical Genetics, Ph.D. Medical Genetics',
       ),
     ],
@@ -4327,7 +4327,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('170300000X'),
+        code: FhirCode('170300000X'),
         display: 'Genetic Counselor, MS',
       ),
     ],
@@ -4336,7 +4336,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('171000000X'),
+        code: FhirCode('171000000X'),
         display: 'Military Health Care Provider',
       ),
     ],
@@ -4345,7 +4345,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1710I1002X'),
+        code: FhirCode('1710I1002X'),
         display: 'Independent Duty Corpsman',
       ),
     ],
@@ -4354,7 +4354,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1710I1003X'),
+        code: FhirCode('1710I1003X'),
         display: 'Independent Duty Medical Technicians',
       ),
     ],
@@ -4363,7 +4363,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('171100000X'),
+        code: FhirCode('171100000X'),
         display: 'Acupuncturist',
       ),
     ],
@@ -4372,7 +4372,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('171M00000X'),
+        code: FhirCode('171M00000X'),
         display: 'Case Manager/Care Coordinator',
       ),
     ],
@@ -4381,7 +4381,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('171R00000X'),
+        code: FhirCode('171R00000X'),
         display: 'Interpreter',
       ),
     ],
@@ -4390,7 +4390,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('171W00000X'),
+        code: FhirCode('171W00000X'),
         display: 'Contractor',
       ),
     ],
@@ -4399,7 +4399,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('171WH0202X'),
+        code: FhirCode('171WH0202X'),
         display: 'Home Modifications',
       ),
     ],
@@ -4408,7 +4408,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('171WV0202X'),
+        code: FhirCode('171WV0202X'),
         display: 'Vehicle Modifications',
       ),
     ],
@@ -4417,7 +4417,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('172A00000X'),
+        code: FhirCode('172A00000X'),
         display: 'Driver',
       ),
     ],
@@ -4426,7 +4426,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('172M00000X'),
+        code: FhirCode('172M00000X'),
         display: 'Mechanotherapist',
       ),
     ],
@@ -4435,7 +4435,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('172P00000X'),
+        code: FhirCode('172P00000X'),
         display: 'Naprapath',
       ),
     ],
@@ -4444,7 +4444,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('172V00000X'),
+        code: FhirCode('172V00000X'),
         display: 'Community Health Worker',
       ),
     ],
@@ -4453,7 +4453,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('173000000X'),
+        code: FhirCode('173000000X'),
         display: 'Legal Medicine',
       ),
     ],
@@ -4462,7 +4462,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('173C00000X'),
+        code: FhirCode('173C00000X'),
         display: 'Reflexologist',
       ),
     ],
@@ -4471,7 +4471,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('173F00000X'),
+        code: FhirCode('173F00000X'),
         display: 'Sleep Specialist, PhD',
       ),
     ],
@@ -4480,7 +4480,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('174200000X'),
+        code: FhirCode('174200000X'),
         display: 'Meals',
       ),
     ],
@@ -4489,7 +4489,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('174400000X'),
+        code: FhirCode('174400000X'),
         display: 'Specialist',
       ),
     ],
@@ -4498,7 +4498,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1744G0900X'),
+        code: FhirCode('1744G0900X'),
         display: 'Graphics Designer',
       ),
     ],
@@ -4507,7 +4507,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1744P3200X'),
+        code: FhirCode('1744P3200X'),
         display: 'Prosthetics Case Management',
       ),
     ],
@@ -4516,7 +4516,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1744R1102X'),
+        code: FhirCode('1744R1102X'),
         display: 'Research Study',
       ),
     ],
@@ -4525,7 +4525,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1744R1103X'),
+        code: FhirCode('1744R1103X'),
         display: 'Research Data Abstracter/Coder',
       ),
     ],
@@ -4534,7 +4534,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('174H00000X'),
+        code: FhirCode('174H00000X'),
         display: 'Health Educator',
       ),
     ],
@@ -4543,7 +4543,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('174M00000X'),
+        code: FhirCode('174M00000X'),
         display: 'Veterinarian',
       ),
     ],
@@ -4552,7 +4552,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('174MM1900X'),
+        code: FhirCode('174MM1900X'),
         display: 'Medical Research',
       ),
     ],
@@ -4561,7 +4561,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('174N00000X'),
+        code: FhirCode('174N00000X'),
         display: 'Lactation Consultant, Non-RN',
       ),
     ],
@@ -4570,7 +4570,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('174V00000X'),
+        code: FhirCode('174V00000X'),
         display: 'Clinical Ethicist',
       ),
     ],
@@ -4579,7 +4579,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('175F00000X'),
+        code: FhirCode('175F00000X'),
         display: 'Naturopath',
       ),
     ],
@@ -4588,7 +4588,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('175L00000X'),
+        code: FhirCode('175L00000X'),
         display: 'Homeopath',
       ),
     ],
@@ -4597,7 +4597,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('175M00000X'),
+        code: FhirCode('175M00000X'),
         display: 'Midwife, Lay',
       ),
     ],
@@ -4606,7 +4606,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('175T00000X'),
+        code: FhirCode('175T00000X'),
         display: 'Peer Specialist',
       ),
     ],
@@ -4615,7 +4615,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('176B00000X'),
+        code: FhirCode('176B00000X'),
         display: 'Midwife',
       ),
     ],
@@ -4624,7 +4624,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('176P00000X'),
+        code: FhirCode('176P00000X'),
         display: 'Funeral Director',
       ),
     ],
@@ -4633,7 +4633,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('177F00000X'),
+        code: FhirCode('177F00000X'),
         display: 'Lodging',
       ),
     ],
@@ -4642,7 +4642,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-9'),
+        code: FhirCode('base-9'),
         display: 'Pharmacy Service Providers',
       ),
     ],
@@ -4651,7 +4651,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('183500000X'),
+        code: FhirCode('183500000X'),
         display: 'Pharmacist',
       ),
     ],
@@ -4660,7 +4660,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1835C0205X'),
+        code: FhirCode('1835C0205X'),
         display: 'Critical Care',
       ),
     ],
@@ -4669,7 +4669,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1835G0303X'),
+        code: FhirCode('1835G0303X'),
         display: 'Geriatric',
       ),
     ],
@@ -4678,7 +4678,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1835N0905X'),
+        code: FhirCode('1835N0905X'),
         display: 'Nuclear',
       ),
     ],
@@ -4688,7 +4688,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1835P0018X'),
+        code: FhirCode('1835P0018X'),
         display: 'Pharmacist Clinician (PhC)/ Clinical Pharmacy Specialist',
       ),
     ],
@@ -4697,7 +4697,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1835P1200X'),
+        code: FhirCode('1835P1200X'),
         display: 'Pharmacotherapy',
       ),
     ],
@@ -4706,7 +4706,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1835P1300X'),
+        code: FhirCode('1835P1300X'),
         display: 'Psychiatric',
       ),
     ],
@@ -4715,7 +4715,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('1835X0200X'),
+        code: FhirCode('1835X0200X'),
         display: 'Oncology',
       ),
     ],
@@ -4724,7 +4724,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('183700000X'),
+        code: FhirCode('183700000X'),
         display: 'Pharmacy Technician',
       ),
     ],
@@ -4733,7 +4733,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-10'),
+        code: FhirCode('base-10'),
         display: 'Group',
       ),
     ],
@@ -4742,7 +4742,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('193200000X'),
+        code: FhirCode('193200000X'),
         display: 'Multi-Specialty',
       ),
     ],
@@ -4751,7 +4751,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('193400000X'),
+        code: FhirCode('193400000X'),
         display: 'Single Specialty',
       ),
     ],
@@ -4760,7 +4760,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-11'),
+        code: FhirCode('base-11'),
         display: 'Allopathic & Osteopathic Physicians',
       ),
     ],
@@ -4769,7 +4769,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('202K00000X'),
+        code: FhirCode('202K00000X'),
         display: 'Phlebology',
       ),
     ],
@@ -4779,7 +4779,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('204C00000X'),
+        code: FhirCode('204C00000X'),
         display: 'Neuromusculoskeletal Medicine, Sports Medicine',
       ),
     ],
@@ -4788,7 +4788,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('204D00000X'),
+        code: FhirCode('204D00000X'),
         display: 'Neuromusculoskeletal Medicine & OMM',
       ),
     ],
@@ -4797,7 +4797,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('204E00000X'),
+        code: FhirCode('204E00000X'),
         display: 'Oral & Maxillofacial Surgery',
       ),
     ],
@@ -4806,7 +4806,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('204F00000X'),
+        code: FhirCode('204F00000X'),
         display: 'Transplant Surgery',
       ),
     ],
@@ -4815,7 +4815,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('204R00000X'),
+        code: FhirCode('204R00000X'),
         display: 'Electrodiagnostic Medicine',
       ),
     ],
@@ -4824,7 +4824,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207K00000X'),
+        code: FhirCode('207K00000X'),
         display: 'Allergy & Immunology',
       ),
     ],
@@ -4833,7 +4833,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207KA0200X'),
+        code: FhirCode('207KA0200X'),
         display: 'Allergy',
       ),
     ],
@@ -4842,7 +4842,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207KI0005X'),
+        code: FhirCode('207KI0005X'),
         display: 'Clinical & Laboratory Immunology',
       ),
     ],
@@ -4851,7 +4851,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207L00000X'),
+        code: FhirCode('207L00000X'),
         display: 'Anesthesiology',
       ),
     ],
@@ -4860,7 +4860,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207LA0401X'),
+        code: FhirCode('207LA0401X'),
         display: 'Addiction Medicine',
       ),
     ],
@@ -4869,7 +4869,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207LH0002X'),
+        code: FhirCode('207LH0002X'),
         display: 'Hospice and Palliative Medicine',
       ),
     ],
@@ -4878,7 +4878,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207LP2900X'),
+        code: FhirCode('207LP2900X'),
         display: 'Pain Medicine',
       ),
     ],
@@ -4887,7 +4887,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207LP3000X'),
+        code: FhirCode('207LP3000X'),
         display: 'Pediatric Anesthesiology',
       ),
     ],
@@ -4896,7 +4896,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207N00000X'),
+        code: FhirCode('207N00000X'),
         display: 'Dermatology',
       ),
     ],
@@ -4905,7 +4905,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ND0101X'),
+        code: FhirCode('207ND0101X'),
         display: 'MOHS-Micrographic Surgery',
       ),
     ],
@@ -4914,7 +4914,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ND0900X'),
+        code: FhirCode('207ND0900X'),
         display: 'Dermatopathology',
       ),
     ],
@@ -4924,7 +4924,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207NI0002X'),
+        code: FhirCode('207NI0002X'),
         display: 'Clinical & Laboratory Dermatological Immunology',
       ),
     ],
@@ -4933,7 +4933,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207NP0225X'),
+        code: FhirCode('207NP0225X'),
         display: 'Pediatric Dermatology',
       ),
     ],
@@ -4942,7 +4942,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207NS0135X'),
+        code: FhirCode('207NS0135X'),
         display: 'Procedural Dermatology',
       ),
     ],
@@ -4951,7 +4951,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207P00000X'),
+        code: FhirCode('207P00000X'),
         display: 'Emergency Medicine',
       ),
     ],
@@ -4960,7 +4960,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207PE0004X'),
+        code: FhirCode('207PE0004X'),
         display: 'Emergency Medical Services',
       ),
     ],
@@ -4969,7 +4969,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207PE0005X'),
+        code: FhirCode('207PE0005X'),
         display: 'Undersea and Hyperbaric Medicine',
       ),
     ],
@@ -4978,7 +4978,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207PP0204X'),
+        code: FhirCode('207PP0204X'),
         display: 'Pediatric Emergency Medicine',
       ),
     ],
@@ -4987,7 +4987,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207PS0010X'),
+        code: FhirCode('207PS0010X'),
         display: 'Sports Medicine',
       ),
     ],
@@ -4996,7 +4996,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207PT0002X'),
+        code: FhirCode('207PT0002X'),
         display: 'Medical Toxicology',
       ),
     ],
@@ -5005,7 +5005,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207Q00000X'),
+        code: FhirCode('207Q00000X'),
         display: 'Family Medicine',
       ),
     ],
@@ -5014,7 +5014,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207QA0000X'),
+        code: FhirCode('207QA0000X'),
         display: 'Adolescent Medicine',
       ),
     ],
@@ -5023,7 +5023,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207QA0505X'),
+        code: FhirCode('207QA0505X'),
         display: 'Adult Medicine',
       ),
     ],
@@ -5032,7 +5032,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207QB0002X'),
+        code: FhirCode('207QB0002X'),
         display: 'Obesity Medicine',
       ),
     ],
@@ -5041,7 +5041,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207QG0300X'),
+        code: FhirCode('207QG0300X'),
         display: 'Geriatric Medicine',
       ),
     ],
@@ -5050,7 +5050,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207QS1201X'),
+        code: FhirCode('207QS1201X'),
         display: 'Sleep Medicine',
       ),
     ],
@@ -5059,7 +5059,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207R00000X'),
+        code: FhirCode('207R00000X'),
         display: 'Internal Medicine',
       ),
     ],
@@ -5069,7 +5069,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RA0001X'),
+        code: FhirCode('207RA0001X'),
         display: 'Advanced Heart Failure and Transplant Cardiology',
       ),
     ],
@@ -5078,7 +5078,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RC0000X'),
+        code: FhirCode('207RC0000X'),
         display: 'Cardiovascular Disease',
       ),
     ],
@@ -5087,7 +5087,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RC0001X'),
+        code: FhirCode('207RC0001X'),
         display: 'Clinical Cardiac Electrophysiology',
       ),
     ],
@@ -5096,7 +5096,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RE0101X'),
+        code: FhirCode('207RE0101X'),
         display: 'Endocrinology, Diabetes & Metabolism',
       ),
     ],
@@ -5105,7 +5105,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RH0000X'),
+        code: FhirCode('207RH0000X'),
         display: 'Hematology',
       ),
     ],
@@ -5114,7 +5114,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RH0003X'),
+        code: FhirCode('207RH0003X'),
         display: 'Hematology & Oncology',
       ),
     ],
@@ -5123,7 +5123,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RH0005X'),
+        code: FhirCode('207RH0005X'),
         display: 'Hypertension Specialist',
       ),
     ],
@@ -5132,7 +5132,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RI0008X'),
+        code: FhirCode('207RI0008X'),
         display: 'Hepatology',
       ),
     ],
@@ -5141,7 +5141,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RI0011X'),
+        code: FhirCode('207RI0011X'),
         display: 'Interventional Cardiology',
       ),
     ],
@@ -5150,7 +5150,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RI0200X'),
+        code: FhirCode('207RI0200X'),
         display: 'Infectious Disease',
       ),
     ],
@@ -5159,7 +5159,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RM1200X'),
+        code: FhirCode('207RM1200X'),
         display: 'Magnetic Resonance Imaging (MRI)',
       ),
     ],
@@ -5168,7 +5168,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RP1001X'),
+        code: FhirCode('207RP1001X'),
         display: 'Pulmonary Disease',
       ),
     ],
@@ -5177,7 +5177,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RR0500X'),
+        code: FhirCode('207RR0500X'),
         display: 'Rheumatology',
       ),
     ],
@@ -5186,7 +5186,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RT0003X'),
+        code: FhirCode('207RT0003X'),
         display: 'Transplant Hepatology',
       ),
     ],
@@ -5195,7 +5195,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207RX0202X'),
+        code: FhirCode('207RX0202X'),
         display: 'Medical Oncology',
       ),
     ],
@@ -5204,7 +5204,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207SC0300X'),
+        code: FhirCode('207SC0300X'),
         display: 'Medical Genetics',
       ),
     ],
@@ -5213,7 +5213,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207SG0201X'),
+        code: FhirCode('207SG0201X'),
         display: 'Clinical Genetics (M.D.)',
       ),
     ],
@@ -5222,7 +5222,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207SG0202X'),
+        code: FhirCode('207SG0202X'),
         display: 'Clinical Biochemical Genetics',
       ),
     ],
@@ -5231,7 +5231,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207SG0203X'),
+        code: FhirCode('207SG0203X'),
         display: 'Clinical Molecular Genetics',
       ),
     ],
@@ -5240,7 +5240,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207SG0205X'),
+        code: FhirCode('207SG0205X'),
         display: 'Ph.D. Medical Genetics',
       ),
     ],
@@ -5249,7 +5249,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207SM0001X'),
+        code: FhirCode('207SM0001X'),
         display: 'Molecular Genetic Pathology',
       ),
     ],
@@ -5258,7 +5258,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207T00000X'),
+        code: FhirCode('207T00000X'),
         display: 'Neurological Surgery',
       ),
     ],
@@ -5267,7 +5267,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207U00000X'),
+        code: FhirCode('207U00000X'),
         display: 'Nuclear Medicine',
       ),
     ],
@@ -5276,7 +5276,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207UN0901X'),
+        code: FhirCode('207UN0901X'),
         display: 'Nuclear Cardiology',
       ),
     ],
@@ -5285,7 +5285,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207UN0902X'),
+        code: FhirCode('207UN0902X'),
         display: 'Nuclear Imaging & Therapy',
       ),
     ],
@@ -5294,7 +5294,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207UN0903X'),
+        code: FhirCode('207UN0903X'),
         display: 'In Vivo & In Vitro Nuclear Medicine',
       ),
     ],
@@ -5303,7 +5303,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207V00000X'),
+        code: FhirCode('207V00000X'),
         display: 'Obstetrics & Gynecology',
       ),
     ],
@@ -5312,7 +5312,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207VE0102X'),
+        code: FhirCode('207VE0102X'),
         display: 'Reproductive Endocrinology',
       ),
     ],
@@ -5322,7 +5322,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207VF0040X'),
+        code: FhirCode('207VF0040X'),
         display: 'Female Pelvic Medicine and Reconstructive Surgery',
       ),
     ],
@@ -5331,7 +5331,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207VG0400X'),
+        code: FhirCode('207VG0400X'),
         display: 'Gynecology',
       ),
     ],
@@ -5340,7 +5340,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207VM0101X'),
+        code: FhirCode('207VM0101X'),
         display: 'Maternal & Fetal Medicine',
       ),
     ],
@@ -5349,7 +5349,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207VX0000X'),
+        code: FhirCode('207VX0000X'),
         display: 'Obstetrics',
       ),
     ],
@@ -5358,7 +5358,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207VX0201X'),
+        code: FhirCode('207VX0201X'),
         display: 'Gynecologic Oncology',
       ),
     ],
@@ -5367,7 +5367,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207W00000X'),
+        code: FhirCode('207W00000X'),
         display: 'Ophthalmology',
       ),
     ],
@@ -5377,7 +5377,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207WX0200X'),
+        code: FhirCode('207WX0200X'),
         display: 'Ophthalmic Plastic and Reconstructive Surgery',
       ),
     ],
@@ -5386,7 +5386,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207X00000X'),
+        code: FhirCode('207X00000X'),
         display: 'Orthopaedic Surgery',
       ),
     ],
@@ -5395,7 +5395,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207XP3100X'),
+        code: FhirCode('207XP3100X'),
         display: 'Pediatric Orthopaedic Surgery',
       ),
     ],
@@ -5404,7 +5404,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207XS0106X'),
+        code: FhirCode('207XS0106X'),
         display: 'Hand Surgery',
       ),
     ],
@@ -5414,7 +5414,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207XS0114X'),
+        code: FhirCode('207XS0114X'),
         display: 'Adult Reconstructive Orthopaedic Surgery',
       ),
     ],
@@ -5423,7 +5423,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207XS0117X'),
+        code: FhirCode('207XS0117X'),
         display: 'Orthopaedic Surgery of the Spine',
       ),
     ],
@@ -5432,7 +5432,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207XX0004X'),
+        code: FhirCode('207XX0004X'),
         display: 'Foot and Ankle Surgery',
       ),
     ],
@@ -5441,7 +5441,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207XX0801X'),
+        code: FhirCode('207XX0801X'),
         display: 'Orthopaedic Trauma',
       ),
     ],
@@ -5450,7 +5450,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207Y00000X'),
+        code: FhirCode('207Y00000X'),
         display: 'Otolaryngology',
       ),
     ],
@@ -5459,7 +5459,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207YP0228X'),
+        code: FhirCode('207YP0228X'),
         display: 'Pediatric Otolaryngology',
       ),
     ],
@@ -5468,7 +5468,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207YS0123X'),
+        code: FhirCode('207YS0123X'),
         display: 'Facial Plastic Surgery',
       ),
     ],
@@ -5477,7 +5477,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207YX0007X'),
+        code: FhirCode('207YX0007X'),
         display: 'Plastic Surgery within the Head & Neck',
       ),
     ],
@@ -5486,7 +5486,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207YX0602X'),
+        code: FhirCode('207YX0602X'),
         display: 'Otolaryngic Allergy',
       ),
     ],
@@ -5495,7 +5495,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207YX0901X'),
+        code: FhirCode('207YX0901X'),
         display: 'Otology & Neurotology',
       ),
     ],
@@ -5504,7 +5504,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207YX0905X'),
+        code: FhirCode('207YX0905X'),
         display: 'Otolaryngology/Facial Plastic Surgery',
       ),
     ],
@@ -5513,7 +5513,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZB0001X'),
+        code: FhirCode('207ZB0001X'),
         display: 'Pathology',
       ),
     ],
@@ -5522,7 +5522,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZC0006X'),
+        code: FhirCode('207ZC0006X'),
         display: 'Clinical Pathology',
       ),
     ],
@@ -5531,7 +5531,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZC0008X'),
+        code: FhirCode('207ZC0008X'),
         display: 'Clinical Informatics',
       ),
     ],
@@ -5540,7 +5540,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZC0500X'),
+        code: FhirCode('207ZC0500X'),
         display: 'Cytopathology',
       ),
     ],
@@ -5549,7 +5549,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZF0201X'),
+        code: FhirCode('207ZF0201X'),
         display: 'Forensic Pathology',
       ),
     ],
@@ -5558,7 +5558,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZI0100X'),
+        code: FhirCode('207ZI0100X'),
         display: 'Immunopathology',
       ),
     ],
@@ -5567,7 +5567,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZM0300X'),
+        code: FhirCode('207ZM0300X'),
         display: 'Medical Microbiology',
       ),
     ],
@@ -5576,7 +5576,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZN0500X'),
+        code: FhirCode('207ZN0500X'),
         display: 'Neuropathology',
       ),
     ],
@@ -5585,7 +5585,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZP0101X'),
+        code: FhirCode('207ZP0101X'),
         display: 'Anatomic Pathology',
       ),
     ],
@@ -5594,7 +5594,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZP0102X'),
+        code: FhirCode('207ZP0102X'),
         display: 'Anatomic Pathology & Clinical Pathology',
       ),
     ],
@@ -5603,7 +5603,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZP0104X'),
+        code: FhirCode('207ZP0104X'),
         display: 'Chemical Pathology',
       ),
     ],
@@ -5612,7 +5612,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZP0105X'),
+        code: FhirCode('207ZP0105X'),
         display: 'Clinical Pathology/Laboratory Medicine',
       ),
     ],
@@ -5621,7 +5621,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('207ZP0213X'),
+        code: FhirCode('207ZP0213X'),
         display: 'Pediatric Pathology',
       ),
     ],
@@ -5630,7 +5630,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080C0008X'),
+        code: FhirCode('2080C0008X'),
         display: 'Child Abuse Pediatrics',
       ),
     ],
@@ -5639,7 +5639,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080N0001X'),
+        code: FhirCode('2080N0001X'),
         display: 'Neonatal-Perinatal Medicine',
       ),
     ],
@@ -5648,7 +5648,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0006X'),
+        code: FhirCode('2080P0006X'),
         display: 'Developmental � Behavioral Pediatrics',
       ),
     ],
@@ -5657,7 +5657,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0008X'),
+        code: FhirCode('2080P0008X'),
         display: 'Neurodevelopmental Disabilities',
       ),
     ],
@@ -5666,7 +5666,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0201X'),
+        code: FhirCode('2080P0201X'),
         display: 'Pediatric Allergy/Immunology',
       ),
     ],
@@ -5675,7 +5675,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0202X'),
+        code: FhirCode('2080P0202X'),
         display: 'Pediatric Cardiology',
       ),
     ],
@@ -5684,7 +5684,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0203X'),
+        code: FhirCode('2080P0203X'),
         display: 'Pediatric Critical Care Medicine',
       ),
     ],
@@ -5693,7 +5693,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0205X'),
+        code: FhirCode('2080P0205X'),
         display: 'Pediatric Endocrinology',
       ),
     ],
@@ -5702,7 +5702,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0206X'),
+        code: FhirCode('2080P0206X'),
         display: 'Pediatric Gastroenterology',
       ),
     ],
@@ -5711,7 +5711,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0207X'),
+        code: FhirCode('2080P0207X'),
         display: 'Pediatric Hematology-Oncology',
       ),
     ],
@@ -5720,7 +5720,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0208X'),
+        code: FhirCode('2080P0208X'),
         display: 'Pediatric Infectious Diseases',
       ),
     ],
@@ -5729,7 +5729,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0210X'),
+        code: FhirCode('2080P0210X'),
         display: 'Pediatric Nephrology',
       ),
     ],
@@ -5738,7 +5738,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0214X'),
+        code: FhirCode('2080P0214X'),
         display: 'Pediatric Pulmonology',
       ),
     ],
@@ -5747,7 +5747,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080P0216X'),
+        code: FhirCode('2080P0216X'),
         display: 'Pediatric Rheumatology',
       ),
     ],
@@ -5756,7 +5756,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2080T0004X'),
+        code: FhirCode('2080T0004X'),
         display: 'Pediatric Transplant Hepatology',
       ),
     ],
@@ -5765,7 +5765,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('208100000X'),
+        code: FhirCode('208100000X'),
         display: 'Physical Medicine & Rehabilitation',
       ),
     ],
@@ -5774,7 +5774,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2081N0008X'),
+        code: FhirCode('2081N0008X'),
         display: 'Neuromuscular Medicine',
       ),
     ],
@@ -5783,7 +5783,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2081P0004X'),
+        code: FhirCode('2081P0004X'),
         display: 'Spinal Cord Injury Medicine',
       ),
     ],
@@ -5792,7 +5792,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2081P0010X'),
+        code: FhirCode('2081P0010X'),
         display: 'Pediatric Rehabilitation Medicine',
       ),
     ],
@@ -5801,7 +5801,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2081P0301X'),
+        code: FhirCode('2081P0301X'),
         display: 'Brain Injury Medicine',
       ),
     ],
@@ -5811,7 +5811,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2082S0099X'),
+        code: FhirCode('2082S0099X'),
         display: 'Plastic Surgery Within the Head and Neck',
       ),
     ],
@@ -5820,7 +5820,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2082S0105X'),
+        code: FhirCode('2082S0105X'),
         display: 'Surgery of the Hand',
       ),
     ],
@@ -5829,7 +5829,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2083A0100X'),
+        code: FhirCode('2083A0100X'),
         display: 'Preventive Medicine',
       ),
     ],
@@ -5839,7 +5839,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2083P0500X'),
+        code: FhirCode('2083P0500X'),
         display: 'Preventive Medicine/Occupational Environmental Medicine',
       ),
     ],
@@ -5849,7 +5849,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2083P0901X'),
+        code: FhirCode('2083P0901X'),
         display: 'Public Health & General Preventive Medicine',
       ),
     ],
@@ -5858,7 +5858,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2083X0100X'),
+        code: FhirCode('2083X0100X'),
         display: 'Occupational Medicine',
       ),
     ],
@@ -5867,7 +5867,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084A0401X'),
+        code: FhirCode('2084A0401X'),
         display: 'Psychiatry & Neurology',
       ),
     ],
@@ -5876,7 +5876,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084A2900X'),
+        code: FhirCode('2084A2900X'),
         display: 'Neurocritical Care',
       ),
     ],
@@ -5885,7 +5885,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084B0040X'),
+        code: FhirCode('2084B0040X'),
         display: 'Behavioral Neurology & Neuropsychiatry',
       ),
     ],
@@ -5894,7 +5894,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084D0003X'),
+        code: FhirCode('2084D0003X'),
         display: 'Diagnostic Neuroimaging',
       ),
     ],
@@ -5903,7 +5903,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084F0202X'),
+        code: FhirCode('2084F0202X'),
         display: 'Forensic Psychiatry',
       ),
     ],
@@ -5913,7 +5913,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084N0402X'),
+        code: FhirCode('2084N0402X'),
         display: 'Neurology with Special Qualifications in Child Neurology',
       ),
     ],
@@ -5922,7 +5922,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084N0600X'),
+        code: FhirCode('2084N0600X'),
         display: 'Clinical Neurophysiology',
       ),
     ],
@@ -5931,7 +5931,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084P0015X'),
+        code: FhirCode('2084P0015X'),
         display: 'Psychosomatic Medicine',
       ),
     ],
@@ -5940,7 +5940,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084P0800X'),
+        code: FhirCode('2084P0800X'),
         display: 'Psychiatry',
       ),
     ],
@@ -5949,7 +5949,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084P0802X'),
+        code: FhirCode('2084P0802X'),
         display: 'Addiction Psychiatry',
       ),
     ],
@@ -5958,7 +5958,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084P0804X'),
+        code: FhirCode('2084P0804X'),
         display: 'Child & Adolescent Psychiatry',
       ),
     ],
@@ -5967,7 +5967,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084P0805X'),
+        code: FhirCode('2084P0805X'),
         display: 'Geriatric Psychiatry',
       ),
     ],
@@ -5976,7 +5976,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2084V0102X'),
+        code: FhirCode('2084V0102X'),
         display: 'Vascular Neurology',
       ),
     ],
@@ -5985,7 +5985,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085N0700X'),
+        code: FhirCode('2085N0700X'),
         display: 'Neuroradiology',
       ),
     ],
@@ -5994,7 +5994,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085N0904X'),
+        code: FhirCode('2085N0904X'),
         display: 'Nuclear Radiology',
       ),
     ],
@@ -6003,7 +6003,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085P0229X'),
+        code: FhirCode('2085P0229X'),
         display: 'Pediatric Radiology',
       ),
     ],
@@ -6012,7 +6012,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085R0001X'),
+        code: FhirCode('2085R0001X'),
         display: 'Radiation Oncology',
       ),
     ],
@@ -6021,7 +6021,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085R0202X'),
+        code: FhirCode('2085R0202X'),
         display: 'Diagnostic Radiology',
       ),
     ],
@@ -6030,7 +6030,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085R0203X'),
+        code: FhirCode('2085R0203X'),
         display: 'Therapeutic Radiology',
       ),
     ],
@@ -6039,7 +6039,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085R0204X'),
+        code: FhirCode('2085R0204X'),
         display: 'Vascular & Interventional Radiology',
       ),
     ],
@@ -6048,7 +6048,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085R0205X'),
+        code: FhirCode('2085R0205X'),
         display: 'Radiological Physics',
       ),
     ],
@@ -6057,7 +6057,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2085U0001X'),
+        code: FhirCode('2085U0001X'),
         display: 'Diagnostic Ultrasound',
       ),
     ],
@@ -6066,7 +6066,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('208600000X'),
+        code: FhirCode('208600000X'),
         display: 'Surgery',
       ),
     ],
@@ -6075,7 +6075,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2086S0102X'),
+        code: FhirCode('2086S0102X'),
         display: 'Surgical Critical Care',
       ),
     ],
@@ -6084,7 +6084,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2086S0120X'),
+        code: FhirCode('2086S0120X'),
         display: 'Pediatric Surgery',
       ),
     ],
@@ -6093,7 +6093,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2086S0122X'),
+        code: FhirCode('2086S0122X'),
         display: 'Plastic and Reconstructive Surgery',
       ),
     ],
@@ -6102,7 +6102,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2086S0127X'),
+        code: FhirCode('2086S0127X'),
         display: 'Trauma Surgery',
       ),
     ],
@@ -6111,7 +6111,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2086S0129X'),
+        code: FhirCode('2086S0129X'),
         display: 'Vascular Surgery',
       ),
     ],
@@ -6120,7 +6120,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2086X0206X'),
+        code: FhirCode('2086X0206X'),
         display: 'Surgical Oncology',
       ),
     ],
@@ -6129,7 +6129,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2088P0231X'),
+        code: FhirCode('2088P0231X'),
         display: 'Pediatric Urology',
       ),
     ],
@@ -6138,7 +6138,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('208C00000X'),
+        code: FhirCode('208C00000X'),
         display: 'Colon & Rectal Surgery',
       ),
     ],
@@ -6148,7 +6148,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('208G00000X'),
+        code: FhirCode('208G00000X'),
         display: 'Thoracic Surgery (Cardiothoracic Vascular Surgery)',
       ),
     ],
@@ -6157,7 +6157,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('208M00000X'),
+        code: FhirCode('208M00000X'),
         display: 'Hospitalist',
       ),
     ],
@@ -6166,7 +6166,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('208U00000X'),
+        code: FhirCode('208U00000X'),
         display: 'Clinical Pharmacology',
       ),
     ],
@@ -6175,7 +6175,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('208VP0014X'),
+        code: FhirCode('208VP0014X'),
         display: 'Interventional Pain Medicine',
       ),
     ],
@@ -6185,7 +6185,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-12'),
+        code: FhirCode('base-12'),
         display: 'Podiatric Medicine & Surgery Service Providers',
       ),
     ],
@@ -6194,7 +6194,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('211D00000X'),
+        code: FhirCode('211D00000X'),
         display: 'Assistant, Podiatric',
       ),
     ],
@@ -6203,7 +6203,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('213E00000X'),
+        code: FhirCode('213E00000X'),
         display: 'Podiatrist',
       ),
     ],
@@ -6212,7 +6212,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('213EP0504X'),
+        code: FhirCode('213EP0504X'),
         display: 'Public Medicine',
       ),
     ],
@@ -6221,7 +6221,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('213EP1101X'),
+        code: FhirCode('213EP1101X'),
         display: 'Primary Podiatric Medicine',
       ),
     ],
@@ -6230,7 +6230,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('213ES0103X'),
+        code: FhirCode('213ES0103X'),
         display: 'Foot & Ankle Surgery',
       ),
     ],
@@ -6239,7 +6239,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('213ES0131X'),
+        code: FhirCode('213ES0131X'),
         display: 'Foot Surgery',
       ),
     ],
@@ -6250,7 +6250,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-13'),
+        code: FhirCode('base-13'),
         display:
             'Respiratory, Developmental, Rehabilitative and Restorative Service Providers',
       ),
@@ -6260,7 +6260,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('221700000X'),
+        code: FhirCode('221700000X'),
         display: 'Art Therapist',
       ),
     ],
@@ -6269,7 +6269,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('222Q00000X'),
+        code: FhirCode('222Q00000X'),
         display: 'Developmental Therapist',
       ),
     ],
@@ -6278,7 +6278,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('222Z00000X'),
+        code: FhirCode('222Z00000X'),
         display: 'Orthotist',
       ),
     ],
@@ -6287,7 +6287,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224900000X'),
+        code: FhirCode('224900000X'),
         display: 'Mastectomy Fitter',
       ),
     ],
@@ -6296,7 +6296,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224L00000X'),
+        code: FhirCode('224L00000X'),
         display: 'Pedorthist',
       ),
     ],
@@ -6305,7 +6305,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224P00000X'),
+        code: FhirCode('224P00000X'),
         display: 'Prosthetist',
       ),
     ],
@@ -6314,7 +6314,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224Y00000X'),
+        code: FhirCode('224Y00000X'),
         display: 'Clinical Exercise Physiologist',
       ),
     ],
@@ -6323,7 +6323,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224Z00000X'),
+        code: FhirCode('224Z00000X'),
         display: 'Occupational Therapy Assistant',
       ),
     ],
@@ -6332,7 +6332,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224ZE0001X'),
+        code: FhirCode('224ZE0001X'),
         display: 'Environmental Modification',
       ),
     ],
@@ -6341,7 +6341,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224ZF0002X'),
+        code: FhirCode('224ZF0002X'),
         display: 'Feeding, Eating & Swallowing',
       ),
     ],
@@ -6350,7 +6350,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224ZL0004X'),
+        code: FhirCode('224ZL0004X'),
         display: 'Low Vision',
       ),
     ],
@@ -6359,7 +6359,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('224ZR0403X'),
+        code: FhirCode('224ZR0403X'),
         display: 'Driving and Community Mobility',
       ),
     ],
@@ -6368,7 +6368,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225000000X'),
+        code: FhirCode('225000000X'),
         display: 'Orthotic Fitter',
       ),
     ],
@@ -6377,7 +6377,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225100000X'),
+        code: FhirCode('225100000X'),
         display: 'Physical Therapist',
       ),
     ],
@@ -6386,7 +6386,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2251C2600X'),
+        code: FhirCode('2251C2600X'),
         display: 'Cardiopulmonary',
       ),
     ],
@@ -6395,7 +6395,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2251E1200X'),
+        code: FhirCode('2251E1200X'),
         display: 'Ergonomics',
       ),
     ],
@@ -6404,7 +6404,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2251E1300X'),
+        code: FhirCode('2251E1300X'),
         display: 'Electrophysiology, Clinical',
       ),
     ],
@@ -6413,7 +6413,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2251G0304X'),
+        code: FhirCode('2251G0304X'),
         display: 'Geriatrics',
       ),
     ],
@@ -6422,7 +6422,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2251H1200X'),
+        code: FhirCode('2251H1200X'),
         display: 'Hand',
       ),
     ],
@@ -6431,7 +6431,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2251H1300X'),
+        code: FhirCode('2251H1300X'),
         display: 'Human Factors',
       ),
     ],
@@ -6440,7 +6440,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2251S0007X'),
+        code: FhirCode('2251S0007X'),
         display: 'Sports',
       ),
     ],
@@ -6449,7 +6449,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225200000X'),
+        code: FhirCode('225200000X'),
         display: 'Physical Therapy Assistant',
       ),
     ],
@@ -6458,7 +6458,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225400000X'),
+        code: FhirCode('225400000X'),
         display: 'Rehabilitation Practitioner',
       ),
     ],
@@ -6467,7 +6467,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225500000X'),
+        code: FhirCode('225500000X'),
         display: 'Specialist/Technologist',
       ),
     ],
@@ -6476,7 +6476,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2255A2300X'),
+        code: FhirCode('2255A2300X'),
         display: 'Athletic Trainer',
       ),
     ],
@@ -6485,7 +6485,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2255R0406X'),
+        code: FhirCode('2255R0406X'),
         display: 'Rehabilitation, Blind',
       ),
     ],
@@ -6494,7 +6494,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225600000X'),
+        code: FhirCode('225600000X'),
         display: 'Dance Therapist',
       ),
     ],
@@ -6503,7 +6503,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225700000X'),
+        code: FhirCode('225700000X'),
         display: 'Massage Therapist',
       ),
     ],
@@ -6512,7 +6512,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225800000X'),
+        code: FhirCode('225800000X'),
         display: 'Recreation Therapist',
       ),
     ],
@@ -6521,7 +6521,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225A00000X'),
+        code: FhirCode('225A00000X'),
         display: 'Music Therapist',
       ),
     ],
@@ -6530,7 +6530,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225B00000X'),
+        code: FhirCode('225B00000X'),
         display: 'Pulmonary Function Technologist',
       ),
     ],
@@ -6539,7 +6539,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225C00000X'),
+        code: FhirCode('225C00000X'),
         display: 'Rehabilitation Counselor',
       ),
     ],
@@ -6548,7 +6548,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225CA2400X'),
+        code: FhirCode('225CA2400X'),
         display: 'Assistive Technology Practitioner',
       ),
     ],
@@ -6557,7 +6557,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225CA2500X'),
+        code: FhirCode('225CA2500X'),
         display: 'Assistive Technology Supplier',
       ),
     ],
@@ -6567,7 +6567,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225CX0006X'),
+        code: FhirCode('225CX0006X'),
         display: 'Orientation and Mobility Training Provider',
       ),
     ],
@@ -6576,7 +6576,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225X00000X'),
+        code: FhirCode('225X00000X'),
         display: 'Occupational Therapist',
       ),
     ],
@@ -6585,7 +6585,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225XN1300X'),
+        code: FhirCode('225XN1300X'),
         display: 'Neurorehabilitation',
       ),
     ],
@@ -6594,7 +6594,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('225XP0019X'),
+        code: FhirCode('225XP0019X'),
         display: 'Physical Rehabilitation',
       ),
     ],
@@ -6603,7 +6603,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('226000000X'),
+        code: FhirCode('226000000X'),
         display: 'Recreational Therapist Assistant',
       ),
     ],
@@ -6612,7 +6612,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('226300000X'),
+        code: FhirCode('226300000X'),
         display: 'Kinesiotherapist',
       ),
     ],
@@ -6621,7 +6621,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('227800000X'),
+        code: FhirCode('227800000X'),
         display: 'Respiratory Therapist, Certified',
       ),
     ],
@@ -6630,7 +6630,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278E0002X'),
+        code: FhirCode('2278E0002X'),
         display: 'Emergency Care',
       ),
     ],
@@ -6639,7 +6639,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278G0305X'),
+        code: FhirCode('2278G0305X'),
         display: 'Geriatric Care',
       ),
     ],
@@ -6648,7 +6648,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278G1100X'),
+        code: FhirCode('2278G1100X'),
         display: 'General Care',
       ),
     ],
@@ -6657,7 +6657,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278P1004X'),
+        code: FhirCode('2278P1004X'),
         display: 'Pulmonary Diagnostics',
       ),
     ],
@@ -6666,7 +6666,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278P1005X'),
+        code: FhirCode('2278P1005X'),
         display: 'Pulmonary Rehabilitation',
       ),
     ],
@@ -6675,7 +6675,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278P3800X'),
+        code: FhirCode('2278P3800X'),
         display: 'Palliative/Hospice',
       ),
     ],
@@ -6684,7 +6684,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278P3900X'),
+        code: FhirCode('2278P3900X'),
         display: 'Neonatal/Pediatrics',
       ),
     ],
@@ -6693,7 +6693,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278P4000X'),
+        code: FhirCode('2278P4000X'),
         display: 'Patient Transport',
       ),
     ],
@@ -6702,7 +6702,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2278S1500X'),
+        code: FhirCode('2278S1500X'),
         display: 'SNF/Subacute Care',
       ),
     ],
@@ -6711,7 +6711,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('227900000X'),
+        code: FhirCode('227900000X'),
         display: 'Respiratory Therapist, Registered',
       ),
     ],
@@ -6720,7 +6720,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('229N00000X'),
+        code: FhirCode('229N00000X'),
         display: 'Anaplastologist',
       ),
     ],
@@ -6730,7 +6730,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-14'),
+        code: FhirCode('base-14'),
         display: 'Speech, Language and Hearing Service Providers',
       ),
     ],
@@ -6739,7 +6739,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('231H00000X'),
+        code: FhirCode('231H00000X'),
         display: 'Audiologist',
       ),
     ],
@@ -6748,7 +6748,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2355A2700X'),
+        code: FhirCode('2355A2700X'),
         display: 'Audiology Assistant',
       ),
     ],
@@ -6757,7 +6757,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2355S0801X'),
+        code: FhirCode('2355S0801X'),
         display: 'Speech-Language Assistant',
       ),
     ],
@@ -6766,7 +6766,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('235Z00000X'),
+        code: FhirCode('235Z00000X'),
         display: 'Speech-Language Pathologist',
       ),
     ],
@@ -6775,7 +6775,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('237600000X'),
+        code: FhirCode('237600000X'),
         display: 'Audiologist-Hearing Aid Fitter',
       ),
     ],
@@ -6784,7 +6784,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('237700000X'),
+        code: FhirCode('237700000X'),
         display: 'Hearing Instrument Specialist',
       ),
     ],
@@ -6795,7 +6795,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-15'),
+        code: FhirCode('base-15'),
         display:
             'Technologists, Technicians & Other Technical Service Providers',
       ),
@@ -6805,7 +6805,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('242T00000X'),
+        code: FhirCode('242T00000X'),
         display: 'Perfusionist',
       ),
     ],
@@ -6814,7 +6814,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('243U00000X'),
+        code: FhirCode('243U00000X'),
         display: 'Radiology Practitioner Assistant',
       ),
     ],
@@ -6823,7 +6823,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246Q00000X'),
+        code: FhirCode('246Q00000X'),
         display: 'Spec/Tech, Pathology',
       ),
     ],
@@ -6832,7 +6832,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QB0000X'),
+        code: FhirCode('246QB0000X'),
         display: 'Blood Banking',
       ),
     ],
@@ -6841,7 +6841,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QC1000X'),
+        code: FhirCode('246QC1000X'),
         display: 'Chemistry',
       ),
     ],
@@ -6850,7 +6850,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QC2700X'),
+        code: FhirCode('246QC2700X'),
         display: 'Cytotechnology',
       ),
     ],
@@ -6859,7 +6859,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QH0401X'),
+        code: FhirCode('246QH0401X'),
         display: 'Hemapheresis Practitioner',
       ),
     ],
@@ -6868,7 +6868,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QH0600X'),
+        code: FhirCode('246QH0600X'),
         display: 'Histology',
       ),
     ],
@@ -6877,7 +6877,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QI0000X'),
+        code: FhirCode('246QI0000X'),
         display: 'Immunology',
       ),
     ],
@@ -6886,7 +6886,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QL0900X'),
+        code: FhirCode('246QL0900X'),
         display: 'Laboratory Management',
       ),
     ],
@@ -6895,7 +6895,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QL0901X'),
+        code: FhirCode('246QL0901X'),
         display: 'Laboratory Management, Diplomate',
       ),
     ],
@@ -6904,7 +6904,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QM0706X'),
+        code: FhirCode('246QM0706X'),
         display: 'Medical Technologist',
       ),
     ],
@@ -6913,7 +6913,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246QM0900X'),
+        code: FhirCode('246QM0900X'),
         display: 'Microbiology',
       ),
     ],
@@ -6922,7 +6922,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246R00000X'),
+        code: FhirCode('246R00000X'),
         display: 'Technician, Pathology',
       ),
     ],
@@ -6931,7 +6931,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246RM2200X'),
+        code: FhirCode('246RM2200X'),
         display: 'Medical Laboratory',
       ),
     ],
@@ -6940,7 +6940,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246RP1900X'),
+        code: FhirCode('246RP1900X'),
         display: 'Phlebotomy',
       ),
     ],
@@ -6949,7 +6949,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246W00000X'),
+        code: FhirCode('246W00000X'),
         display: 'Technician, Cardiology',
       ),
     ],
@@ -6958,7 +6958,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246X00000X'),
+        code: FhirCode('246X00000X'),
         display: 'Spec/Tech, Cardiovascular',
       ),
     ],
@@ -6967,7 +6967,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246XC2901X'),
+        code: FhirCode('246XC2901X'),
         display: 'Cardiovascular Invasive Specialist',
       ),
     ],
@@ -6976,7 +6976,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246XC2903X'),
+        code: FhirCode('246XC2903X'),
         display: 'Vascular Specialist',
       ),
     ],
@@ -6985,7 +6985,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246XS1301X'),
+        code: FhirCode('246XS1301X'),
         display: 'Sonography',
       ),
     ],
@@ -6994,7 +6994,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246Y00000X'),
+        code: FhirCode('246Y00000X'),
         display: 'Spec/Tech, Health Info',
       ),
     ],
@@ -7003,7 +7003,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246YC3301X'),
+        code: FhirCode('246YC3301X'),
         display: 'Coding Specialist, Hospital Based',
       ),
     ],
@@ -7013,7 +7013,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246YC3302X'),
+        code: FhirCode('246YC3302X'),
         display: 'Coding Specialist, Physician Office Based',
       ),
     ],
@@ -7022,7 +7022,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246YR1600X'),
+        code: FhirCode('246YR1600X'),
         display: 'Registered Record Administrator',
       ),
     ],
@@ -7031,7 +7031,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246Z00000X'),
+        code: FhirCode('246Z00000X'),
         display: 'Specialist/Technologist, Other',
       ),
     ],
@@ -7040,7 +7040,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZA2600X'),
+        code: FhirCode('246ZA2600X'),
         display: 'Art, Medical',
       ),
     ],
@@ -7049,7 +7049,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZB0301X'),
+        code: FhirCode('246ZB0301X'),
         display: 'Biomedical Engineering',
       ),
     ],
@@ -7058,7 +7058,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZB0302X'),
+        code: FhirCode('246ZB0302X'),
         display: 'Biomedical Photographer',
       ),
     ],
@@ -7067,7 +7067,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZB0500X'),
+        code: FhirCode('246ZB0500X'),
         display: 'Biochemist',
       ),
     ],
@@ -7076,7 +7076,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZB0600X'),
+        code: FhirCode('246ZB0600X'),
         display: 'Biostatistician',
       ),
     ],
@@ -7085,7 +7085,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZC0007X'),
+        code: FhirCode('246ZC0007X'),
         display: 'Surgical Assistant',
       ),
     ],
@@ -7094,7 +7094,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZE0500X'),
+        code: FhirCode('246ZE0500X'),
         display: 'EEG',
       ),
     ],
@@ -7103,7 +7103,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZE0600X'),
+        code: FhirCode('246ZE0600X'),
         display: 'Electroneurodiagnostic',
       ),
     ],
@@ -7112,7 +7112,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZG0701X'),
+        code: FhirCode('246ZG0701X'),
         display: 'Graphics Methods',
       ),
     ],
@@ -7121,7 +7121,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZG1000X'),
+        code: FhirCode('246ZG1000X'),
         display: 'Geneticist, Medical (PhD)',
       ),
     ],
@@ -7130,7 +7130,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZI1000X'),
+        code: FhirCode('246ZI1000X'),
         display: 'Illustration, Medical',
       ),
     ],
@@ -7139,7 +7139,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZS0410X'),
+        code: FhirCode('246ZS0410X'),
         display: 'Surgical Technologist',
       ),
     ],
@@ -7148,7 +7148,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('246ZX2200X'),
+        code: FhirCode('246ZX2200X'),
         display: 'Orthopedic Assistant',
       ),
     ],
@@ -7157,7 +7157,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('247000000X'),
+        code: FhirCode('247000000X'),
         display: 'Technician, Health Information',
       ),
     ],
@@ -7166,7 +7166,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2470A2800X'),
+        code: FhirCode('2470A2800X'),
         display: 'Assistant Record Technician',
       ),
     ],
@@ -7175,7 +7175,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('247100000X'),
+        code: FhirCode('247100000X'),
         display: 'Radiologic Technologist',
       ),
     ],
@@ -7184,7 +7184,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471B0102X'),
+        code: FhirCode('2471B0102X'),
         display: 'Bone Densitometry',
       ),
     ],
@@ -7194,7 +7194,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471C1101X'),
+        code: FhirCode('2471C1101X'),
         display: 'Cardiovascular-Interventional Technology',
       ),
     ],
@@ -7203,7 +7203,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471C1106X'),
+        code: FhirCode('2471C1106X'),
         display: 'Cardiac-Interventional Technology',
       ),
     ],
@@ -7212,7 +7212,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471C3401X'),
+        code: FhirCode('2471C3401X'),
         display: 'Computed Tomography',
       ),
     ],
@@ -7221,7 +7221,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471C3402X'),
+        code: FhirCode('2471C3402X'),
         display: 'Radiography',
       ),
     ],
@@ -7230,7 +7230,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471M1202X'),
+        code: FhirCode('2471M1202X'),
         display: 'Magnetic Resonance Imaging',
       ),
     ],
@@ -7239,7 +7239,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471M2300X'),
+        code: FhirCode('2471M2300X'),
         display: 'Mammography',
       ),
     ],
@@ -7248,7 +7248,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471N0900X'),
+        code: FhirCode('2471N0900X'),
         display: 'Nuclear Medicine Technology',
       ),
     ],
@@ -7257,7 +7257,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471Q0001X'),
+        code: FhirCode('2471Q0001X'),
         display: 'Quality Management',
       ),
     ],
@@ -7266,7 +7266,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471R0002X'),
+        code: FhirCode('2471R0002X'),
         display: 'Radiation Therapy',
       ),
     ],
@@ -7275,7 +7275,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471V0105X'),
+        code: FhirCode('2471V0105X'),
         display: 'Vascular Sonography',
       ),
     ],
@@ -7284,7 +7284,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2471V0106X'),
+        code: FhirCode('2471V0106X'),
         display: 'Vascular-Interventional Technology',
       ),
     ],
@@ -7293,7 +7293,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('247200000X'),
+        code: FhirCode('247200000X'),
         display: 'Technician, Other',
       ),
     ],
@@ -7302,7 +7302,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2472D0500X'),
+        code: FhirCode('2472D0500X'),
         display: 'Darkroom',
       ),
     ],
@@ -7311,7 +7311,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2472R0900X'),
+        code: FhirCode('2472R0900X'),
         display: 'Renal Dialysis',
       ),
     ],
@@ -7320,7 +7320,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2472V0600X'),
+        code: FhirCode('2472V0600X'),
         display: 'Veterinary',
       ),
     ],
@@ -7329,7 +7329,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-16'),
+        code: FhirCode('base-16'),
         display: 'Agencies',
       ),
     ],
@@ -7338,7 +7338,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251300000X'),
+        code: FhirCode('251300000X'),
         display: 'Local Education Agency (LEA)',
       ),
     ],
@@ -7348,7 +7348,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251C00000X'),
+        code: FhirCode('251C00000X'),
         display: 'Day Training, Developmentally Disabled Services',
       ),
     ],
@@ -7357,7 +7357,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251F00000X'),
+        code: FhirCode('251F00000X'),
         display: 'Home Infusion',
       ),
     ],
@@ -7366,7 +7366,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251G00000X'),
+        code: FhirCode('251G00000X'),
         display: 'Hospice Care, Community Based',
       ),
     ],
@@ -7375,7 +7375,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251J00000X'),
+        code: FhirCode('251J00000X'),
         display: 'Nursing Care',
       ),
     ],
@@ -7384,7 +7384,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251K00000X'),
+        code: FhirCode('251K00000X'),
         display: 'Public Health or Welfare',
       ),
     ],
@@ -7393,7 +7393,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251S00000X'),
+        code: FhirCode('251S00000X'),
         display: 'Community/Behavioral Health',
       ),
     ],
@@ -7402,7 +7402,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251T00000X'),
+        code: FhirCode('251T00000X'),
         display: 'PACE Provider Organization',
       ),
     ],
@@ -7411,7 +7411,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251V00000X'),
+        code: FhirCode('251V00000X'),
         display: 'Voluntary or Charitable',
       ),
     ],
@@ -7420,7 +7420,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('251X00000X'),
+        code: FhirCode('251X00000X'),
         display: 'Supports Brokerage',
       ),
     ],
@@ -7429,7 +7429,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('252Y00000X'),
+        code: FhirCode('252Y00000X'),
         display: 'Early Intervention Provider Agency',
       ),
     ],
@@ -7438,7 +7438,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('253J00000X'),
+        code: FhirCode('253J00000X'),
         display: 'Foster Care Agency',
       ),
     ],
@@ -7447,7 +7447,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('253Z00000X'),
+        code: FhirCode('253Z00000X'),
         display: 'In Home Supportive Care',
       ),
     ],
@@ -7456,7 +7456,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-17'),
+        code: FhirCode('base-17'),
         display: 'Ambulatory Health Care Facilities',
       ),
     ],
@@ -7465,7 +7465,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261Q00000X'),
+        code: FhirCode('261Q00000X'),
         display: 'Clinic/Center',
       ),
     ],
@@ -7474,7 +7474,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QA0005X'),
+        code: FhirCode('261QA0005X'),
         display: 'Ambulatory Family Planning Facility',
       ),
     ],
@@ -7483,7 +7483,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QA0006X'),
+        code: FhirCode('261QA0006X'),
         display: 'Ambulatory Fertility Facility',
       ),
     ],
@@ -7492,7 +7492,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QA0600X'),
+        code: FhirCode('261QA0600X'),
         display: 'Adult Day Care',
       ),
     ],
@@ -7501,7 +7501,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QA0900X'),
+        code: FhirCode('261QA0900X'),
         display: 'Amputee',
       ),
     ],
@@ -7510,7 +7510,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QA1903X'),
+        code: FhirCode('261QA1903X'),
         display: 'Ambulatory Surgical',
       ),
     ],
@@ -7519,7 +7519,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QA3000X'),
+        code: FhirCode('261QA3000X'),
         display: 'Augmentative Communication',
       ),
     ],
@@ -7528,7 +7528,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QB0400X'),
+        code: FhirCode('261QB0400X'),
         display: 'Birthing',
       ),
     ],
@@ -7537,7 +7537,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QC0050X'),
+        code: FhirCode('261QC0050X'),
         display: 'Critical Access Hospital',
       ),
     ],
@@ -7546,7 +7546,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QC1800X'),
+        code: FhirCode('261QC1800X'),
         display: 'Corporate Health',
       ),
     ],
@@ -7555,7 +7555,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QD0000X'),
+        code: FhirCode('261QD0000X'),
         display: 'Dental',
       ),
     ],
@@ -7564,7 +7564,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QD1600X'),
+        code: FhirCode('261QD1600X'),
         display: 'Developmental Disabilities',
       ),
     ],
@@ -7573,7 +7573,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QE0700X'),
+        code: FhirCode('261QE0700X'),
         display: 'End-Stage Renal Disease (ESRD) Treatment',
       ),
     ],
@@ -7582,7 +7582,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QE0800X'),
+        code: FhirCode('261QE0800X'),
         display: 'Endoscopy',
       ),
     ],
@@ -7591,7 +7591,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QF0050X'),
+        code: FhirCode('261QF0050X'),
         display: 'Family Planning, Non-Surgical',
       ),
     ],
@@ -7600,7 +7600,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QF0400X'),
+        code: FhirCode('261QF0400X'),
         display: 'Federally Qualified Health Center (FQHC)',
       ),
     ],
@@ -7609,7 +7609,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QG0250X'),
+        code: FhirCode('261QG0250X'),
         display: 'Genetics',
       ),
     ],
@@ -7618,7 +7618,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QH0700X'),
+        code: FhirCode('261QH0700X'),
         display: 'Hearing and Speech',
       ),
     ],
@@ -7627,7 +7627,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QL0400X'),
+        code: FhirCode('261QL0400X'),
         display: 'Lithotripsy',
       ),
     ],
@@ -7637,7 +7637,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM0801X'),
+        code: FhirCode('261QM0801X'),
         display: 'Mental Health (Including Community Mental Health Center)',
       ),
     ],
@@ -7646,7 +7646,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM0850X'),
+        code: FhirCode('261QM0850X'),
         display: 'Adult Mental Health',
       ),
     ],
@@ -7655,7 +7655,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM0855X'),
+        code: FhirCode('261QM0855X'),
         display: 'Adolescent and Children Mental Health',
       ),
     ],
@@ -7664,7 +7664,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM1000X'),
+        code: FhirCode('261QM1000X'),
         display: 'Migrant Health',
       ),
     ],
@@ -7673,7 +7673,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM1100X'),
+        code: FhirCode('261QM1100X'),
         display: 'Military/U.S. Coast Guard Outpatient',
       ),
     ],
@@ -7683,7 +7683,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM1101X'),
+        code: FhirCode('261QM1101X'),
         display: 'Military and U.S. Coast Guard Ambulatory Procedure',
       ),
     ],
@@ -7693,7 +7693,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM1102X'),
+        code: FhirCode('261QM1102X'),
         display: 'Military Outpatient Operational (Transportable) Component',
       ),
     ],
@@ -7704,7 +7704,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM1103X'),
+        code: FhirCode('261QM1103X'),
         display:
             'Military Ambulatory Procedure Visits Operational (Transportable)',
       ),
@@ -7714,7 +7714,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM2500X'),
+        code: FhirCode('261QM2500X'),
         display: 'Medical Specialty',
       ),
     ],
@@ -7723,7 +7723,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM2800X'),
+        code: FhirCode('261QM2800X'),
         display: 'Methadone Clinic',
       ),
     ],
@@ -7733,7 +7733,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QM3000X'),
+        code: FhirCode('261QM3000X'),
         display: 'Medically Fragile Intants and Children Day Care',
       ),
     ],
@@ -7742,7 +7742,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QP0904X'),
+        code: FhirCode('261QP0904X'),
         display: 'Public Health, Federal',
       ),
     ],
@@ -7751,7 +7751,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QP0905X'),
+        code: FhirCode('261QP0905X'),
         display: 'Public Health, State or Local',
       ),
     ],
@@ -7760,7 +7760,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QP1100X'),
+        code: FhirCode('261QP1100X'),
         display: 'Podiatric',
       ),
     ],
@@ -7769,7 +7769,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QP2000X'),
+        code: FhirCode('261QP2000X'),
         display: 'Physical Therapy',
       ),
     ],
@@ -7778,7 +7778,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QP2300X'),
+        code: FhirCode('261QP2300X'),
         display: 'Primary Care',
       ),
     ],
@@ -7787,7 +7787,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QP2400X'),
+        code: FhirCode('261QP2400X'),
         display: 'Prison Health',
       ),
     ],
@@ -7796,7 +7796,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QP3300X'),
+        code: FhirCode('261QP3300X'),
         display: 'Pain',
       ),
     ],
@@ -7805,7 +7805,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR0206X'),
+        code: FhirCode('261QR0206X'),
         display: 'Radiology, Mammography',
       ),
     ],
@@ -7814,7 +7814,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR0207X'),
+        code: FhirCode('261QR0207X'),
         display: 'Radiology, Mobile Mammography',
       ),
     ],
@@ -7823,7 +7823,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR0208X'),
+        code: FhirCode('261QR0208X'),
         display: 'Radiology, Mobile',
       ),
     ],
@@ -7834,7 +7834,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR0401X'),
+        code: FhirCode('261QR0401X'),
         display:
             'Rehabilitation, Comprehensive Outpatient Rehabilitation Facility (CORF)',
       ),
@@ -7844,7 +7844,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR0404X'),
+        code: FhirCode('261QR0404X'),
         display: 'Rehabilitation, Cardiac Facilities',
       ),
     ],
@@ -7853,7 +7853,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR0405X'),
+        code: FhirCode('261QR0405X'),
         display: 'Rehabilitation, Substance Use Disorder',
       ),
     ],
@@ -7862,7 +7862,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR0800X'),
+        code: FhirCode('261QR0800X'),
         display: 'Recovery Care',
       ),
     ],
@@ -7871,7 +7871,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR1100X'),
+        code: FhirCode('261QR1100X'),
         display: 'Research',
       ),
     ],
@@ -7880,7 +7880,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QR1300X'),
+        code: FhirCode('261QR1300X'),
         display: 'Rural Health',
       ),
     ],
@@ -7889,7 +7889,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QS0132X'),
+        code: FhirCode('261QS0132X'),
         display: 'Ophthalmologic Surgery',
       ),
     ],
@@ -7898,7 +7898,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QS1000X'),
+        code: FhirCode('261QS1000X'),
         display: 'Student Health',
       ),
     ],
@@ -7907,7 +7907,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QS1200X'),
+        code: FhirCode('261QS1200X'),
         display: 'Sleep Disorder Diagnostic',
       ),
     ],
@@ -7916,7 +7916,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QU0200X'),
+        code: FhirCode('261QU0200X'),
         display: 'Urgent Care',
       ),
     ],
@@ -7925,7 +7925,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QV0200X'),
+        code: FhirCode('261QV0200X'),
         display: 'VA',
       ),
     ],
@@ -7934,7 +7934,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('261QX0203X'),
+        code: FhirCode('261QX0203X'),
         display: 'Oncology, Radiation',
       ),
     ],
@@ -7943,7 +7943,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-18'),
+        code: FhirCode('base-18'),
         display: 'Hospital Units',
       ),
     ],
@@ -7952,7 +7952,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('273100000X'),
+        code: FhirCode('273100000X'),
         display: 'Epilepsy Unit',
       ),
     ],
@@ -7961,7 +7961,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('273R00000X'),
+        code: FhirCode('273R00000X'),
         display: 'Psychiatric Unit',
       ),
     ],
@@ -7970,7 +7970,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('273Y00000X'),
+        code: FhirCode('273Y00000X'),
         display: 'Rehabilitation Unit',
       ),
     ],
@@ -7979,7 +7979,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('275N00000X'),
+        code: FhirCode('275N00000X'),
         display: 'Medicare Defined Swing Bed Unit',
       ),
     ],
@@ -7989,7 +7989,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('276400000X'),
+        code: FhirCode('276400000X'),
         display: 'Rehabilitation, Substance Use Disorder Unit',
       ),
     ],
@@ -7998,7 +7998,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-19'),
+        code: FhirCode('base-19'),
         display: 'Hospitals',
       ),
     ],
@@ -8007,7 +8007,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('281P00000X'),
+        code: FhirCode('281P00000X'),
         display: 'Chronic Disease Hospital',
       ),
     ],
@@ -8016,7 +8016,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('281PC2000X'),
+        code: FhirCode('281PC2000X'),
         display: 'Children',
       ),
     ],
@@ -8025,7 +8025,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('282E00000X'),
+        code: FhirCode('282E00000X'),
         display: 'Long Term Care Hospital',
       ),
     ],
@@ -8035,7 +8035,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('282J00000X'),
+        code: FhirCode('282J00000X'),
         display: 'Religious Nonmedical Health Care Institution',
       ),
     ],
@@ -8044,7 +8044,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('282N00000X'),
+        code: FhirCode('282N00000X'),
         display: 'General Acute Care Hospital',
       ),
     ],
@@ -8053,7 +8053,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('282NC0060X'),
+        code: FhirCode('282NC0060X'),
         display: 'Critical Access',
       ),
     ],
@@ -8062,7 +8062,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('282NR1301X'),
+        code: FhirCode('282NR1301X'),
         display: 'Rural',
       ),
     ],
@@ -8071,7 +8071,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('283Q00000X'),
+        code: FhirCode('283Q00000X'),
         display: 'Psychiatric Hospital',
       ),
     ],
@@ -8080,7 +8080,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('283X00000X'),
+        code: FhirCode('283X00000X'),
         display: 'Rehabilitation Hospital',
       ),
     ],
@@ -8089,7 +8089,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('284300000X'),
+        code: FhirCode('284300000X'),
         display: 'Special Hospital',
       ),
     ],
@@ -8098,7 +8098,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('286500000X'),
+        code: FhirCode('286500000X'),
         display: 'Military Hospital',
       ),
     ],
@@ -8107,7 +8107,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2865M2000X'),
+        code: FhirCode('2865M2000X'),
         display: 'Military General Acute Care Hospital',
       ),
     ],
@@ -8118,7 +8118,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('2865X1600X'),
+        code: FhirCode('2865X1600X'),
         display:
             'Military General Acute Care Hospital. Operational (Transportable)',
       ),
@@ -8128,7 +8128,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('287300000X'),
+        code: FhirCode('287300000X'),
         display: 'Christian Science Sanitorium',
       ),
     ],
@@ -8137,7 +8137,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-20'),
+        code: FhirCode('base-20'),
         display: 'Laboratories',
       ),
     ],
@@ -8146,7 +8146,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('291900000X'),
+        code: FhirCode('291900000X'),
         display: 'Military Clinical Medical Laboratory',
       ),
     ],
@@ -8155,7 +8155,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('291U00000X'),
+        code: FhirCode('291U00000X'),
         display: 'Clinical Medical Laboratory',
       ),
     ],
@@ -8164,7 +8164,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('292200000X'),
+        code: FhirCode('292200000X'),
         display: 'Dental Laboratory',
       ),
     ],
@@ -8173,7 +8173,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('293D00000X'),
+        code: FhirCode('293D00000X'),
         display: 'Physiological Laboratory',
       ),
     ],
@@ -8182,7 +8182,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-21'),
+        code: FhirCode('base-21'),
         display: 'Managed Care Organizations',
       ),
     ],
@@ -8191,7 +8191,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('302F00000X'),
+        code: FhirCode('302F00000X'),
         display: 'Exclusive Provider Organization',
       ),
     ],
@@ -8200,7 +8200,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('302R00000X'),
+        code: FhirCode('302R00000X'),
         display: 'Health Maintenance Organization',
       ),
     ],
@@ -8209,7 +8209,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('305R00000X'),
+        code: FhirCode('305R00000X'),
         display: 'Preferred Provider Organization',
       ),
     ],
@@ -8218,7 +8218,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('305S00000X'),
+        code: FhirCode('305S00000X'),
         display: 'Point of Service',
       ),
     ],
@@ -8227,7 +8227,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-22'),
+        code: FhirCode('base-22'),
         display: 'Nursing & Custodial Care Facilities',
       ),
     ],
@@ -8236,7 +8236,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('310400000X'),
+        code: FhirCode('310400000X'),
         display: 'Assisted Living Facility',
       ),
     ],
@@ -8245,7 +8245,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3104A0625X'),
+        code: FhirCode('3104A0625X'),
         display: 'Assisted Living, Mental Illness',
       ),
     ],
@@ -8254,7 +8254,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3104A0630X'),
+        code: FhirCode('3104A0630X'),
         display: 'Assisted Living, Behavioral Disturbances',
       ),
     ],
@@ -8264,7 +8264,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('310500000X'),
+        code: FhirCode('310500000X'),
         display: 'Intermediate Care Facility, Mental Illness',
       ),
     ],
@@ -8273,7 +8273,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('311500000X'),
+        code: FhirCode('311500000X'),
         display: 'Alzheimer Center (Dementia Center)',
       ),
     ],
@@ -8282,7 +8282,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('311Z00000X'),
+        code: FhirCode('311Z00000X'),
         display: 'Custodial Care Facility',
       ),
     ],
@@ -8291,7 +8291,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('311ZA0620X'),
+        code: FhirCode('311ZA0620X'),
         display: 'Adult Care Home',
       ),
     ],
@@ -8301,7 +8301,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('313M00000X'),
+        code: FhirCode('313M00000X'),
         display: 'Nursing Facility/Intermediate Care Facility',
       ),
     ],
@@ -8310,7 +8310,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('314000000X'),
+        code: FhirCode('314000000X'),
         display: 'Skilled Nursing Facility',
       ),
     ],
@@ -8319,7 +8319,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3140N1450X'),
+        code: FhirCode('3140N1450X'),
         display: 'Nursing Care, Pediatric',
       ),
     ],
@@ -8328,7 +8328,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('315D00000X'),
+        code: FhirCode('315D00000X'),
         display: 'Hospice, Inpatient',
       ),
     ],
@@ -8338,7 +8338,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('315P00000X'),
+        code: FhirCode('315P00000X'),
         display: 'Intermediate Care Facility, Mentally Retarded',
       ),
     ],
@@ -8347,7 +8347,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('317400000X'),
+        code: FhirCode('317400000X'),
         display: 'Christian Science Facility',
       ),
     ],
@@ -8356,7 +8356,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-23'),
+        code: FhirCode('base-23'),
         display: 'Residential Treatment Facilities',
       ),
     ],
@@ -8367,7 +8367,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('320600000X'),
+        code: FhirCode('320600000X'),
         display:
             'Residential Treatment Facility, Mental Retardation and/or Developmental Disabilities',
       ),
@@ -8378,7 +8378,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('320700000X'),
+        code: FhirCode('320700000X'),
         display: 'Residential Treatment Facility, Physical Disabilities',
       ),
     ],
@@ -8389,7 +8389,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('320800000X'),
+        code: FhirCode('320800000X'),
         display:
             'Community Based Residential Treatment Facility, Mental Illness',
       ),
@@ -8401,7 +8401,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('320900000X'),
+        code: FhirCode('320900000X'),
         display:
             'Community Based Residential Treatment, Mental Retardation and/or Developmental Disabilities',
       ),
@@ -8413,7 +8413,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('322D00000X'),
+        code: FhirCode('322D00000X'),
         display:
             'Residential Treatment Facility, Emotionally Disturbed Children',
       ),
@@ -8424,7 +8424,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('323P00000X'),
+        code: FhirCode('323P00000X'),
         display: 'Psychiatric Residential Treatment Facility',
       ),
     ],
@@ -8433,7 +8433,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('324500000X'),
+        code: FhirCode('324500000X'),
         display: 'Substance Abuse Rehabilitation Facility',
       ),
     ],
@@ -8442,7 +8442,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3245S0500X'),
+        code: FhirCode('3245S0500X'),
         display: 'Substance Abuse Treatment, Children',
       ),
     ],
@@ -8451,7 +8451,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-24'),
+        code: FhirCode('base-24'),
         display: 'Suppliers',
       ),
     ],
@@ -8460,7 +8460,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('331L00000X'),
+        code: FhirCode('331L00000X'),
         display: 'Blood Bank',
       ),
     ],
@@ -8469,7 +8469,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332000000X'),
+        code: FhirCode('332000000X'),
         display: 'Military/U.S. Coast Guard Pharmacy',
       ),
     ],
@@ -8479,7 +8479,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332100000X'),
+        code: FhirCode('332100000X'),
         display: 'Department of Veterans Affairs (VA) Pharmacy',
       ),
     ],
@@ -8490,7 +8490,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332800000X'),
+        code: FhirCode('332800000X'),
         display:
             'Indian Health Service/Tribal/Urban Indian Health (I/T/U) Pharmacy',
       ),
@@ -8500,7 +8500,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332900000X'),
+        code: FhirCode('332900000X'),
         display: 'Non-Pharmacy Dispensing Site',
       ),
     ],
@@ -8510,7 +8510,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332B00000X'),
+        code: FhirCode('332B00000X'),
         display: 'Durable Medical Equipment & Medical Supplies',
       ),
     ],
@@ -8519,7 +8519,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332BC3200X'),
+        code: FhirCode('332BC3200X'),
         display: 'Customized Equipment',
       ),
     ],
@@ -8528,7 +8528,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332BD1200X'),
+        code: FhirCode('332BD1200X'),
         display: 'Dialysis Equipment & Supplies',
       ),
     ],
@@ -8537,7 +8537,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332BN1400X'),
+        code: FhirCode('332BN1400X'),
         display: 'Nursing Facility Supplies',
       ),
     ],
@@ -8546,7 +8546,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332BP3500X'),
+        code: FhirCode('332BP3500X'),
         display: 'Parenteral & Enteral Nutrition',
       ),
     ],
@@ -8555,7 +8555,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332BX2000X'),
+        code: FhirCode('332BX2000X'),
         display: 'Oxygen Equipment & Supplies',
       ),
     ],
@@ -8564,7 +8564,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332G00000X'),
+        code: FhirCode('332G00000X'),
         display: 'Eye Bank',
       ),
     ],
@@ -8574,7 +8574,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332H00000X'),
+        code: FhirCode('332H00000X'),
         display: 'Eyewear Supplier (Equipment, not the service)',
       ),
     ],
@@ -8583,7 +8583,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332S00000X'),
+        code: FhirCode('332S00000X'),
         display: 'Hearing Aid Equipment',
       ),
     ],
@@ -8592,7 +8592,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('332U00000X'),
+        code: FhirCode('332U00000X'),
         display: 'Home Delivered Meals',
       ),
     ],
@@ -8601,7 +8601,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('333300000X'),
+        code: FhirCode('333300000X'),
         display: 'Emergency Response System Companies',
       ),
     ],
@@ -8610,7 +8610,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('333600000X'),
+        code: FhirCode('333600000X'),
         display: 'Pharmacy',
       ),
     ],
@@ -8619,7 +8619,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336C0002X'),
+        code: FhirCode('3336C0002X'),
         display: 'Clinic Pharmacy',
       ),
     ],
@@ -8628,7 +8628,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336C0003X'),
+        code: FhirCode('3336C0003X'),
         display: 'Community/Retail Pharmacy',
       ),
     ],
@@ -8637,7 +8637,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336C0004X'),
+        code: FhirCode('3336C0004X'),
         display: 'Compounding Pharmacy',
       ),
     ],
@@ -8646,7 +8646,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336H0001X'),
+        code: FhirCode('3336H0001X'),
         display: 'Home Infusion Therapy Pharmacy',
       ),
     ],
@@ -8655,7 +8655,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336I0012X'),
+        code: FhirCode('3336I0012X'),
         display: 'Institutional Pharmacy',
       ),
     ],
@@ -8664,7 +8664,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336L0003X'),
+        code: FhirCode('3336L0003X'),
         display: 'Long Term Care Pharmacy',
       ),
     ],
@@ -8673,7 +8673,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336M0002X'),
+        code: FhirCode('3336M0002X'),
         display: 'Mail Order Pharmacy',
       ),
     ],
@@ -8682,7 +8682,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336M0003X'),
+        code: FhirCode('3336M0003X'),
         display: 'Managed Care Organization Pharmacy',
       ),
     ],
@@ -8691,7 +8691,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336N0007X'),
+        code: FhirCode('3336N0007X'),
         display: 'Nuclear Pharmacy',
       ),
     ],
@@ -8700,7 +8700,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3336S0011X'),
+        code: FhirCode('3336S0011X'),
         display: 'Specialty Pharmacy',
       ),
     ],
@@ -8709,7 +8709,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('335E00000X'),
+        code: FhirCode('335E00000X'),
         display: 'Prosthetic/Orthotic Supplier',
       ),
     ],
@@ -8718,7 +8718,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('335G00000X'),
+        code: FhirCode('335G00000X'),
         display: 'Medical Foods Supplier',
       ),
     ],
@@ -8727,7 +8727,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('335U00000X'),
+        code: FhirCode('335U00000X'),
         display: 'Organ Procurement Organization',
       ),
     ],
@@ -8738,7 +8738,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('335V00000X'),
+        code: FhirCode('335V00000X'),
         display:
             'Portable X-ray and/or Other Portable Diagnostic Imaging Supplier',
       ),
@@ -8748,7 +8748,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-25'),
+        code: FhirCode('base-25'),
         display: 'Transportation Services',
       ),
     ],
@@ -8757,7 +8757,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('341600000X'),
+        code: FhirCode('341600000X'),
         display: 'Ambulance',
       ),
     ],
@@ -8766,7 +8766,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3416A0800X'),
+        code: FhirCode('3416A0800X'),
         display: 'Air Transport',
       ),
     ],
@@ -8775,7 +8775,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3416L0300X'),
+        code: FhirCode('3416L0300X'),
         display: 'Land Transport',
       ),
     ],
@@ -8784,7 +8784,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3416S0300X'),
+        code: FhirCode('3416S0300X'),
         display: 'Water Transport',
       ),
     ],
@@ -8793,7 +8793,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('341800000X'),
+        code: FhirCode('341800000X'),
         display: 'Military/U.S. Coast Guard Transport',
       ),
     ],
@@ -8803,7 +8803,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3418M1110X'),
+        code: FhirCode('3418M1110X'),
         display: 'Military or U.S. Coast Guard Ambulance, Ground Transport',
       ),
     ],
@@ -8813,7 +8813,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3418M1120X'),
+        code: FhirCode('3418M1120X'),
         display: 'Military or U.S. Coast Guard Ambulance, Air Transport',
       ),
     ],
@@ -8823,7 +8823,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3418M1130X'),
+        code: FhirCode('3418M1130X'),
         display: 'Military or U.S. Coast Guard Ambulance, Water Transport',
       ),
     ],
@@ -8832,7 +8832,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('343800000X'),
+        code: FhirCode('343800000X'),
         display: 'Secured Medical Transport (VAN)',
       ),
     ],
@@ -8841,7 +8841,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('343900000X'),
+        code: FhirCode('343900000X'),
         display: 'Non-emergency Medical Transport (VAN)',
       ),
     ],
@@ -8850,7 +8850,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('344600000X'),
+        code: FhirCode('344600000X'),
         display: 'Taxi',
       ),
     ],
@@ -8859,7 +8859,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('344800000X'),
+        code: FhirCode('344800000X'),
         display: 'Air Carrier',
       ),
     ],
@@ -8868,7 +8868,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('347B00000X'),
+        code: FhirCode('347B00000X'),
         display: 'Bus',
       ),
     ],
@@ -8877,7 +8877,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('347C00000X'),
+        code: FhirCode('347C00000X'),
         display: 'Private Vehicle',
       ),
     ],
@@ -8886,7 +8886,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('347D00000X'),
+        code: FhirCode('347D00000X'),
         display: 'Train',
       ),
     ],
@@ -8895,7 +8895,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('347E00000X'),
+        code: FhirCode('347E00000X'),
         display: 'Transportation Broker',
       ),
     ],
@@ -8905,7 +8905,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-26'),
+        code: FhirCode('base-26'),
         display: 'Physician Assistants & Advanced Practice Nursing Providers',
       ),
     ],
@@ -8914,7 +8914,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363A00000X'),
+        code: FhirCode('363A00000X'),
         display: 'Physician Assistant',
       ),
     ],
@@ -8923,7 +8923,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363AM0700X'),
+        code: FhirCode('363AM0700X'),
         display: 'Medical',
       ),
     ],
@@ -8932,7 +8932,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363L00000X'),
+        code: FhirCode('363L00000X'),
         display: 'Nurse Practitioner',
       ),
     ],
@@ -8941,7 +8941,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363LA2100X'),
+        code: FhirCode('363LA2100X'),
         display: 'Acute Care',
       ),
     ],
@@ -8950,7 +8950,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363LA2200X'),
+        code: FhirCode('363LA2200X'),
         display: 'Adult Health',
       ),
     ],
@@ -8959,7 +8959,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363LN0000X'),
+        code: FhirCode('363LN0000X'),
         display: 'Neonatal',
       ),
     ],
@@ -8968,7 +8968,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363LN0005X'),
+        code: FhirCode('363LN0005X'),
         display: 'Neonatal, Critical Care',
       ),
     ],
@@ -8977,7 +8977,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363LP0222X'),
+        code: FhirCode('363LP0222X'),
         display: 'Pediatrics, Critical Care',
       ),
     ],
@@ -8986,7 +8986,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('363LW0102X'),
+        code: FhirCode('363LW0102X'),
         display: 'Women\'s Health',
       ),
     ],
@@ -8995,7 +8995,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364S00000X'),
+        code: FhirCode('364S00000X'),
         display: 'Clinical Nurse Specialist',
       ),
     ],
@@ -9004,7 +9004,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SC1501X'),
+        code: FhirCode('364SC1501X'),
         display: 'Community Health/Public Health',
       ),
     ],
@@ -9013,7 +9013,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SC2300X'),
+        code: FhirCode('364SC2300X'),
         display: 'Chronic Care',
       ),
     ],
@@ -9022,7 +9022,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SE1400X'),
+        code: FhirCode('364SE1400X'),
         display: 'Ethics',
       ),
     ],
@@ -9031,7 +9031,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SF0001X'),
+        code: FhirCode('364SF0001X'),
         display: 'Family Health',
       ),
     ],
@@ -9040,7 +9040,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SH1100X'),
+        code: FhirCode('364SH1100X'),
         display: 'Holistic',
       ),
     ],
@@ -9049,7 +9049,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SI0800X'),
+        code: FhirCode('364SI0800X'),
         display: 'Informatics',
       ),
     ],
@@ -9058,7 +9058,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SL0600X'),
+        code: FhirCode('364SL0600X'),
         display: 'Long-Term Care',
       ),
     ],
@@ -9067,7 +9067,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SP0810X'),
+        code: FhirCode('364SP0810X'),
         display: 'Psych/Mental Health, Child & Family',
       ),
     ],
@@ -9076,7 +9076,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SP0811X'),
+        code: FhirCode('364SP0811X'),
         display: 'Psych/Mental Health, Chronically Ill',
       ),
     ],
@@ -9085,7 +9085,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SP0812X'),
+        code: FhirCode('364SP0812X'),
         display: 'Psych/Mental Health, Community',
       ),
     ],
@@ -9094,7 +9094,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SP0813X'),
+        code: FhirCode('364SP0813X'),
         display: 'Psych/Mental Health, Geropsychiatric',
       ),
     ],
@@ -9103,7 +9103,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SP2800X'),
+        code: FhirCode('364SP2800X'),
         display: 'Perioperative',
       ),
     ],
@@ -9112,7 +9112,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364ST0500X'),
+        code: FhirCode('364ST0500X'),
         display: 'Transplantation',
       ),
     ],
@@ -9121,7 +9121,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('364SX0204X'),
+        code: FhirCode('364SX0204X'),
         display: 'Oncology, Pediatrics',
       ),
     ],
@@ -9130,7 +9130,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('367500000X'),
+        code: FhirCode('367500000X'),
         display: 'Nurse Anesthetist, Certified Registered',
       ),
     ],
@@ -9139,7 +9139,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('367A00000X'),
+        code: FhirCode('367A00000X'),
         display: 'Advanced Practice Midwife',
       ),
     ],
@@ -9148,7 +9148,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('367H00000X'),
+        code: FhirCode('367H00000X'),
         display: 'Anesthesiologist Assistant',
       ),
     ],
@@ -9157,7 +9157,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-27'),
+        code: FhirCode('base-27'),
         display: 'Nursing Service Related Providers',
       ),
     ],
@@ -9166,7 +9166,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('372500000X'),
+        code: FhirCode('372500000X'),
         display: 'Chore Provider',
       ),
     ],
@@ -9175,7 +9175,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('372600000X'),
+        code: FhirCode('372600000X'),
         display: 'Adult Companion',
       ),
     ],
@@ -9184,7 +9184,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('373H00000X'),
+        code: FhirCode('373H00000X'),
         display: 'Day Training/Habilitation Specialist',
       ),
     ],
@@ -9193,7 +9193,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('374700000X'),
+        code: FhirCode('374700000X'),
         display: 'Technician',
       ),
     ],
@@ -9202,7 +9202,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3747A0650X'),
+        code: FhirCode('3747A0650X'),
         display: 'Attendant Care Provider',
       ),
     ],
@@ -9211,7 +9211,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('3747P1801X'),
+        code: FhirCode('3747P1801X'),
         display: 'Personal Care Attendant',
       ),
     ],
@@ -9220,7 +9220,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('374J00000X'),
+        code: FhirCode('374J00000X'),
         display: 'Doula',
       ),
     ],
@@ -9229,7 +9229,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('374K00000X'),
+        code: FhirCode('374K00000X'),
         display: 'Religious Nonmedical Practitioner',
       ),
     ],
@@ -9238,7 +9238,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('374T00000X'),
+        code: FhirCode('374T00000X'),
         display: 'Religious Nonmedical Nursing Personnel',
       ),
     ],
@@ -9247,7 +9247,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('374U00000X'),
+        code: FhirCode('374U00000X'),
         display: 'Home Health Aide',
       ),
     ],
@@ -9256,7 +9256,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('376G00000X'),
+        code: FhirCode('376G00000X'),
         display: 'Nursing Home Administrator',
       ),
     ],
@@ -9265,7 +9265,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('376J00000X'),
+        code: FhirCode('376J00000X'),
         display: 'Homemaker',
       ),
     ],
@@ -9274,7 +9274,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('376K00000X'),
+        code: FhirCode('376K00000X'),
         display: 'Nurse\'s Aide',
       ),
     ],
@@ -9283,7 +9283,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-28'),
+        code: FhirCode('base-28'),
         display: 'Respite Care Facility',
       ),
     ],
@@ -9292,7 +9292,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('385H00000X'),
+        code: FhirCode('385H00000X'),
         display: 'Respite Care',
       ),
     ],
@@ -9301,7 +9301,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('385HR2050X'),
+        code: FhirCode('385HR2050X'),
         display: 'Respite Care Camp',
       ),
     ],
@@ -9310,7 +9310,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('385HR2055X'),
+        code: FhirCode('385HR2055X'),
         display: 'Respite Care, Mental Illness, Child',
       ),
     ],
@@ -9321,7 +9321,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('385HR2060X'),
+        code: FhirCode('385HR2060X'),
         display:
             'Respite Care, Mental Retardation and/or Developmental Disabilities, Child',
       ),
@@ -9332,7 +9332,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('385HR2065X'),
+        code: FhirCode('385HR2065X'),
         display: 'Respite Care, Physical Disabilities, Child',
       ),
     ],
@@ -9341,7 +9341,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('base-29'),
+        code: FhirCode('base-29'),
         display: 'Student, Health Care',
       ),
     ],
@@ -9352,7 +9352,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('390200000X'),
+        code: FhirCode('390200000X'),
         display:
             'Student in an Organized Health Care Education/Training Program',
       ),
@@ -9362,7 +9362,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://nucc.org/provider-taxonomy'),
-        code: Code('405300000X'),
+        code: FhirCode('405300000X'),
         display: 'Prevention Professional',
       ),
     ],
@@ -9371,7 +9371,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('223366009'),
+        code: FhirCode('223366009'),
         display: 'Healthcare professional',
       ),
     ],
@@ -9380,7 +9380,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('1421009'),
+        code: FhirCode('1421009'),
         display: 'Specialized surgeon',
       ),
     ],
@@ -9389,7 +9389,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3430008'),
+        code: FhirCode('3430008'),
         display: 'Radiation therapist',
       ),
     ],
@@ -9398,7 +9398,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('5275007'),
+        code: FhirCode('5275007'),
         display: 'Auxiliary nurse',
       ),
     ],
@@ -9407,7 +9407,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('6816002'),
+        code: FhirCode('6816002'),
         display: 'Specialized nurse',
       ),
     ],
@@ -9416,7 +9416,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('6868009'),
+        code: FhirCode('6868009'),
         display: 'Hospital administrator',
       ),
     ],
@@ -9425,7 +9425,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8724009'),
+        code: FhirCode('8724009'),
         display: 'Plastic surgeon',
       ),
     ],
@@ -9434,7 +9434,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('11661002'),
+        code: FhirCode('11661002'),
         display: 'Neuropathologist',
       ),
     ],
@@ -9443,7 +9443,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('11911009'),
+        code: FhirCode('11911009'),
         display: 'Nephrologist',
       ),
     ],
@@ -9452,7 +9452,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('11935004'),
+        code: FhirCode('11935004'),
         display: 'Obstetrician',
       ),
     ],
@@ -9461,7 +9461,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('13580004'),
+        code: FhirCode('13580004'),
         display: 'School dental assistant',
       ),
     ],
@@ -9470,7 +9470,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('14698002'),
+        code: FhirCode('14698002'),
         display: 'Medical microbiologist',
       ),
     ],
@@ -9479,7 +9479,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('17561000'),
+        code: FhirCode('17561000'),
         display: 'Cardiologist',
       ),
     ],
@@ -9488,7 +9488,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('18803008'),
+        code: FhirCode('18803008'),
         display: 'Dermatologist',
       ),
     ],
@@ -9497,7 +9497,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('18850004'),
+        code: FhirCode('18850004'),
         display: 'Laboratory hematologist',
       ),
     ],
@@ -9506,7 +9506,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('19244007'),
+        code: FhirCode('19244007'),
         display: 'Gerodontist',
       ),
     ],
@@ -9515,7 +9515,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('20145008'),
+        code: FhirCode('20145008'),
         display: 'Removable prosthodontist',
       ),
     ],
@@ -9524,7 +9524,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('21365001'),
+        code: FhirCode('21365001'),
         display: 'Specialized dentist',
       ),
     ],
@@ -9533,7 +9533,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('21450003'),
+        code: FhirCode('21450003'),
         display: 'Neuropsychiatrist',
       ),
     ],
@@ -9542,7 +9542,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('22515006'),
+        code: FhirCode('22515006'),
         display: 'Medical assistant',
       ),
     ],
@@ -9551,7 +9551,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('22731001'),
+        code: FhirCode('22731001'),
         display: 'Orthopedic surgeon',
       ),
     ],
@@ -9560,7 +9560,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('22983004'),
+        code: FhirCode('22983004'),
         display: 'Thoracic surgeon',
       ),
     ],
@@ -9569,7 +9569,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('23278007'),
+        code: FhirCode('23278007'),
         display: 'Community health physician',
       ),
     ],
@@ -9578,7 +9578,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24430003'),
+        code: FhirCode('24430003'),
         display: 'Physical medicine specialist',
       ),
     ],
@@ -9587,7 +9587,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24590004'),
+        code: FhirCode('24590004'),
         display: 'Urologist',
       ),
     ],
@@ -9596,7 +9596,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('25961008'),
+        code: FhirCode('25961008'),
         display: 'Electroencephalography specialist',
       ),
     ],
@@ -9605,7 +9605,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('26369006'),
+        code: FhirCode('26369006'),
         display: 'Public health nurse',
       ),
     ],
@@ -9614,7 +9614,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('28411006'),
+        code: FhirCode('28411006'),
         display: 'Neonatologist',
       ),
     ],
@@ -9623,7 +9623,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('28544002'),
+        code: FhirCode('28544002'),
         display: 'Medical biochemist',
       ),
     ],
@@ -9632,7 +9632,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('36682004'),
+        code: FhirCode('36682004'),
         display: 'Physiotherapist',
       ),
     ],
@@ -9641,7 +9641,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('37154003'),
+        code: FhirCode('37154003'),
         display: 'Periodontist',
       ),
     ],
@@ -9650,7 +9650,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('37504001'),
+        code: FhirCode('37504001'),
         display: 'Orthodontist',
       ),
     ],
@@ -9659,7 +9659,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('39677007'),
+        code: FhirCode('39677007'),
         display: 'Internal medicine specialist',
       ),
     ],
@@ -9668,7 +9668,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('40127002'),
+        code: FhirCode('40127002'),
         display: 'Dietitian (general)',
       ),
     ],
@@ -9677,7 +9677,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('40204001'),
+        code: FhirCode('40204001'),
         display: 'Hematologist',
       ),
     ],
@@ -9686,7 +9686,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('41672002'),
+        code: FhirCode('41672002'),
         display: 'Respiratory disease specialist',
       ),
     ],
@@ -9695,7 +9695,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('41904004'),
+        code: FhirCode('41904004'),
         display: 'Medical X-ray technician',
       ),
     ],
@@ -9704,7 +9704,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('43702002'),
+        code: FhirCode('43702002'),
         display: 'Occupational health nurse',
       ),
     ],
@@ -9713,7 +9713,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('44652006'),
+        code: FhirCode('44652006'),
         display: 'Pharmaceutical assistant',
       ),
     ],
@@ -9722,7 +9722,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('45419001'),
+        code: FhirCode('45419001'),
         display: 'Masseur',
       ),
     ],
@@ -9731,7 +9731,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('45440000'),
+        code: FhirCode('45440000'),
         display: 'Rheumatologist',
       ),
     ],
@@ -9740,7 +9740,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('45544007'),
+        code: FhirCode('45544007'),
         display: 'Neurosurgeon',
       ),
     ],
@@ -9749,7 +9749,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('45956004'),
+        code: FhirCode('45956004'),
         display: 'Sanitarian',
       ),
     ],
@@ -9758,7 +9758,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('48740002'),
+        code: FhirCode('48740002'),
         display: 'Philologist',
       ),
     ],
@@ -9767,7 +9767,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('49203003'),
+        code: FhirCode('49203003'),
         display: 'Dispensing optician',
       ),
     ],
@@ -9776,7 +9776,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('49993003'),
+        code: FhirCode('49993003'),
         display: 'Oral surgeon',
       ),
     ],
@@ -9785,7 +9785,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('50149000'),
+        code: FhirCode('50149000'),
         display: 'Endodontist',
       ),
     ],
@@ -9794,7 +9794,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('54503009'),
+        code: FhirCode('54503009'),
         display: 'Faith healer',
       ),
     ],
@@ -9803,7 +9803,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('56397003'),
+        code: FhirCode('56397003'),
         display: 'Neurologist',
       ),
     ],
@@ -9812,7 +9812,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('56466003'),
+        code: FhirCode('56466003'),
         display: 'Public health physician',
       ),
     ],
@@ -9821,7 +9821,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('56542007'),
+        code: FhirCode('56542007'),
         display: 'Medical record administrator',
       ),
     ],
@@ -9830,7 +9830,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('56545009'),
+        code: FhirCode('56545009'),
         display: 'Cardiovascular surgeon',
       ),
     ],
@@ -9839,7 +9839,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('57654006'),
+        code: FhirCode('57654006'),
         display: 'Fixed prosthodontist',
       ),
     ],
@@ -9848,7 +9848,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('59058001'),
+        code: FhirCode('59058001'),
         display: 'General physician',
       ),
     ],
@@ -9857,7 +9857,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('59169001'),
+        code: FhirCode('59169001'),
         display: 'Orthopedic technician',
       ),
     ],
@@ -9866,7 +9866,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('59317003'),
+        code: FhirCode('59317003'),
         display: 'Dental prosthesis maker and repairer',
       ),
     ],
@@ -9875,7 +9875,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('60008001'),
+        code: FhirCode('60008001'),
         display: 'Public health nutritionist',
       ),
     ],
@@ -9884,7 +9884,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('61207006'),
+        code: FhirCode('61207006'),
         display: 'Medical pathologist',
       ),
     ],
@@ -9893,7 +9893,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('61246008'),
+        code: FhirCode('61246008'),
         display: 'Laboratory medicine specialist',
       ),
     ],
@@ -9902,7 +9902,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('61345009'),
+        code: FhirCode('61345009'),
         display: 'Otorhinolaryngologist',
       ),
     ],
@@ -9911,7 +9911,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('61894003'),
+        code: FhirCode('61894003'),
         display: 'Endocrinologist',
       ),
     ],
@@ -9920,7 +9920,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('62247001'),
+        code: FhirCode('62247001'),
         display: 'Family medicine specialist',
       ),
     ],
@@ -9929,7 +9929,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('63098009'),
+        code: FhirCode('63098009'),
         display: 'Clinical immunologist',
       ),
     ],
@@ -9938,7 +9938,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('66476003'),
+        code: FhirCode('66476003'),
         display: 'Oral pathologist',
       ),
     ],
@@ -9947,7 +9947,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('66862007'),
+        code: FhirCode('66862007'),
         display: 'Radiologist',
       ),
     ],
@@ -9956,7 +9956,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('68867008'),
+        code: FhirCode('68867008'),
         display: 'Public health dentist',
       ),
     ],
@@ -9965,7 +9965,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('68950000'),
+        code: FhirCode('68950000'),
         display: 'Prosthodontist',
       ),
     ],
@@ -9974,7 +9974,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('69280009'),
+        code: FhirCode('69280009'),
         display: 'Specialized physician',
       ),
     ],
@@ -9983,7 +9983,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('71838004'),
+        code: FhirCode('71838004'),
         display: 'Gastroenterologist',
       ),
     ],
@@ -9992,7 +9992,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('73265009'),
+        code: FhirCode('73265009'),
         display: 'Nursing aid',
       ),
     ],
@@ -10001,7 +10001,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('75271001'),
+        code: FhirCode('75271001'),
         display: 'Professional midwife',
       ),
     ],
@@ -10010,7 +10010,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('76166008'),
+        code: FhirCode('76166008'),
         display: 'Practical aid (pharmacy)',
       ),
     ],
@@ -10019,7 +10019,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('76231001'),
+        code: FhirCode('76231001'),
         display: 'Osteopath',
       ),
     ],
@@ -10028,7 +10028,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('76899008'),
+        code: FhirCode('76899008'),
         display: 'Infectious disease specialist',
       ),
     ],
@@ -10037,7 +10037,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('78703002'),
+        code: FhirCode('78703002'),
         display: 'General surgeon',
       ),
     ],
@@ -10046,7 +10046,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('78729002'),
+        code: FhirCode('78729002'),
         display: 'Diagnostic radiologist',
       ),
     ],
@@ -10055,7 +10055,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('79898004'),
+        code: FhirCode('79898004'),
         display: 'Auxiliary midwife',
       ),
     ],
@@ -10064,7 +10064,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('80409005'),
+        code: FhirCode('80409005'),
         display: 'Translator',
       ),
     ],
@@ -10073,7 +10073,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('80933006'),
+        code: FhirCode('80933006'),
         display: 'Nuclear medicine specialist',
       ),
     ],
@@ -10082,7 +10082,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('81464008'),
+        code: FhirCode('81464008'),
         display: 'Clinical pathologist',
       ),
     ],
@@ -10091,7 +10091,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('82296001'),
+        code: FhirCode('82296001'),
         display: 'Pediatrician',
       ),
     ],
@@ -10100,7 +10100,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('83189004'),
+        code: FhirCode('83189004'),
         display: 'Other professional nurse',
       ),
     ],
@@ -10109,7 +10109,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('83273008'),
+        code: FhirCode('83273008'),
         display: 'Anatomic pathologist',
       ),
     ],
@@ -10118,7 +10118,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('83685006'),
+        code: FhirCode('83685006'),
         display: 'Gynecologist',
       ),
     ],
@@ -10127,7 +10127,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('85733003'),
+        code: FhirCode('85733003'),
         display: 'General pathologist',
       ),
     ],
@@ -10136,7 +10136,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('88189002'),
+        code: FhirCode('88189002'),
         display: 'Anesthesiologist',
       ),
     ],
@@ -10146,7 +10146,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('88475002'),
+        code: FhirCode('88475002'),
         display: 'Other dietitians and public health nutritionists',
       ),
     ],
@@ -10155,7 +10155,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('90201008'),
+        code: FhirCode('90201008'),
         display: 'Pedodontist',
       ),
     ],
@@ -10164,7 +10164,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('90655003'),
+        code: FhirCode('90655003'),
         display: 'Geriatrics specialist',
       ),
     ],
@@ -10174,7 +10174,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('106291005'),
+        code: FhirCode('106291005'),
         display: 'Dietician AND/OR public health nutritionist',
       ),
     ],
@@ -10183,7 +10183,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('106292003'),
+        code: FhirCode('106292003'),
         display: 'Professional nurse',
       ),
     ],
@@ -10192,7 +10192,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('106293008'),
+        code: FhirCode('106293008'),
         display: 'Nursing personnel',
       ),
     ],
@@ -10201,7 +10201,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('106294002'),
+        code: FhirCode('106294002'),
         display: 'Midwifery personnel',
       ),
     ],
@@ -10211,7 +10211,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('106296000'),
+        code: FhirCode('106296000'),
         display: 'Physiotherapist AND/OR occupational therapist',
       ),
     ],
@@ -10221,7 +10221,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('106330007'),
+        code: FhirCode('106330007'),
         display: 'Philologist, translator AND/OR interpreter',
       ),
     ],
@@ -10230,7 +10230,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('112247003'),
+        code: FhirCode('112247003'),
         display: 'Medical doctor',
       ),
     ],
@@ -10239,7 +10239,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158965000'),
+        code: FhirCode('158965000'),
         display: 'Medical practitioner',
       ),
     ],
@@ -10248,7 +10248,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158966004'),
+        code: FhirCode('158966004'),
         display: 'Medical administrator - national',
       ),
     ],
@@ -10257,7 +10257,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158967008'),
+        code: FhirCode('158967008'),
         display: 'Consultant physician',
       ),
     ],
@@ -10266,7 +10266,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158968003'),
+        code: FhirCode('158968003'),
         display: 'Consultant surgeon',
       ),
     ],
@@ -10275,7 +10275,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158969006'),
+        code: FhirCode('158969006'),
         display: 'Consultant gynecology and obstetrics',
       ),
     ],
@@ -10284,7 +10284,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158971006'),
+        code: FhirCode('158971006'),
         display: 'Hospital registrar',
       ),
     ],
@@ -10293,7 +10293,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158972004'),
+        code: FhirCode('158972004'),
         display: 'House officer',
       ),
     ],
@@ -10302,7 +10302,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158973009'),
+        code: FhirCode('158973009'),
         display: 'Occupational physician',
       ),
     ],
@@ -10311,7 +10311,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158974003'),
+        code: FhirCode('158974003'),
         display: 'Clinical medical officer',
       ),
     ],
@@ -10320,7 +10320,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158975002'),
+        code: FhirCode('158975002'),
         display: 'Medical practitioner - teaching',
       ),
     ],
@@ -10329,7 +10329,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158977005'),
+        code: FhirCode('158977005'),
         display: 'Dental administrator',
       ),
     ],
@@ -10338,7 +10338,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158978000'),
+        code: FhirCode('158978000'),
         display: 'Dental consultant',
       ),
     ],
@@ -10347,7 +10347,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158979008'),
+        code: FhirCode('158979008'),
         display: 'Dental general practitioner',
       ),
     ],
@@ -10356,7 +10356,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158980006'),
+        code: FhirCode('158980006'),
         display: 'Dental practitioner - teaching',
       ),
     ],
@@ -10365,7 +10365,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158983008'),
+        code: FhirCode('158983008'),
         display: 'Nurse administrator - national',
       ),
     ],
@@ -10374,7 +10374,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158984002'),
+        code: FhirCode('158984002'),
         display: 'Nursing officer - region',
       ),
     ],
@@ -10383,7 +10383,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158985001'),
+        code: FhirCode('158985001'),
         display: 'Nursing officer - district',
       ),
     ],
@@ -10392,7 +10392,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158986000'),
+        code: FhirCode('158986000'),
         display: 'Nursing administrator - professional body',
       ),
     ],
@@ -10401,7 +10401,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158987009'),
+        code: FhirCode('158987009'),
         display: 'Nursing officer - division',
       ),
     ],
@@ -10410,7 +10410,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158988004'),
+        code: FhirCode('158988004'),
         display: 'Nurse education director',
       ),
     ],
@@ -10419,7 +10419,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158989007'),
+        code: FhirCode('158989007'),
         display: 'Occupational health nursing officer',
       ),
     ],
@@ -10428,7 +10428,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158990003'),
+        code: FhirCode('158990003'),
         display: 'Nursing officer',
       ),
     ],
@@ -10437,7 +10437,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158992006'),
+        code: FhirCode('158992006'),
         display: 'Midwifery sister',
       ),
     ],
@@ -10446,7 +10446,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158993001'),
+        code: FhirCode('158993001'),
         display: 'Nursing sister (theatre)',
       ),
     ],
@@ -10455,7 +10455,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158994007'),
+        code: FhirCode('158994007'),
         display: 'Staff nurse',
       ),
     ],
@@ -10464,7 +10464,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158995008'),
+        code: FhirCode('158995008'),
         display: 'Staff midwife',
       ),
     ],
@@ -10473,7 +10473,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158996009'),
+        code: FhirCode('158996009'),
         display: 'State enrolled nurse',
       ),
     ],
@@ -10482,7 +10482,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158997000'),
+        code: FhirCode('158997000'),
         display: 'District nurse',
       ),
     ],
@@ -10491,7 +10491,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158998005'),
+        code: FhirCode('158998005'),
         display: 'Private nurse',
       ),
     ],
@@ -10500,7 +10500,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('158999002'),
+        code: FhirCode('158999002'),
         display: 'Community midwife',
       ),
     ],
@@ -10509,7 +10509,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159001001'),
+        code: FhirCode('159001001'),
         display: 'Clinic nurse',
       ),
     ],
@@ -10518,7 +10518,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159002008'),
+        code: FhirCode('159002008'),
         display: 'Practice nurse',
       ),
     ],
@@ -10527,7 +10527,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159003003'),
+        code: FhirCode('159003003'),
         display: 'School nurse',
       ),
     ],
@@ -10536,7 +10536,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159004009'),
+        code: FhirCode('159004009'),
         display: 'Nurse - teaching',
       ),
     ],
@@ -10545,7 +10545,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159005005'),
+        code: FhirCode('159005005'),
         display: 'Student nurse',
       ),
     ],
@@ -10554,7 +10554,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159006006'),
+        code: FhirCode('159006006'),
         display: 'Dental nurse',
       ),
     ],
@@ -10563,7 +10563,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159007002'),
+        code: FhirCode('159007002'),
         display: 'Community pediatric nurse',
       ),
     ],
@@ -10572,7 +10572,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159010009'),
+        code: FhirCode('159010009'),
         display: 'Hospital pharmacist',
       ),
     ],
@@ -10581,7 +10581,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159011008'),
+        code: FhirCode('159011008'),
         display: 'Retail pharmacist',
       ),
     ],
@@ -10590,7 +10590,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159012001'),
+        code: FhirCode('159012001'),
         display: 'Industrial pharmacist',
       ),
     ],
@@ -10599,7 +10599,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159014000'),
+        code: FhirCode('159014000'),
         display: 'Trainee pharmacist',
       ),
     ],
@@ -10608,7 +10608,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159016003'),
+        code: FhirCode('159016003'),
         display: 'Medical radiographer',
       ),
     ],
@@ -10617,7 +10617,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159017007'),
+        code: FhirCode('159017007'),
         display: 'Diagnostic radiographer',
       ),
     ],
@@ -10626,7 +10626,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159018002'),
+        code: FhirCode('159018002'),
         display: 'Therapeutic radiographer',
       ),
     ],
@@ -10635,7 +10635,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159019005'),
+        code: FhirCode('159019005'),
         display: 'Trainee radiographer',
       ),
     ],
@@ -10644,7 +10644,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159021000'),
+        code: FhirCode('159021000'),
         display: 'Ophthalmic optician',
       ),
     ],
@@ -10653,7 +10653,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159022007'),
+        code: FhirCode('159022007'),
         display: 'Trainee optician',
       ),
     ],
@@ -10662,7 +10662,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159025009'),
+        code: FhirCode('159025009'),
         display: 'Remedial gymnast',
       ),
     ],
@@ -10671,7 +10671,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159026005'),
+        code: FhirCode('159026005'),
         display: 'Speech and language therapist',
       ),
     ],
@@ -10680,7 +10680,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159028006'),
+        code: FhirCode('159028006'),
         display: 'Trainee remedial therapist',
       ),
     ],
@@ -10689,7 +10689,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159033005'),
+        code: FhirCode('159033005'),
         display: 'Dietician',
       ),
     ],
@@ -10698,7 +10698,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159035003'),
+        code: FhirCode('159035003'),
         display: 'Dental auxiliary',
       ),
     ],
@@ -10707,7 +10707,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159036002'),
+        code: FhirCode('159036002'),
         display: 'ECG technician',
       ),
     ],
@@ -10716,7 +10716,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159037006'),
+        code: FhirCode('159037006'),
         display: 'EEG technician',
       ),
     ],
@@ -10725,7 +10725,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159038001'),
+        code: FhirCode('159038001'),
         display: 'Artificial limb fitter',
       ),
     ],
@@ -10734,7 +10734,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159039009'),
+        code: FhirCode('159039009'),
         display: 'AT - Audiology technician',
       ),
     ],
@@ -10743,7 +10743,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159041005'),
+        code: FhirCode('159041005'),
         display: 'Trainee medical technician',
       ),
     ],
@@ -10752,7 +10752,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159141008'),
+        code: FhirCode('159141008'),
         display: 'Geneticist',
       ),
     ],
@@ -10761,7 +10761,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('159972006'),
+        code: FhirCode('159972006'),
         display: 'Surgical corset fitter',
       ),
     ],
@@ -10770,7 +10770,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('160008000'),
+        code: FhirCode('160008000'),
         display: 'Dental technician',
       ),
     ],
@@ -10779,7 +10779,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224529009'),
+        code: FhirCode('224529009'),
         display: 'Clinical assistant',
       ),
     ],
@@ -10788,7 +10788,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224530004'),
+        code: FhirCode('224530004'),
         display: 'Senior registrar',
       ),
     ],
@@ -10797,7 +10797,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224531000'),
+        code: FhirCode('224531000'),
         display: 'Registrar',
       ),
     ],
@@ -10806,7 +10806,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224532007'),
+        code: FhirCode('224532007'),
         display: 'Senior house officer',
       ),
     ],
@@ -10815,7 +10815,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224533002'),
+        code: FhirCode('224533002'),
         display: 'MO - Medical officer',
       ),
     ],
@@ -10824,7 +10824,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224534008'),
+        code: FhirCode('224534008'),
         display: 'Health visitors, nurses and midwives',
       ),
     ],
@@ -10833,7 +10833,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224536005'),
+        code: FhirCode('224536005'),
         display: 'Midwifery tutor',
       ),
     ],
@@ -10842,7 +10842,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224537001'),
+        code: FhirCode('224537001'),
         display: 'Accident and Emergency nurse',
       ),
     ],
@@ -10851,7 +10851,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224538006'),
+        code: FhirCode('224538006'),
         display: 'Triage nurse',
       ),
     ],
@@ -10860,7 +10860,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224540001'),
+        code: FhirCode('224540001'),
         display: 'Community nurse',
       ),
     ],
@@ -10869,7 +10869,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224541002'),
+        code: FhirCode('224541002'),
         display: 'Nursing continence advisor',
       ),
     ],
@@ -10878,7 +10878,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224542009'),
+        code: FhirCode('224542009'),
         display: 'Coronary care nurse',
       ),
     ],
@@ -10887,7 +10887,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224543004'),
+        code: FhirCode('224543004'),
         display: 'Diabetic nurse',
       ),
     ],
@@ -10896,7 +10896,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224544005'),
+        code: FhirCode('224544005'),
         display: 'Family planning nurse',
       ),
     ],
@@ -10905,7 +10905,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224545006'),
+        code: FhirCode('224545006'),
         display: 'Care of the elderly nurse',
       ),
     ],
@@ -10914,7 +10914,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224546007'),
+        code: FhirCode('224546007'),
         display: 'ICN - Infection control nurse',
       ),
     ],
@@ -10923,7 +10923,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224547003'),
+        code: FhirCode('224547003'),
         display: 'Intensive therapy nurse',
       ),
     ],
@@ -10932,7 +10932,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224548008'),
+        code: FhirCode('224548008'),
         display: 'Learning disabilities nurse',
       ),
     ],
@@ -10941,7 +10941,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224549000'),
+        code: FhirCode('224549000'),
         display: 'Neonatal nurse',
       ),
     ],
@@ -10950,7 +10950,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224550000'),
+        code: FhirCode('224550000'),
         display: 'Neurology nurse',
       ),
     ],
@@ -10959,7 +10959,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224551001'),
+        code: FhirCode('224551001'),
         display: 'Industrial nurse',
       ),
     ],
@@ -10968,7 +10968,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224552008'),
+        code: FhirCode('224552008'),
         display: 'Oncology nurse',
       ),
     ],
@@ -10977,7 +10977,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224553003'),
+        code: FhirCode('224553003'),
         display: 'Macmillan nurse',
       ),
     ],
@@ -10986,7 +10986,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224554009'),
+        code: FhirCode('224554009'),
         display: 'Marie Curie nurse',
       ),
     ],
@@ -10995,7 +10995,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224555005'),
+        code: FhirCode('224555005'),
         display: 'Pain control nurse',
       ),
     ],
@@ -11004,7 +11004,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224556006'),
+        code: FhirCode('224556006'),
         display: 'Palliative care nurse',
       ),
     ],
@@ -11013,7 +11013,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224557002'),
+        code: FhirCode('224557002'),
         display: 'Chemotherapy nurse',
       ),
     ],
@@ -11022,7 +11022,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224558007'),
+        code: FhirCode('224558007'),
         display: 'Radiotherapy nurse',
       ),
     ],
@@ -11031,7 +11031,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224559004'),
+        code: FhirCode('224559004'),
         display: 'Recovery nurse',
       ),
     ],
@@ -11040,7 +11040,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224560009'),
+        code: FhirCode('224560009'),
         display: 'Stomatherapist',
       ),
     ],
@@ -11049,7 +11049,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224561008'),
+        code: FhirCode('224561008'),
         display: 'Theatre nurse',
       ),
     ],
@@ -11058,7 +11058,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224562001'),
+        code: FhirCode('224562001'),
         display: 'Pediatric nurse',
       ),
     ],
@@ -11067,7 +11067,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224563006'),
+        code: FhirCode('224563006'),
         display: 'Psychiatric nurse',
       ),
     ],
@@ -11076,7 +11076,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224564000'),
+        code: FhirCode('224564000'),
         display: 'Community mental health nurse',
       ),
     ],
@@ -11085,7 +11085,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224565004'),
+        code: FhirCode('224565004'),
         display: 'Renal nurse',
       ),
     ],
@@ -11094,7 +11094,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224566003'),
+        code: FhirCode('224566003'),
         display: 'Hemodialysis nurse',
       ),
     ],
@@ -11103,7 +11103,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224567007'),
+        code: FhirCode('224567007'),
         display: 'Wound care nurse',
       ),
     ],
@@ -11112,7 +11112,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224569005'),
+        code: FhirCode('224569005'),
         display: 'Nurse grade',
       ),
     ],
@@ -11121,7 +11121,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224572003'),
+        code: FhirCode('224572003'),
         display: 'Nursing sister',
       ),
     ],
@@ -11130,7 +11130,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224573008'),
+        code: FhirCode('224573008'),
         display: 'CN - Charge nurse',
       ),
     ],
@@ -11139,7 +11139,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224574002'),
+        code: FhirCode('224574002'),
         display: 'Ward manager',
       ),
     ],
@@ -11148,7 +11148,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224575001'),
+        code: FhirCode('224575001'),
         display: 'Nursing team leader',
       ),
     ],
@@ -11157,7 +11157,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224576000'),
+        code: FhirCode('224576000'),
         display: 'Nursing assistant',
       ),
     ],
@@ -11166,7 +11166,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224577009'),
+        code: FhirCode('224577009'),
         display: 'HCA - Healthcare assistant',
       ),
     ],
@@ -11175,7 +11175,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224578004'),
+        code: FhirCode('224578004'),
         display: 'Nursery nurse',
       ),
     ],
@@ -11184,7 +11184,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224579007'),
+        code: FhirCode('224579007'),
         display: 'Healthcare service manager',
       ),
     ],
@@ -11193,7 +11193,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224580005'),
+        code: FhirCode('224580005'),
         display: 'Occupational health service manager',
       ),
     ],
@@ -11202,7 +11202,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224581009'),
+        code: FhirCode('224581009'),
         display: 'Community nurse manager',
       ),
     ],
@@ -11211,7 +11211,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224583007'),
+        code: FhirCode('224583007'),
         display: 'Behavior therapist',
       ),
     ],
@@ -11220,7 +11220,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224584001'),
+        code: FhirCode('224584001'),
         display: 'Behavior therapy assistant',
       ),
     ],
@@ -11229,7 +11229,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224585000'),
+        code: FhirCode('224585000'),
         display: 'Drama therapist',
       ),
     ],
@@ -11238,7 +11238,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224586004'),
+        code: FhirCode('224586004'),
         display: 'Domiciliary occupational therapist',
       ),
     ],
@@ -11247,7 +11247,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224587008'),
+        code: FhirCode('224587008'),
         display: 'Occupational therapy helper',
       ),
     ],
@@ -11256,7 +11256,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224588003'),
+        code: FhirCode('224588003'),
         display: 'Psychotherapist',
       ),
     ],
@@ -11265,7 +11265,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224589006'),
+        code: FhirCode('224589006'),
         display: 'Community-based physiotherapist',
       ),
     ],
@@ -11274,7 +11274,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224590002'),
+        code: FhirCode('224590002'),
         display: 'Play therapist',
       ),
     ],
@@ -11283,7 +11283,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224591003'),
+        code: FhirCode('224591003'),
         display: 'Play specialist',
       ),
     ],
@@ -11292,7 +11292,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224592005'),
+        code: FhirCode('224592005'),
         display: 'Play leader',
       ),
     ],
@@ -11302,7 +11302,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224593000'),
+        code: FhirCode('224593000'),
         display: 'Community-based speech and language therapist',
       ),
     ],
@@ -11311,7 +11311,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224594006'),
+        code: FhirCode('224594006'),
         display: 'Speech and language assistant',
       ),
     ],
@@ -11320,7 +11320,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224595007'),
+        code: FhirCode('224595007'),
         display: 'Professional counselor',
       ),
     ],
@@ -11329,7 +11329,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224596008'),
+        code: FhirCode('224596008'),
         display: 'Marriage guidance counselor',
       ),
     ],
@@ -11338,7 +11338,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224597004'),
+        code: FhirCode('224597004'),
         display: 'Trained nurse counselor',
       ),
     ],
@@ -11347,7 +11347,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224598009'),
+        code: FhirCode('224598009'),
         display: 'Trained social worker counselor',
       ),
     ],
@@ -11356,7 +11356,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224599001'),
+        code: FhirCode('224599001'),
         display: 'Trained personnel counselor',
       ),
     ],
@@ -11365,7 +11365,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224601004'),
+        code: FhirCode('224601004'),
         display: 'Assistant psychologist',
       ),
     ],
@@ -11374,7 +11374,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224602006'),
+        code: FhirCode('224602006'),
         display: 'Community-based podiatrist',
       ),
     ],
@@ -11383,7 +11383,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224603001'),
+        code: FhirCode('224603001'),
         display: 'Foot care worker',
       ),
     ],
@@ -11392,7 +11392,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224604007'),
+        code: FhirCode('224604007'),
         display: 'Audiometrician',
       ),
     ],
@@ -11401,7 +11401,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224605008'),
+        code: FhirCode('224605008'),
         display: 'Audiometrist',
       ),
     ],
@@ -11410,7 +11410,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224606009'),
+        code: FhirCode('224606009'),
         display: 'Technical healthcare occupation',
       ),
     ],
@@ -11420,7 +11420,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224607000'),
+        code: FhirCode('224607000'),
         display: 'Occupational therapy technical instructor',
       ),
     ],
@@ -11429,7 +11429,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224608005'),
+        code: FhirCode('224608005'),
         display: 'Administrative healthcare staff',
       ),
     ],
@@ -11438,7 +11438,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224609002'),
+        code: FhirCode('224609002'),
         display: 'Complementary health worker',
       ),
     ],
@@ -11447,7 +11447,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224610007'),
+        code: FhirCode('224610007'),
         display: 'Supporting services personnel',
       ),
     ],
@@ -11456,7 +11456,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224614003'),
+        code: FhirCode('224614003'),
         display: 'Research associate',
       ),
     ],
@@ -11465,7 +11465,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224615002'),
+        code: FhirCode('224615002'),
         display: 'Research nurse',
       ),
     ],
@@ -11474,7 +11474,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224620002'),
+        code: FhirCode('224620002'),
         display: 'Human aid to communication',
       ),
     ],
@@ -11483,7 +11483,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224621003'),
+        code: FhirCode('224621003'),
         display: 'Palantypist',
       ),
     ],
@@ -11492,7 +11492,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224622005'),
+        code: FhirCode('224622005'),
         display: 'Note taker',
       ),
     ],
@@ -11501,7 +11501,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224623000'),
+        code: FhirCode('224623000'),
         display: 'Cuer',
       ),
     ],
@@ -11510,7 +11510,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224624006'),
+        code: FhirCode('224624006'),
         display: 'Lipspeaker',
       ),
     ],
@@ -11519,7 +11519,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224625007'),
+        code: FhirCode('224625007'),
         display: 'Interpreter for British sign language',
       ),
     ],
@@ -11529,7 +11529,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224626008'),
+        code: FhirCode('224626008'),
         display: 'Interpreter for Signs supporting English',
       ),
     ],
@@ -11538,7 +11538,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224936003'),
+        code: FhirCode('224936003'),
         display: 'General practitioner locum',
       ),
     ],
@@ -11547,7 +11547,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('225727002'),
+        code: FhirCode('225727002'),
         display: 'Midwife counselor',
       ),
     ],
@@ -11556,7 +11556,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('265937000'),
+        code: FhirCode('265937000'),
         display: 'Nursing occupation',
       ),
     ],
@@ -11565,7 +11565,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('265939002'),
+        code: FhirCode('265939002'),
         display: 'Medical/dental technicians',
       ),
     ],
@@ -11574,7 +11574,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('283875005'),
+        code: FhirCode('283875005'),
         display: 'Parkinson\'s disease nurse',
       ),
     ],
@@ -11583,7 +11583,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('302211009'),
+        code: FhirCode('302211009'),
         display: 'Specialist registrar',
       ),
     ],
@@ -11592,7 +11592,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('303124005'),
+        code: FhirCode('303124005'),
         display: 'Member of mental health review tribunal',
       ),
     ],
@@ -11601,7 +11601,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('303129000'),
+        code: FhirCode('303129000'),
         display: 'Hospital manager',
       ),
     ],
@@ -11610,7 +11610,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('303133007'),
+        code: FhirCode('303133007'),
         display: 'Responsible medical officer',
       ),
     ],
@@ -11619,7 +11619,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('303134001'),
+        code: FhirCode('303134001'),
         display: 'Independent doctor',
       ),
     ],
@@ -11628,7 +11628,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('304291006'),
+        code: FhirCode('304291006'),
         display: 'Bereavement counselor',
       ),
     ],
@@ -11637,7 +11637,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('304292004'),
+        code: FhirCode('304292004'),
         display: 'Surgeon',
       ),
     ],
@@ -11646,7 +11646,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('307988006'),
+        code: FhirCode('307988006'),
         display: 'Medical technician',
       ),
     ],
@@ -11655,7 +11655,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('308002005'),
+        code: FhirCode('308002005'),
         display: 'Remedial therapist',
       ),
     ],
@@ -11664,7 +11664,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309294001'),
+        code: FhirCode('309294001'),
         display: 'Accident and emergency doctor',
       ),
     ],
@@ -11673,7 +11673,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309295000'),
+        code: FhirCode('309295000'),
         display: 'Clinical oncologist',
       ),
     ],
@@ -11682,7 +11682,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309296004'),
+        code: FhirCode('309296004'),
         display: 'Family planning doctor',
       ),
     ],
@@ -11691,7 +11691,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309322005'),
+        code: FhirCode('309322005'),
         display: 'Associate general practitioner',
       ),
     ],
@@ -11700,7 +11700,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309323000'),
+        code: FhirCode('309323000'),
         display: 'Partner of general practitioner',
       ),
     ],
@@ -11709,7 +11709,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309324006'),
+        code: FhirCode('309324006'),
         display: 'Assistant GP',
       ),
     ],
@@ -11718,7 +11718,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309326008'),
+        code: FhirCode('309326008'),
         display: 'Deputizing general practitioner',
       ),
     ],
@@ -11727,7 +11727,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309327004'),
+        code: FhirCode('309327004'),
         display: 'General practitioner registrar',
       ),
     ],
@@ -11736,7 +11736,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309328009'),
+        code: FhirCode('309328009'),
         display: 'Ambulatory pediatrician',
       ),
     ],
@@ -11745,7 +11745,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309329001'),
+        code: FhirCode('309329001'),
         display: 'Community pediatrician',
       ),
     ],
@@ -11754,7 +11754,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309330006'),
+        code: FhirCode('309330006'),
         display: 'Pediatric cardiologist',
       ),
     ],
@@ -11763,7 +11763,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309331005'),
+        code: FhirCode('309331005'),
         display: 'Pediatric endocrinologist',
       ),
     ],
@@ -11772,7 +11772,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309332003'),
+        code: FhirCode('309332003'),
         display: 'Pediatric gastroenterologist',
       ),
     ],
@@ -11781,7 +11781,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309333008'),
+        code: FhirCode('309333008'),
         display: 'Pediatric nephrologist',
       ),
     ],
@@ -11790,7 +11790,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309334002'),
+        code: FhirCode('309334002'),
         display: 'Pediatric neurologist',
       ),
     ],
@@ -11799,7 +11799,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309335001'),
+        code: FhirCode('309335001'),
         display: 'Pediatric rheumatologist',
       ),
     ],
@@ -11808,7 +11808,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309336000'),
+        code: FhirCode('309336000'),
         display: 'Pediatric oncologist',
       ),
     ],
@@ -11817,7 +11817,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309337009'),
+        code: FhirCode('309337009'),
         display: 'Pain management specialist',
       ),
     ],
@@ -11826,7 +11826,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309338004'),
+        code: FhirCode('309338004'),
         display: 'Intensive care specialist',
       ),
     ],
@@ -11835,7 +11835,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309339007'),
+        code: FhirCode('309339007'),
         display: 'Adult intensive care specialist',
       ),
     ],
@@ -11844,7 +11844,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309340009'),
+        code: FhirCode('309340009'),
         display: 'Pediatric intensive care specialist',
       ),
     ],
@@ -11853,7 +11853,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309341008'),
+        code: FhirCode('309341008'),
         display: 'Blood transfusion doctor',
       ),
     ],
@@ -11862,7 +11862,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309342001'),
+        code: FhirCode('309342001'),
         display: 'Histopathologist',
       ),
     ],
@@ -11871,7 +11871,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309343006'),
+        code: FhirCode('309343006'),
         display: 'Physician',
       ),
     ],
@@ -11880,7 +11880,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309345004'),
+        code: FhirCode('309345004'),
         display: 'Chest physician',
       ),
     ],
@@ -11889,7 +11889,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309346003'),
+        code: FhirCode('309346003'),
         display: 'Thoracic physician',
       ),
     ],
@@ -11898,7 +11898,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309347007'),
+        code: FhirCode('309347007'),
         display: 'Clinical hematologist',
       ),
     ],
@@ -11907,7 +11907,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309348002'),
+        code: FhirCode('309348002'),
         display: 'Clinical neurophysiologist',
       ),
     ],
@@ -11916,7 +11916,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309349005'),
+        code: FhirCode('309349005'),
         display: 'Clinical physiologist',
       ),
     ],
@@ -11925,7 +11925,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309350005'),
+        code: FhirCode('309350005'),
         display: 'Diabetologist',
       ),
     ],
@@ -11934,7 +11934,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309351009'),
+        code: FhirCode('309351009'),
         display: 'Andrologist',
       ),
     ],
@@ -11943,7 +11943,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309352002'),
+        code: FhirCode('309352002'),
         display: 'Neuroendocrinologist',
       ),
     ],
@@ -11952,7 +11952,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309353007'),
+        code: FhirCode('309353007'),
         display: 'Reproductive endocrinologist',
       ),
     ],
@@ -11961,7 +11961,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309354001'),
+        code: FhirCode('309354001'),
         display: 'Thyroidologist',
       ),
     ],
@@ -11970,7 +11970,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309355000'),
+        code: FhirCode('309355000'),
         display: 'Clinical geneticist',
       ),
     ],
@@ -11979,7 +11979,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309356004'),
+        code: FhirCode('309356004'),
         display: 'Clinical cytogeneticist',
       ),
     ],
@@ -11988,7 +11988,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309357008'),
+        code: FhirCode('309357008'),
         display: 'Clinical molecular geneticist',
       ),
     ],
@@ -11997,7 +11997,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309358003'),
+        code: FhirCode('309358003'),
         display: 'Genitourinary medicine physician',
       ),
     ],
@@ -12006,7 +12006,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309359006'),
+        code: FhirCode('309359006'),
         display: 'Palliative care physician',
       ),
     ],
@@ -12015,7 +12015,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309360001'),
+        code: FhirCode('309360001'),
         display: 'Rehabilitation physician',
       ),
     ],
@@ -12024,7 +12024,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309361002'),
+        code: FhirCode('309361002'),
         display: 'Child and adolescent psychiatrist',
       ),
     ],
@@ -12033,7 +12033,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309362009'),
+        code: FhirCode('309362009'),
         display: 'Forensic psychiatrist',
       ),
     ],
@@ -12042,7 +12042,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309363004'),
+        code: FhirCode('309363004'),
         display: 'Liaison psychiatrist',
       ),
     ],
@@ -12051,7 +12051,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309364005'),
+        code: FhirCode('309364005'),
         display: 'Psychogeriatrician',
       ),
     ],
@@ -12060,7 +12060,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309365006'),
+        code: FhirCode('309365006'),
         display: 'Psychiatrist for mental handicap',
       ),
     ],
@@ -12069,7 +12069,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309366007'),
+        code: FhirCode('309366007'),
         display: 'Rehabilitation psychiatrist',
       ),
     ],
@@ -12078,7 +12078,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309367003'),
+        code: FhirCode('309367003'),
         display: 'Obstetrician and gynecologist',
       ),
     ],
@@ -12087,7 +12087,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309368008'),
+        code: FhirCode('309368008'),
         display: 'Breast surgeon',
       ),
     ],
@@ -12096,7 +12096,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309369000'),
+        code: FhirCode('309369000'),
         display: 'Cardiothoracic surgeon',
       ),
     ],
@@ -12105,7 +12105,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309371000'),
+        code: FhirCode('309371000'),
         display: 'Cardiac surgeon',
       ),
     ],
@@ -12114,7 +12114,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309372007'),
+        code: FhirCode('309372007'),
         display: 'Ear, nose and throat surgeon',
       ),
     ],
@@ -12123,7 +12123,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309373002'),
+        code: FhirCode('309373002'),
         display: 'Endocrine surgeon',
       ),
     ],
@@ -12132,7 +12132,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309374008'),
+        code: FhirCode('309374008'),
         display: 'Thyroid surgeon',
       ),
     ],
@@ -12141,7 +12141,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309375009'),
+        code: FhirCode('309375009'),
         display: 'Pituitary surgeon',
       ),
     ],
@@ -12150,7 +12150,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309376005'),
+        code: FhirCode('309376005'),
         display: 'Gastrointestinal surgeon',
       ),
     ],
@@ -12159,7 +12159,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309377001'),
+        code: FhirCode('309377001'),
         display: 'General gastrointestinal surgeon',
       ),
     ],
@@ -12168,7 +12168,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309378006'),
+        code: FhirCode('309378006'),
         display: 'Upper gastrointestinal surgeon',
       ),
     ],
@@ -12177,7 +12177,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309379003'),
+        code: FhirCode('309379003'),
         display: 'Colorectal surgeon',
       ),
     ],
@@ -12186,7 +12186,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309380000'),
+        code: FhirCode('309380000'),
         display: 'Hand surgeon',
       ),
     ],
@@ -12195,7 +12195,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309381001'),
+        code: FhirCode('309381001'),
         display: 'Hepatobiliary surgeon',
       ),
     ],
@@ -12204,7 +12204,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309382008'),
+        code: FhirCode('309382008'),
         display: 'Ophthalmic surgeon',
       ),
     ],
@@ -12213,7 +12213,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309383003'),
+        code: FhirCode('309383003'),
         display: 'Pediatric surgeon',
       ),
     ],
@@ -12222,7 +12222,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309384009'),
+        code: FhirCode('309384009'),
         display: 'Pancreatic surgeon',
       ),
     ],
@@ -12231,7 +12231,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309385005'),
+        code: FhirCode('309385005'),
         display: 'Transplant surgeon',
       ),
     ],
@@ -12240,7 +12240,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309386006'),
+        code: FhirCode('309386006'),
         display: 'Trauma surgeon',
       ),
     ],
@@ -12249,7 +12249,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309388007'),
+        code: FhirCode('309388007'),
         display: 'Vascular surgeon',
       ),
     ],
@@ -12258,7 +12258,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309389004'),
+        code: FhirCode('309389004'),
         display: 'Medical practitioner grade',
       ),
     ],
@@ -12267,7 +12267,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309390008'),
+        code: FhirCode('309390008'),
         display: 'Hospital consultant',
       ),
     ],
@@ -12276,7 +12276,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309391007'),
+        code: FhirCode('309391007'),
         display: 'Visiting specialist registrar',
       ),
     ],
@@ -12285,7 +12285,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309392000'),
+        code: FhirCode('309392000'),
         display: 'Research registrar',
       ),
     ],
@@ -12294,7 +12294,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309393005'),
+        code: FhirCode('309393005'),
         display: 'General practitioner grade',
       ),
     ],
@@ -12303,7 +12303,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309394004'),
+        code: FhirCode('309394004'),
         display: 'General practitioner principal',
       ),
     ],
@@ -12312,7 +12312,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309395003'),
+        code: FhirCode('309395003'),
         display: 'Hospital specialist',
       ),
     ],
@@ -12321,7 +12321,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309396002'),
+        code: FhirCode('309396002'),
         display: 'Associate specialist',
       ),
     ],
@@ -12330,7 +12330,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309397006'),
+        code: FhirCode('309397006'),
         display: 'Research fellow',
       ),
     ],
@@ -12339,7 +12339,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309398001'),
+        code: FhirCode('309398001'),
         display: 'Profession allied to medicine',
       ),
     ],
@@ -12348,7 +12348,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309399009'),
+        code: FhirCode('309399009'),
         display: 'Hospital dietitian',
       ),
     ],
@@ -12357,7 +12357,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309400002'),
+        code: FhirCode('309400002'),
         display: 'Domiciliary physiotherapist',
       ),
     ],
@@ -12366,7 +12366,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309401003'),
+        code: FhirCode('309401003'),
         display: 'GP-based physiotherapist',
       ),
     ],
@@ -12375,7 +12375,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309402005'),
+        code: FhirCode('309402005'),
         display: 'Hospital-based physiotherapist',
       ),
     ],
@@ -12384,7 +12384,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309403000'),
+        code: FhirCode('309403000'),
         display: 'Private physiotherapist',
       ),
     ],
@@ -12393,7 +12393,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309404006'),
+        code: FhirCode('309404006'),
         display: 'Physiotherapy helper',
       ),
     ],
@@ -12403,7 +12403,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309409001'),
+        code: FhirCode('309409001'),
         display: 'Hospital-based speech and language therapist',
       ),
     ],
@@ -12412,7 +12412,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309410006'),
+        code: FhirCode('309410006'),
         display: 'Arts therapist',
       ),
     ],
@@ -12421,7 +12421,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309413008'),
+        code: FhirCode('309413008'),
         display: 'Renal dietitian',
       ),
     ],
@@ -12430,7 +12430,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309414002'),
+        code: FhirCode('309414002'),
         display: 'Liver dietitian',
       ),
     ],
@@ -12439,7 +12439,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309415001'),
+        code: FhirCode('309415001'),
         display: 'Oncology dietitian',
       ),
     ],
@@ -12448,7 +12448,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309416000'),
+        code: FhirCode('309416000'),
         display: 'Pediatric dietitian',
       ),
     ],
@@ -12457,7 +12457,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309417009'),
+        code: FhirCode('309417009'),
         display: 'Diabetes dietitian',
       ),
     ],
@@ -12466,7 +12466,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309419007'),
+        code: FhirCode('309419007'),
         display: 'Hearing therapist',
       ),
     ],
@@ -12475,7 +12475,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309420001'),
+        code: FhirCode('309420001'),
         display: 'Audiological scientist',
       ),
     ],
@@ -12484,7 +12484,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309421002'),
+        code: FhirCode('309421002'),
         display: 'Hearing aid dispenser',
       ),
     ],
@@ -12493,7 +12493,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309422009'),
+        code: FhirCode('309422009'),
         display: 'Community-based occupational therapist',
       ),
     ],
@@ -12502,7 +12502,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309423004'),
+        code: FhirCode('309423004'),
         display: 'Hospital occupational therapist',
       ),
     ],
@@ -12511,7 +12511,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309427003'),
+        code: FhirCode('309427003'),
         display: 'Social services occupational therapist',
       ),
     ],
@@ -12520,7 +12520,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309429000'),
+        code: FhirCode('309429000'),
         display: 'Surgical fitter',
       ),
     ],
@@ -12529,7 +12529,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309434001'),
+        code: FhirCode('309434001'),
         display: 'Hospital-based podiatrist',
       ),
     ],
@@ -12538,7 +12538,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309435000'),
+        code: FhirCode('309435000'),
         display: 'Podiatry assistant',
       ),
     ],
@@ -12547,7 +12547,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309436004'),
+        code: FhirCode('309436004'),
         display: 'Lymphedema nurse',
       ),
     ],
@@ -12556,7 +12556,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309437008'),
+        code: FhirCode('309437008'),
         display: 'Community learning disabilities nurse',
       ),
     ],
@@ -12565,7 +12565,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309439006'),
+        code: FhirCode('309439006'),
         display: 'Clinical nurse teacher',
       ),
     ],
@@ -12574,7 +12574,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309440008'),
+        code: FhirCode('309440008'),
         display: 'Community practice nurse teacher',
       ),
     ],
@@ -12583,7 +12583,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309441007'),
+        code: FhirCode('309441007'),
         display: 'Nurse tutor',
       ),
     ],
@@ -12592,7 +12592,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309442000'),
+        code: FhirCode('309442000'),
         display: 'Nurse teacher practitioner',
       ),
     ],
@@ -12601,7 +12601,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309443005'),
+        code: FhirCode('309443005'),
         display: 'Nurse lecturer practitioner',
       ),
     ],
@@ -12610,7 +12610,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309444004'),
+        code: FhirCode('309444004'),
         display: 'Outreach nurse',
       ),
     ],
@@ -12619,7 +12619,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309445003'),
+        code: FhirCode('309445003'),
         display: 'Anesthetic nurse',
       ),
     ],
@@ -12628,7 +12628,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309446002'),
+        code: FhirCode('309446002'),
         display: 'Nurse manager',
       ),
     ],
@@ -12637,7 +12637,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309450009'),
+        code: FhirCode('309450009'),
         display: 'Nurse administrator',
       ),
     ],
@@ -12646,7 +12646,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309452001'),
+        code: FhirCode('309452001'),
         display: 'Midwifery grade',
       ),
     ],
@@ -12655,7 +12655,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309453006'),
+        code: FhirCode('309453006'),
         display: 'Registered midwife',
       ),
     ],
@@ -12664,7 +12664,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309454000'),
+        code: FhirCode('309454000'),
         display: 'Student midwife',
       ),
     ],
@@ -12673,7 +12673,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309455004'),
+        code: FhirCode('309455004'),
         display: 'Parentcraft sister',
       ),
     ],
@@ -12682,7 +12682,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309459005'),
+        code: FhirCode('309459005'),
         display: 'Healthcare professional grade',
       ),
     ],
@@ -12691,7 +12691,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('309460000'),
+        code: FhirCode('309460000'),
         display: 'Restorative dentist',
       ),
     ],
@@ -12700,7 +12700,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310170009'),
+        code: FhirCode('310170009'),
         display: 'Pediatric audiologist',
       ),
     ],
@@ -12709,7 +12709,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310171008'),
+        code: FhirCode('310171008'),
         display: 'Immunopathologist',
       ),
     ],
@@ -12718,7 +12718,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310172001'),
+        code: FhirCode('310172001'),
         display: 'Audiological physician',
       ),
     ],
@@ -12727,7 +12727,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310173006'),
+        code: FhirCode('310173006'),
         display: 'Clinical pharmacologist',
       ),
     ],
@@ -12736,7 +12736,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310174000'),
+        code: FhirCode('310174000'),
         display: 'Private doctor',
       ),
     ],
@@ -12745,7 +12745,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310175004'),
+        code: FhirCode('310175004'),
         display: 'Agency nurse',
       ),
     ],
@@ -12754,7 +12754,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310176003'),
+        code: FhirCode('310176003'),
         display: 'Behavioral therapist nurse',
       ),
     ],
@@ -12763,7 +12763,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310177007'),
+        code: FhirCode('310177007'),
         display: 'Cardiac rehabilitation nurse',
       ),
     ],
@@ -12772,7 +12772,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310178002'),
+        code: FhirCode('310178002'),
         display: 'Genitourinary nurse',
       ),
     ],
@@ -12781,7 +12781,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310179005'),
+        code: FhirCode('310179005'),
         display: 'Rheumatology nurse specialist',
       ),
     ],
@@ -12790,7 +12790,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310180008'),
+        code: FhirCode('310180008'),
         display: 'Continence nurse',
       ),
     ],
@@ -12799,7 +12799,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310181007'),
+        code: FhirCode('310181007'),
         display: 'Contact tracing nurse',
       ),
     ],
@@ -12808,7 +12808,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310182000'),
+        code: FhirCode('310182000'),
         display: 'General nurse',
       ),
     ],
@@ -12817,7 +12817,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310183005'),
+        code: FhirCode('310183005'),
         display: 'Nurse for the mentally handicapped',
       ),
     ],
@@ -12826,7 +12826,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310184004'),
+        code: FhirCode('310184004'),
         display: 'Liaison nurse',
       ),
     ],
@@ -12835,7 +12835,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310185003'),
+        code: FhirCode('310185003'),
         display: 'Diabetic liaison nurse',
       ),
     ],
@@ -12844,7 +12844,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310186002'),
+        code: FhirCode('310186002'),
         display: 'Nurse psychotherapist',
       ),
     ],
@@ -12853,7 +12853,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310187006'),
+        code: FhirCode('310187006'),
         display: 'Company nurse',
       ),
     ],
@@ -12862,7 +12862,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310188001'),
+        code: FhirCode('310188001'),
         display: 'Hospital midwife',
       ),
     ],
@@ -12871,7 +12871,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310189009'),
+        code: FhirCode('310189009'),
         display: 'Genetic counselor',
       ),
     ],
@@ -12880,7 +12880,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310190000'),
+        code: FhirCode('310190000'),
         display: 'Mental health counselor',
       ),
     ],
@@ -12889,7 +12889,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310191001'),
+        code: FhirCode('310191001'),
         display: 'Clinical psychologist',
       ),
     ],
@@ -12898,7 +12898,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310192008'),
+        code: FhirCode('310192008'),
         display: 'Educational psychologist',
       ),
     ],
@@ -12907,7 +12907,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310193003'),
+        code: FhirCode('310193003'),
         display: 'Coroner',
       ),
     ],
@@ -12916,7 +12916,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310194009'),
+        code: FhirCode('310194009'),
         display: 'Appliance officer',
       ),
     ],
@@ -12925,7 +12925,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310512001'),
+        code: FhirCode('310512001'),
         display: 'Medical oncologist',
       ),
     ],
@@ -12934,7 +12934,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('311441001'),
+        code: FhirCode('311441001'),
         display: 'School medical officer',
       ),
     ],
@@ -12943,7 +12943,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('312485001'),
+        code: FhirCode('312485001'),
         display: 'Integrated midwife',
       ),
     ],
@@ -12952,7 +12952,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('372102007'),
+        code: FhirCode('372102007'),
         display: 'RN First Assist',
       ),
     ],
@@ -12961,7 +12961,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('394572006'),
+        code: FhirCode('394572006'),
         display: 'Medical secretary',
       ),
     ],
@@ -12970,7 +12970,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('394618009'),
+        code: FhirCode('394618009'),
         display: 'Hospital nurse',
       ),
     ],
@@ -12979,7 +12979,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('397897005'),
+        code: FhirCode('397897005'),
         display: 'Paramedic',
       ),
     ],
@@ -12988,7 +12988,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('397903001'),
+        code: FhirCode('397903001'),
         display: 'Staff grade obstetrician',
       ),
     ],
@@ -12997,7 +12997,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('397908005'),
+        code: FhirCode('397908005'),
         display: 'Staff grade practitioner',
       ),
     ],
@@ -13006,7 +13006,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('398130009'),
+        code: FhirCode('398130009'),
         display: 'Medical student',
       ),
     ],
@@ -13015,7 +13015,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('398238009'),
+        code: FhirCode('398238009'),
         display: 'Acting obstetric registrar',
       ),
     ],
@@ -13024,7 +13024,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('404940000'),
+        code: FhirCode('404940000'),
         display: 'Physiotherapist technical instructor',
       ),
     ],
@@ -13033,7 +13033,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('405277009'),
+        code: FhirCode('405277009'),
         display: 'Resident physician',
       ),
     ],
@@ -13042,7 +13042,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('405278004'),
+        code: FhirCode('405278004'),
         display: 'Certified registered nurse anesthetist',
       ),
     ],
@@ -13051,7 +13051,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('405279007'),
+        code: FhirCode('405279007'),
         display: 'Attending physician',
       ),
     ],
@@ -13060,7 +13060,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('405623001'),
+        code: FhirCode('405623001'),
         display: 'Assigned practitioner',
       ),
     ],
@@ -13069,7 +13069,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('405684005'),
+        code: FhirCode('405684005'),
         display: 'Professional initiating surgical case',
       ),
     ],
@@ -13080,7 +13080,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('405685006'),
+        code: FhirCode('405685006'),
         display:
             'Professional providing staff relief during surgical procedure',
       ),
@@ -13090,7 +13090,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('408798009'),
+        code: FhirCode('408798009'),
         display: 'Consultant pediatrician',
       ),
     ],
@@ -13099,7 +13099,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('408799001'),
+        code: FhirCode('408799001'),
         display: 'Consultant neonatologist',
       ),
     ],
@@ -13108,7 +13108,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('409975003'),
+        code: FhirCode('409975003'),
         display: 'Certified health education specialist',
       ),
     ],
@@ -13117,7 +13117,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('413854007'),
+        code: FhirCode('413854007'),
         display: 'Circulating nurse',
       ),
     ],
@@ -13126,7 +13126,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('415075003'),
+        code: FhirCode('415075003'),
         display: 'Perioperative nurse',
       ),
     ],
@@ -13135,7 +13135,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('415506007'),
+        code: FhirCode('415506007'),
         display: 'Scrub nurse',
       ),
     ],
@@ -13145,7 +13145,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('416160000'),
+        code: FhirCode('416160000'),
         display: 'Fellow of American Academy of Osteopathy',
       ),
     ],
@@ -13154,7 +13154,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('420409002'),
+        code: FhirCode('420409002'),
         display: 'Oculoplastic surgeon',
       ),
     ],
@@ -13163,7 +13163,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('420678001'),
+        code: FhirCode('420678001'),
         display: 'Retinal surgeon',
       ),
     ],
@@ -13172,7 +13172,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('421841007'),
+        code: FhirCode('421841007'),
         display: 'Admitting physician',
       ),
     ],
@@ -13181,7 +13181,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('422140007'),
+        code: FhirCode('422140007'),
         display: 'Medical ophthalmologist',
       ),
     ],
@@ -13190,7 +13190,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('422234006'),
+        code: FhirCode('422234006'),
         display: 'Ophthalmologist',
       ),
     ],
@@ -13199,7 +13199,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('432100008'),
+        code: FhirCode('432100008'),
         display: 'Health coach',
       ),
     ],
@@ -13208,7 +13208,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('442867008'),
+        code: FhirCode('442867008'),
         display: 'Respiratory therapist',
       ),
     ],
@@ -13217,7 +13217,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('443090005'),
+        code: FhirCode('443090005'),
         display: 'Podiatric surgeon',
       ),
     ],
@@ -13226,7 +13226,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('444912007'),
+        code: FhirCode('444912007'),
         display: 'Hypnotherapist',
       ),
     ],
@@ -13235,7 +13235,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('445313000'),
+        code: FhirCode('445313000'),
         display: 'Asthma nurse specialist',
       ),
     ],
@@ -13244,7 +13244,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('445451001'),
+        code: FhirCode('445451001'),
         display: 'Nurse case manager',
       ),
     ],
@@ -13253,7 +13253,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('446050000'),
+        code: FhirCode('446050000'),
         display: 'PCP - Primary care physician',
       ),
     ],
@@ -13262,7 +13262,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('446701002'),
+        code: FhirCode('446701002'),
         display: 'Addiction medicine specialist',
       ),
     ],
@@ -13271,7 +13271,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('449161006'),
+        code: FhirCode('449161006'),
         display: 'PA - physician assistant',
       ),
     ],
@@ -13280,7 +13280,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('471302004'),
+        code: FhirCode('471302004'),
         display: 'Government midwife',
       ),
     ],
@@ -13289,7 +13289,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('720503005'),
+        code: FhirCode('720503005'),
         display: 'Sleep medicine specialist',
       ),
     ],
@@ -13298,7 +13298,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721936008'),
+        code: FhirCode('721936008'),
         display: 'Occupation medicine specialist',
       ),
     ],
@@ -13307,7 +13307,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721937004'),
+        code: FhirCode('721937004'),
         display: 'Preventive medicine specialist',
       ),
     ],
@@ -13316,7 +13316,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721938009'),
+        code: FhirCode('721938009'),
         display: 'Tropical medicine specialist',
       ),
     ],
@@ -13325,7 +13325,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721939001'),
+        code: FhirCode('721939001'),
         display: 'Vascular medicine specialist',
       ),
     ],
@@ -13334,7 +13334,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721940004'),
+        code: FhirCode('721940004'),
         display: 'Legal medicine specialist',
       ),
     ],
@@ -13343,7 +13343,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721941000'),
+        code: FhirCode('721941000'),
         display: 'Health psychologist',
       ),
     ],
@@ -13352,7 +13352,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721942007'),
+        code: FhirCode('721942007'),
         display: 'Cardiovascular perfusionist',
       ),
     ],
@@ -13362,7 +13362,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('721943002'),
+        code: FhirCode('721943002'),
         display: 'Clinical immunology and allergy specialist',
       ),
     ],
@@ -13371,7 +13371,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('734293001'),
+        code: FhirCode('734293001'),
         display: 'Clinical pharmacist',
       ),
     ],
@@ -13380,7 +13380,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('734294007'),
+        code: FhirCode('734294007'),
         display: 'Pharmacist prescriber',
       ),
     ],
@@ -13389,7 +13389,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('763292005'),
+        code: FhirCode('763292005'),
         display: 'Radiation oncologist',
       ),
     ],
@@ -13398,7 +13398,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768731002'),
+        code: FhirCode('768731002'),
         display: 'Home helper',
       ),
     ],
@@ -13407,7 +13407,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768732009'),
+        code: FhirCode('768732009'),
         display: 'School health educator',
       ),
     ],
@@ -13416,7 +13416,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768819009'),
+        code: FhirCode('768819009'),
         display: 'Medically responsible investigator',
       ),
     ],
@@ -13425,7 +13425,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768826009'),
+        code: FhirCode('768826009'),
         display: 'Crisis counselor',
       ),
     ],
@@ -13434,7 +13434,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768828005'),
+        code: FhirCode('768828005'),
         display: 'Epidemiologist',
       ),
     ],
@@ -13443,7 +13443,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768829002'),
+        code: FhirCode('768829002'),
         display: 'Community dietician',
       ),
     ],
@@ -13452,7 +13452,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768832004'),
+        code: FhirCode('768832004'),
         display: 'Case manager',
       ),
     ],
@@ -13461,7 +13461,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768833009'),
+        code: FhirCode('768833009'),
         display: 'Discharging physician',
       ),
     ],
@@ -13470,7 +13470,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768834003'),
+        code: FhirCode('768834003'),
         display: 'Disease manager',
       ),
     ],
@@ -13479,7 +13479,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768836001'),
+        code: FhirCode('768836001'),
         display: 'Patient navigator',
       ),
     ],
@@ -13488,7 +13488,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768837005'),
+        code: FhirCode('768837005'),
         display: 'Specialized hospital physician',
       ),
     ],
@@ -13497,7 +13497,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('768839008'),
+        code: FhirCode('768839008'),
         display: 'Consultant',
       ),
     ],
@@ -13506,7 +13506,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('789543004'),
+        code: FhirCode('789543004'),
         display: 'Ultrasonographer',
       ),
     ],
@@ -13515,7 +13515,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('1271000175101'),
+        code: FhirCode('1271000175101'),
         display: 'Primary obstetrician',
       ),
     ],
@@ -13524,7 +13524,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3981000175106'),
+        code: FhirCode('3981000175106'),
         display: 'Nurse complex case manager',
       ),
     ],
@@ -13533,7 +13533,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('5191000124109'),
+        code: FhirCode('5191000124109'),
         display: 'Private midwife',
       ),
     ],
@@ -13542,7 +13542,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('440051000124108'),
+        code: FhirCode('440051000124108'),
         display: 'Medical Examiner',
       ),
     ],
@@ -13551,7 +13551,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('442251000124100'),
+        code: FhirCode('442251000124100'),
         display: 'Licensed practical nurse',
       ),
     ],
@@ -13560,7 +13560,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('445531000124104'),
+        code: FhirCode('445531000124104'),
         display: 'Lay midwife',
       ),
     ],
@@ -13570,7 +13570,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('453121000124107'),
+        code: FhirCode('453121000124107'),
         display: 'Emergency department healthcare professional',
       ),
     ],
@@ -13579,7 +13579,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('453231000124104'),
+        code: FhirCode('453231000124104'),
         display: 'Primary care provider',
       ),
     ],
@@ -13588,7 +13588,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('457141000124107'),
+        code: FhirCode('457141000124107'),
         display: 'Locum tenens attending physician',
       ),
     ],
@@ -13597,7 +13597,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('457151000124109'),
+        code: FhirCode('457151000124109'),
         display: 'Locum admitting physician',
       ),
     ],
@@ -13606,7 +13606,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224930009'),
+        code: FhirCode('224930009'),
         display: 'Services',
       ),
     ],
@@ -13615,7 +13615,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('224891009'),
+        code: FhirCode('224891009'),
         display: 'Healthcare services',
       ),
     ],
@@ -13624,7 +13624,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('278032008'),
+        code: FhirCode('278032008'),
         display: 'Preventive service',
       ),
     ],
@@ -13633,7 +13633,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310000008'),
+        code: FhirCode('310000008'),
         display: 'Casualty service',
       ),
     ],
@@ -13642,7 +13642,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310001007'),
+        code: FhirCode('310001007'),
         display: 'Anesthetic service',
       ),
     ],
@@ -13651,7 +13651,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310002000'),
+        code: FhirCode('310002000'),
         display: 'Assessment service',
       ),
     ],
@@ -13660,7 +13660,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310003005'),
+        code: FhirCode('310003005'),
         display: 'Child assessment service',
       ),
     ],
@@ -13669,7 +13669,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310004004'),
+        code: FhirCode('310004004'),
         display: 'Audiological service',
       ),
     ],
@@ -13678,7 +13678,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310005003'),
+        code: FhirCode('310005003'),
         display: 'Diagnostic audiology service',
       ),
     ],
@@ -13687,7 +13687,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310006002'),
+        code: FhirCode('310006002'),
         display: 'Adult diagnostic audiology service',
       ),
     ],
@@ -13696,7 +13696,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310007006'),
+        code: FhirCode('310007006'),
         display: 'Pediatric diagnostic audiology service',
       ),
     ],
@@ -13705,7 +13705,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310008001'),
+        code: FhirCode('310008001'),
         display: 'Audiological screening service',
       ),
     ],
@@ -13714,7 +13714,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310009009'),
+        code: FhirCode('310009009'),
         display: 'Neonatal audiological screening service',
       ),
     ],
@@ -13724,7 +13724,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310010004'),
+        code: FhirCode('310010004'),
         display: 'Distraction test audiological screening service',
       ),
     ],
@@ -13733,7 +13733,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310011000'),
+        code: FhirCode('310011000'),
         display: 'Aural rehabilitation service',
       ),
     ],
@@ -13742,7 +13742,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310012007'),
+        code: FhirCode('310012007'),
         display: 'Cochlear implant service',
       ),
     ],
@@ -13751,7 +13751,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310013002'),
+        code: FhirCode('310013002'),
         display: 'Adult cochlear implant service',
       ),
     ],
@@ -13760,7 +13760,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310014008'),
+        code: FhirCode('310014008'),
         display: 'Pediatric cochlear implant service',
       ),
     ],
@@ -13769,7 +13769,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310015009'),
+        code: FhirCode('310015009'),
         display: 'Hearing aid service',
       ),
     ],
@@ -13778,7 +13778,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310016005'),
+        code: FhirCode('310016005'),
         display: 'Adult hearing aid service',
       ),
     ],
@@ -13787,7 +13787,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310017001'),
+        code: FhirCode('310017001'),
         display: 'Pediatric hearing aid service',
       ),
     ],
@@ -13796,7 +13796,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310018006'),
+        code: FhirCode('310018006'),
         display: 'Speech-reading training service',
       ),
     ],
@@ -13805,7 +13805,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310019003'),
+        code: FhirCode('310019003'),
         display: 'Tinnitus management service',
       ),
     ],
@@ -13814,7 +13814,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310020009'),
+        code: FhirCode('310020009'),
         display: 'Hearing therapy service',
       ),
     ],
@@ -13823,7 +13823,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310021008'),
+        code: FhirCode('310021008'),
         display: 'Assistive listening device service',
       ),
     ],
@@ -13832,7 +13832,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310022001'),
+        code: FhirCode('310022001'),
         display: 'Clinical oncology service',
       ),
     ],
@@ -13841,7 +13841,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310023006'),
+        code: FhirCode('310023006'),
         display: 'Radiotherapy service',
       ),
     ],
@@ -13850,7 +13850,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310024000'),
+        code: FhirCode('310024000'),
         display: 'Colposcopy service',
       ),
     ],
@@ -13859,7 +13859,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310025004'),
+        code: FhirCode('310025004'),
         display: 'Complementary therapy service',
       ),
     ],
@@ -13868,7 +13868,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310026003'),
+        code: FhirCode('310026003'),
         display: 'Counseling service',
       ),
     ],
@@ -13877,7 +13877,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310027007'),
+        code: FhirCode('310027007'),
         display: 'Mental health counseling service',
       ),
     ],
@@ -13886,7 +13886,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310028002'),
+        code: FhirCode('310028002'),
         display: 'Diagnostic investigation service',
       ),
     ],
@@ -13895,7 +13895,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310029005'),
+        code: FhirCode('310029005'),
         display: 'Domiciliary visit service',
       ),
     ],
@@ -13904,7 +13904,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310030000'),
+        code: FhirCode('310030000'),
         display: 'Endoscopy service',
       ),
     ],
@@ -13913,7 +13913,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310031001'),
+        code: FhirCode('310031001'),
         display: 'Family planning service',
       ),
     ],
@@ -13922,7 +13922,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310032008'),
+        code: FhirCode('310032008'),
         display: 'Intensive care service',
       ),
     ],
@@ -13931,7 +13931,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310033003'),
+        code: FhirCode('310033003'),
         display: 'Adult ITU service',
       ),
     ],
@@ -13940,7 +13940,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310034009'),
+        code: FhirCode('310034009'),
         display: 'Pediatric ITU service',
       ),
     ],
@@ -13949,7 +13949,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310060005'),
+        code: FhirCode('310060005'),
         display: 'Obstetrics and gynecology service',
       ),
     ],
@@ -13958,7 +13958,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310061009'),
+        code: FhirCode('310061009'),
         display: 'Gynecology service',
       ),
     ],
@@ -13967,7 +13967,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310062002'),
+        code: FhirCode('310062002'),
         display: 'Pregnancy termination service',
       ),
     ],
@@ -13976,7 +13976,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310063007'),
+        code: FhirCode('310063007'),
         display: 'Obstetrics service',
       ),
     ],
@@ -13985,7 +13985,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310064001'),
+        code: FhirCode('310064001'),
         display: 'Occupational health service',
       ),
     ],
@@ -13994,7 +13994,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310065000'),
+        code: FhirCode('310065000'),
         display: 'Open access service',
       ),
     ],
@@ -14003,7 +14003,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310066004'),
+        code: FhirCode('310066004'),
         display: 'Pediatric service',
       ),
     ],
@@ -14012,7 +14012,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310067008'),
+        code: FhirCode('310067008'),
         display: 'Community pediatric service',
       ),
     ],
@@ -14021,7 +14021,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310068003'),
+        code: FhirCode('310068003'),
         display: 'Pediatric neurology service',
       ),
     ],
@@ -14030,7 +14030,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310069006'),
+        code: FhirCode('310069006'),
         display: 'Pediatric oncology service',
       ),
     ],
@@ -14039,7 +14039,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310070007'),
+        code: FhirCode('310070007'),
         display: 'Special care baby service',
       ),
     ],
@@ -14048,7 +14048,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310071006'),
+        code: FhirCode('310071006'),
         display: 'Pain management service',
       ),
     ],
@@ -14057,7 +14057,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310072004'),
+        code: FhirCode('310072004'),
         display: 'Acute pain service',
       ),
     ],
@@ -14066,7 +14066,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310073009'),
+        code: FhirCode('310073009'),
         display: 'Palliative care service',
       ),
     ],
@@ -14075,7 +14075,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310074003'),
+        code: FhirCode('310074003'),
         display: 'Pathology service',
       ),
     ],
@@ -14084,7 +14084,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310076001'),
+        code: FhirCode('310076001'),
         display: 'Clinical biochemistry service',
       ),
     ],
@@ -14093,7 +14093,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310078000'),
+        code: FhirCode('310078000'),
         display: 'Medical microbiology service',
       ),
     ],
@@ -14102,7 +14102,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310079008'),
+        code: FhirCode('310079008'),
         display: 'Neuropathology service',
       ),
     ],
@@ -14111,7 +14111,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310080006'),
+        code: FhirCode('310080006'),
         display: 'Pharmacy service',
       ),
     ],
@@ -14120,7 +14120,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310081005'),
+        code: FhirCode('310081005'),
         display: 'Professional allied to medicine service',
       ),
     ],
@@ -14129,7 +14129,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310082003'),
+        code: FhirCode('310082003'),
         display: 'Arts therapy services',
       ),
     ],
@@ -14138,7 +14138,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310083008'),
+        code: FhirCode('310083008'),
         display: 'Art therapy service',
       ),
     ],
@@ -14147,7 +14147,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310084002'),
+        code: FhirCode('310084002'),
         display: 'Dance therapy service',
       ),
     ],
@@ -14156,7 +14156,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310085001'),
+        code: FhirCode('310085001'),
         display: 'Drama therapy service',
       ),
     ],
@@ -14165,7 +14165,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310086000'),
+        code: FhirCode('310086000'),
         display: 'Music therapy service',
       ),
     ],
@@ -14174,7 +14174,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310087009'),
+        code: FhirCode('310087009'),
         display: 'Podiatry service',
       ),
     ],
@@ -14183,7 +14183,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310088004'),
+        code: FhirCode('310088004'),
         display: 'Community podiatry service',
       ),
     ],
@@ -14192,7 +14192,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310089007'),
+        code: FhirCode('310089007'),
         display: 'Hospital-based podiatry service',
       ),
     ],
@@ -14201,7 +14201,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310090003'),
+        code: FhirCode('310090003'),
         display: 'Dietetics service',
       ),
     ],
@@ -14210,7 +14210,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310091004'),
+        code: FhirCode('310091004'),
         display: 'Community-based dietetics service',
       ),
     ],
@@ -14219,7 +14219,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310092006'),
+        code: FhirCode('310092006'),
         display: 'Hospital dietetics service',
       ),
     ],
@@ -14228,7 +14228,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310093001'),
+        code: FhirCode('310093001'),
         display: 'Occupational therapy service',
       ),
     ],
@@ -14238,7 +14238,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310094007'),
+        code: FhirCode('310094007'),
         display: 'Community-based occupational therapy service',
       ),
     ],
@@ -14248,7 +14248,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310095008'),
+        code: FhirCode('310095008'),
         display: 'Social services occupational therapy service',
       ),
     ],
@@ -14257,7 +14257,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310096009'),
+        code: FhirCode('310096009'),
         display: 'Hospital occupational therapy service',
       ),
     ],
@@ -14266,7 +14266,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310098005'),
+        code: FhirCode('310098005'),
         display: 'Hospital physiotherapy service',
       ),
     ],
@@ -14275,7 +14275,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310099002'),
+        code: FhirCode('310099002'),
         display: 'Child physiotherapy service',
       ),
     ],
@@ -14284,7 +14284,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310100005'),
+        code: FhirCode('310100005'),
         display: 'Play therapy service',
       ),
     ],
@@ -14293,7 +14293,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310101009'),
+        code: FhirCode('310101009'),
         display: 'Speech and language therapy service',
       ),
     ],
@@ -14303,7 +14303,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310102002'),
+        code: FhirCode('310102002'),
         display: 'Community-based speech and language therapy service',
       ),
     ],
@@ -14313,7 +14313,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310103007'),
+        code: FhirCode('310103007'),
         display: 'Hospital speech and language therapy service',
       ),
     ],
@@ -14323,7 +14323,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310104001'),
+        code: FhirCode('310104001'),
         display: 'Child speech and language therapy service',
       ),
     ],
@@ -14332,7 +14332,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310105000'),
+        code: FhirCode('310105000'),
         display: 'Optometry service',
       ),
     ],
@@ -14341,7 +14341,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310106004'),
+        code: FhirCode('310106004'),
         display: 'Orthoptics service',
       ),
     ],
@@ -14350,7 +14350,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310107008'),
+        code: FhirCode('310107008'),
         display: 'Hospital orthoptics service',
       ),
     ],
@@ -14359,7 +14359,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310108003'),
+        code: FhirCode('310108003'),
         display: 'Community orthoptics service',
       ),
     ],
@@ -14368,7 +14368,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310109006'),
+        code: FhirCode('310109006'),
         display: 'Orthotics service',
       ),
     ],
@@ -14377,7 +14377,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310110001'),
+        code: FhirCode('310110001'),
         display: 'Hospital orthotics service',
       ),
     ],
@@ -14386,7 +14386,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310111002'),
+        code: FhirCode('310111002'),
         display: 'Community orthotics service',
       ),
     ],
@@ -14395,7 +14395,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310112009'),
+        code: FhirCode('310112009'),
         display: 'Surgical fitting service',
       ),
     ],
@@ -14404,7 +14404,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310113004'),
+        code: FhirCode('310113004'),
         display: 'Hospital surgical fitting service',
       ),
     ],
@@ -14413,7 +14413,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310114005'),
+        code: FhirCode('310114005'),
         display: 'Community surgical fitting service',
       ),
     ],
@@ -14422,7 +14422,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310115006'),
+        code: FhirCode('310115006'),
         display: 'Public health service',
       ),
     ],
@@ -14431,7 +14431,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310116007'),
+        code: FhirCode('310116007'),
         display: 'Psychiatry service',
       ),
     ],
@@ -14440,7 +14440,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310117003'),
+        code: FhirCode('310117003'),
         display: 'Child and adolescent psychiatry service',
       ),
     ],
@@ -14449,7 +14449,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310118008'),
+        code: FhirCode('310118008'),
         display: 'Forensic psychiatry service',
       ),
     ],
@@ -14458,7 +14458,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310119000'),
+        code: FhirCode('310119000'),
         display: 'Liaison psychiatry service',
       ),
     ],
@@ -14467,7 +14467,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310120006'),
+        code: FhirCode('310120006'),
         display: 'Mental handicap psychiatry service',
       ),
     ],
@@ -14476,7 +14476,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310121005'),
+        code: FhirCode('310121005'),
         display: 'Psychogeriatric service',
       ),
     ],
@@ -14485,7 +14485,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310122003'),
+        code: FhirCode('310122003'),
         display: 'Rehabilitation psychiatry service',
       ),
     ],
@@ -14494,7 +14494,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310123008'),
+        code: FhirCode('310123008'),
         display: 'Psychology service',
       ),
     ],
@@ -14503,7 +14503,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310124002'),
+        code: FhirCode('310124002'),
         display: 'Psychotherapy service',
       ),
     ],
@@ -14512,7 +14512,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310125001'),
+        code: FhirCode('310125001'),
         display: 'Radiology service',
       ),
     ],
@@ -14521,7 +14521,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310126000'),
+        code: FhirCode('310126000'),
         display: 'Breast screening service',
       ),
     ],
@@ -14530,7 +14530,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310127009'),
+        code: FhirCode('310127009'),
         display: 'Magnetic resonance imaging service',
       ),
     ],
@@ -14539,7 +14539,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310128004'),
+        code: FhirCode('310128004'),
         display: 'Computerized tomography service',
       ),
     ],
@@ -14548,7 +14548,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310129007'),
+        code: FhirCode('310129007'),
         display: 'Rehabilitation service',
       ),
     ],
@@ -14557,7 +14557,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310130002'),
+        code: FhirCode('310130002'),
         display: 'Head injury rehabilitation service',
       ),
     ],
@@ -14566,7 +14566,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310131003'),
+        code: FhirCode('310131003'),
         display: 'Community rehabilitation service',
       ),
     ],
@@ -14575,7 +14575,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310132005'),
+        code: FhirCode('310132005'),
         display: 'Young disabled service',
       ),
     ],
@@ -14584,7 +14584,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310133000'),
+        code: FhirCode('310133000'),
         display: 'Swallow clinic',
       ),
     ],
@@ -14593,7 +14593,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310134006'),
+        code: FhirCode('310134006'),
         display: 'Social services',
       ),
     ],
@@ -14602,7 +14602,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310135007'),
+        code: FhirCode('310135007'),
         display: 'SSD customer services',
       ),
     ],
@@ -14611,7 +14611,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310136008'),
+        code: FhirCode('310136008'),
         display: 'Social services department duty team',
       ),
     ],
@@ -14620,7 +14620,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310137004'),
+        code: FhirCode('310137004'),
         display: 'Stroke service',
       ),
     ],
@@ -14629,7 +14629,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310138009'),
+        code: FhirCode('310138009'),
         display: 'Surgical service',
       ),
     ],
@@ -14638,7 +14638,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310139001'),
+        code: FhirCode('310139001'),
         display: 'Breast surgery service',
       ),
     ],
@@ -14647,7 +14647,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310140004'),
+        code: FhirCode('310140004'),
         display: 'Cardiothoracic surgery service',
       ),
     ],
@@ -14656,7 +14656,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310141000'),
+        code: FhirCode('310141000'),
         display: 'Thoracic surgery service',
       ),
     ],
@@ -14665,7 +14665,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310142007'),
+        code: FhirCode('310142007'),
         display: 'Cardiac surgery service',
       ),
     ],
@@ -14674,7 +14674,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310143002'),
+        code: FhirCode('310143002'),
         display: 'Dental surgery service',
       ),
     ],
@@ -14683,7 +14683,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310144008'),
+        code: FhirCode('310144008'),
         display: 'General dental surgery service',
       ),
     ],
@@ -14692,7 +14692,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310145009'),
+        code: FhirCode('310145009'),
         display: 'Oral surgery service',
       ),
     ],
@@ -14701,7 +14701,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310146005'),
+        code: FhirCode('310146005'),
         display: 'Orthodontics service',
       ),
     ],
@@ -14710,7 +14710,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310147001'),
+        code: FhirCode('310147001'),
         display: 'Pediatric dentistry service',
       ),
     ],
@@ -14719,7 +14719,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310148006'),
+        code: FhirCode('310148006'),
         display: 'Restorative dentistry service',
       ),
     ],
@@ -14728,7 +14728,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310149003'),
+        code: FhirCode('310149003'),
         display: 'Ear, nose and throat service',
       ),
     ],
@@ -14737,7 +14737,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310150003'),
+        code: FhirCode('310150003'),
         display: 'Endocrine surgery service',
       ),
     ],
@@ -14746,7 +14746,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310151004'),
+        code: FhirCode('310151004'),
         display: 'Gastrointestinal surgery service',
       ),
     ],
@@ -14755,7 +14755,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310152006'),
+        code: FhirCode('310152006'),
         display: 'General GI surgery service',
       ),
     ],
@@ -14764,7 +14764,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310153001'),
+        code: FhirCode('310153001'),
         display: 'Upper gastrointestinal surgery service',
       ),
     ],
@@ -14773,7 +14773,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310155008'),
+        code: FhirCode('310155008'),
         display: 'Colorectal surgery service',
       ),
     ],
@@ -14782,7 +14782,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310156009'),
+        code: FhirCode('310156009'),
         display: 'General surgical service',
       ),
     ],
@@ -14791,7 +14791,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310157000'),
+        code: FhirCode('310157000'),
         display: 'Hand surgery service',
       ),
     ],
@@ -14800,7 +14800,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310158005'),
+        code: FhirCode('310158005'),
         display: 'Hepatobiliary surgical service',
       ),
     ],
@@ -14809,7 +14809,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310159002'),
+        code: FhirCode('310159002'),
         display: 'Neurosurgical service',
       ),
     ],
@@ -14818,7 +14818,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310160007'),
+        code: FhirCode('310160007'),
         display: 'Ophthalmology service',
       ),
     ],
@@ -14827,7 +14827,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310161006'),
+        code: FhirCode('310161006'),
         display: 'Orthopedic service',
       ),
     ],
@@ -14836,7 +14836,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310162004'),
+        code: FhirCode('310162004'),
         display: 'Pancreatic surgery service',
       ),
     ],
@@ -14845,7 +14845,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310163009'),
+        code: FhirCode('310163009'),
         display: 'Pediatric surgical service',
       ),
     ],
@@ -14854,7 +14854,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310164003'),
+        code: FhirCode('310164003'),
         display: 'Plastic surgery service',
       ),
     ],
@@ -14863,7 +14863,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310165002'),
+        code: FhirCode('310165002'),
         display: 'Transplant surgery service',
       ),
     ],
@@ -14872,7 +14872,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310166001'),
+        code: FhirCode('310166001'),
         display: 'Trauma surgery service',
       ),
     ],
@@ -14881,7 +14881,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310167005'),
+        code: FhirCode('310167005'),
         display: 'Urology service',
       ),
     ],
@@ -14890,7 +14890,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310168000'),
+        code: FhirCode('310168000'),
         display: 'Vascular surgery service',
       ),
     ],
@@ -14899,7 +14899,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310169008'),
+        code: FhirCode('310169008'),
         display: 'Ultrasonography service',
       ),
     ],
@@ -14908,7 +14908,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('310200001'),
+        code: FhirCode('310200001'),
         display: 'Cytology service',
       ),
     ],
@@ -14917,7 +14917,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('373654008'),
+        code: FhirCode('373654008'),
         display: 'Medical referral service',
       ),
     ],
@@ -14926,7 +14926,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('395086005'),
+        code: FhirCode('395086005'),
         display: 'Community specialist palliative care',
       ),
     ],
@@ -14935,7 +14935,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('395092004'),
+        code: FhirCode('395092004'),
         display: 'Specialist palliative care',
       ),
     ],
@@ -14945,7 +14945,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('395104009'),
+        code: FhirCode('395104009'),
         display: 'Cancer primary healthcare multidisciplinary team',
       ),
     ],
@@ -14954,7 +14954,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('408451000'),
+        code: FhirCode('408451000'),
         display: 'Community learning disabilities team',
       ),
     ],
@@ -14963,7 +14963,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('408452007'),
+        code: FhirCode('408452007'),
         display: 'Behavioral intervention team',
       ),
     ],
@@ -14972,7 +14972,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('408458006'),
+        code: FhirCode('408458006'),
         display: 'Specialist multidisciplinary team',
       ),
     ],
@@ -14981,7 +14981,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('413294000'),
+        code: FhirCode('413294000'),
         display: 'Community health services',
       ),
     ],
@@ -14990,7 +14990,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('413299005'),
+        code: FhirCode('413299005'),
         display: 'Early years services',
       ),
     ],
@@ -14999,7 +14999,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('413331009'),
+        code: FhirCode('413331009'),
         display: 'Voluntary services',
       ),
     ],
@@ -15008,7 +15008,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('444913002'),
+        code: FhirCode('444913002'),
         display: 'Diabetes mellitus service',
       ),
     ],
@@ -15017,7 +15017,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('444933003'),
+        code: FhirCode('444933003'),
         display: 'Home hospice service',
       ),
     ],
@@ -15026,7 +15026,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('445449000'),
+        code: FhirCode('445449000'),
         display: 'Acute care hospice service',
       ),
     ],
@@ -15035,7 +15035,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('699478002'),
+        code: FhirCode('699478002'),
         display: 'Surgical oncology service',
       ),
     ],
@@ -15044,7 +15044,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('699650006'),
+        code: FhirCode('699650006'),
         display: 'Community based physiotherapy service',
       ),
     ],
@@ -15053,7 +15053,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700221004'),
+        code: FhirCode('700221004'),
         display: 'Care of elderly service',
       ),
     ],
@@ -15062,7 +15062,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700231006'),
+        code: FhirCode('700231006'),
         display: 'Critical care physician service',
       ),
     ],
@@ -15071,7 +15071,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700232004'),
+        code: FhirCode('700232004'),
         display: 'General medical service',
       ),
     ],
@@ -15080,7 +15080,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700241009'),
+        code: FhirCode('700241009'),
         display: 'Dermatology service',
       ),
     ],
@@ -15089,7 +15089,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700433006'),
+        code: FhirCode('700433006'),
         display: 'Gastroenterology service',
       ),
     ],
@@ -15098,7 +15098,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700434000'),
+        code: FhirCode('700434000'),
         display: 'Endocrinology service',
       ),
     ],
@@ -15107,7 +15107,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700435004'),
+        code: FhirCode('700435004'),
         display: 'Clinical physiology service',
       ),
     ],
@@ -15116,7 +15116,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('700436003'),
+        code: FhirCode('700436003'),
         display: 'Clinical pharmacology service',
       ),
     ],
@@ -15125,7 +15125,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('705150003'),
+        code: FhirCode('705150003'),
         display: 'Domiciliary physiotherapy service',
       ),
     ],
@@ -15134,7 +15134,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('706900000'),
+        code: FhirCode('706900000'),
         display: 'Parasitology service',
       ),
     ],
@@ -15143,7 +15143,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('706901001'),
+        code: FhirCode('706901001'),
         display: 'Bacteriology service',
       ),
     ],
@@ -15152,7 +15152,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('706902008'),
+        code: FhirCode('706902008'),
         display: 'Mycology service',
       ),
     ],
@@ -15161,7 +15161,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('706903003'),
+        code: FhirCode('706903003'),
         display: 'Mycobacteriology service',
       ),
     ],
@@ -15170,7 +15170,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708168004'),
+        code: FhirCode('708168004'),
         display: 'Mental health service',
       ),
     ],
@@ -15179,7 +15179,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708169007'),
+        code: FhirCode('708169007'),
         display: 'Respiratory therapy service',
       ),
     ],
@@ -15188,7 +15188,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708170008'),
+        code: FhirCode('708170008'),
         display: 'Nursing service',
       ),
     ],
@@ -15197,7 +15197,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708171007'),
+        code: FhirCode('708171007'),
         display: 'Vascular ultrasound service',
       ),
     ],
@@ -15206,7 +15206,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708172000'),
+        code: FhirCode('708172000'),
         display: 'Cardiac ultrasound service',
       ),
     ],
@@ -15215,7 +15215,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708173005'),
+        code: FhirCode('708173005'),
         display: 'Obstetric ultrasound service',
       ),
     ],
@@ -15224,7 +15224,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708174004'),
+        code: FhirCode('708174004'),
         display: 'Interventional radiology service',
       ),
     ],
@@ -15233,7 +15233,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708175003'),
+        code: FhirCode('708175003'),
         display: 'Diagnostic imaging service',
       ),
     ],
@@ -15242,7 +15242,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708178001'),
+        code: FhirCode('708178001'),
         display: 'Cytogenetics service',
       ),
     ],
@@ -15251,7 +15251,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708179009'),
+        code: FhirCode('708179009'),
         display: 'Molecular pathology service',
       ),
     ],
@@ -15260,7 +15260,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708182004'),
+        code: FhirCode('708182004'),
         display: 'Histology service',
       ),
     ],
@@ -15269,7 +15269,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708183009'),
+        code: FhirCode('708183009'),
         display: 'Anatomic pathology service',
       ),
     ],
@@ -15278,7 +15278,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708184003'),
+        code: FhirCode('708184003'),
         display: 'Laboratory service',
       ),
     ],
@@ -15287,7 +15287,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708185002'),
+        code: FhirCode('708185002'),
         display: 'Virology service',
       ),
     ],
@@ -15296,7 +15296,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708187005'),
+        code: FhirCode('708187005'),
         display: 'Surgical pathology service',
       ),
     ],
@@ -15305,7 +15305,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708188000'),
+        code: FhirCode('708188000'),
         display: 'Serology service',
       ),
     ],
@@ -15314,7 +15314,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708190004'),
+        code: FhirCode('708190004'),
         display: 'Immunology service',
       ),
     ],
@@ -15323,7 +15323,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708191000'),
+        code: FhirCode('708191000'),
         display: 'Toxicology service',
       ),
     ],
@@ -15332,7 +15332,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708193002'),
+        code: FhirCode('708193002'),
         display: 'Coagulation service',
       ),
     ],
@@ -15341,7 +15341,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708194008'),
+        code: FhirCode('708194008'),
         display: 'Blood bank service',
       ),
     ],
@@ -15350,7 +15350,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('708196005'),
+        code: FhirCode('708196005'),
         display: 'Hematology service',
       ),
     ],
@@ -15359,7 +15359,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('710028007'),
+        code: FhirCode('710028007'),
         display: 'Maxillofacial surgery service',
       ),
     ],
@@ -15368,7 +15368,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('711332004'),
+        code: FhirCode('711332004'),
         display: 'Allergy service',
       ),
     ],
@@ -15377,7 +15377,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('714088003'),
+        code: FhirCode('714088003'),
         display: 'Midwifery service',
       ),
     ],
@@ -15386,7 +15386,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('714089006'),
+        code: FhirCode('714089006'),
         display: 'Community midwifery service',
       ),
     ],
@@ -15395,7 +15395,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722140001'),
+        code: FhirCode('722140001'),
         display: 'Physiotherapy service',
       ),
     ],
@@ -15404,7 +15404,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722170006'),
+        code: FhirCode('722170006'),
         display: 'Chiropractic service',
       ),
     ],
@@ -15413,7 +15413,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722174002'),
+        code: FhirCode('722174002'),
         display: 'Pulmonary medicine service',
       ),
     ],
@@ -15422,7 +15422,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722175001'),
+        code: FhirCode('722175001'),
         display: 'Psychosomatic medicine service',
       ),
     ],
@@ -15431,7 +15431,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722176000'),
+        code: FhirCode('722176000'),
         display: 'Dentistry service',
       ),
     ],
@@ -15440,7 +15440,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722352000'),
+        code: FhirCode('722352000'),
         display: 'Vascular medicine service',
       ),
     ],
@@ -15449,7 +15449,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722393008'),
+        code: FhirCode('722393008'),
         display: 'Legal medicine service',
       ),
     ],
@@ -15459,7 +15459,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('722424008'),
+        code: FhirCode('722424008'),
         display: 'Physical medicine and rehabilitation service',
       ),
     ],
@@ -15468,7 +15468,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('733459009'),
+        code: FhirCode('733459009'),
         display: 'Cardiac rehabilitation service',
       ),
     ],
@@ -15477,7 +15477,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('733921009'),
+        code: FhirCode('733921009'),
         display: 'Transplant medicine service',
       ),
     ],
@@ -15486,7 +15486,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('734862008'),
+        code: FhirCode('734862008'),
         display: 'Endodontic service',
       ),
     ],
@@ -15495,7 +15495,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('734863003'),
+        code: FhirCode('734863003'),
         display: 'Prosthodontic service',
       ),
     ],
@@ -15504,7 +15504,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('734920002'),
+        code: FhirCode('734920002'),
         display: 'Diabetic education service',
       ),
     ],
@@ -15513,7 +15513,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('736622005'),
+        code: FhirCode('736622005'),
         display: 'Aboriginal health service',
       ),
     ],
@@ -15522,7 +15522,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('741073001'),
+        code: FhirCode('741073001'),
         display: 'Neonatal intensive care service',
       ),
     ],
@@ -15531,7 +15531,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('773558007'),
+        code: FhirCode('773558007'),
         display: 'Physical medicine service',
       ),
     ],
@@ -15540,7 +15540,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788001008'),
+        code: FhirCode('788001008'),
         display: 'Infectious disease service',
       ),
     ],
@@ -15549,7 +15549,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788002001'),
+        code: FhirCode('788002001'),
         display: 'Adult mental health service',
       ),
     ],
@@ -15558,7 +15558,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788003006'),
+        code: FhirCode('788003006'),
         display: 'Nephrology service',
       ),
     ],
@@ -15567,7 +15567,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788004000'),
+        code: FhirCode('788004000'),
         display: 'Clinical genetics service',
       ),
     ],
@@ -15576,7 +15576,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788005004'),
+        code: FhirCode('788005004'),
         display: 'Neurology service',
       ),
     ],
@@ -15585,7 +15585,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788006003'),
+        code: FhirCode('788006003'),
         display: 'Genetic laboratory service',
       ),
     ],
@@ -15594,7 +15594,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788007007'),
+        code: FhirCode('788007007'),
         display: 'General practice service',
       ),
     ],
@@ -15603,7 +15603,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788008002'),
+        code: FhirCode('788008002'),
         display: 'Oral and maxillofacial surgery service',
       ),
     ],
@@ -15612,7 +15612,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788009005'),
+        code: FhirCode('788009005'),
         display: 'Nuclear medicine service',
       ),
     ],
@@ -15621,7 +15621,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788121006'),
+        code: FhirCode('788121006'),
         display: 'Clinical immunology and allergy service',
       ),
     ],
@@ -15630,7 +15630,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788122004'),
+        code: FhirCode('788122004'),
         display: 'Sexual health service',
       ),
     ],
@@ -15639,7 +15639,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788123009'),
+        code: FhirCode('788123009'),
         display: 'Radiation oncology service',
       ),
     ],
@@ -15648,7 +15648,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788124003'),
+        code: FhirCode('788124003'),
         display: 'Histopathology service',
       ),
     ],
@@ -15657,7 +15657,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788125002'),
+        code: FhirCode('788125002'),
         display: 'Addiction service',
       ),
     ],
@@ -15666,7 +15666,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788126001'),
+        code: FhirCode('788126001'),
         display: 'Prosthetic service',
       ),
     ],
@@ -15675,7 +15675,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('788127005'),
+        code: FhirCode('788127005'),
         display: 'Child health service',
       ),
     ],
@@ -15684,7 +15684,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('789714005'),
+        code: FhirCode('789714005'),
         display: 'Pediatric rheumatology service',
       ),
     ],
@@ -15693,7 +15693,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('789715006'),
+        code: FhirCode('789715006'),
         display: 'Pediatric respiratory therapy service',
       ),
     ],
@@ -15702,7 +15702,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('789716007'),
+        code: FhirCode('789716007'),
         display: 'Pediatric otolaryngology service',
       ),
     ],
@@ -15711,7 +15711,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('789717003'),
+        code: FhirCode('789717003'),
         display: 'Pediatric cardiology service',
       ),
     ],
@@ -15720,7 +15720,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('789718008'),
+        code: FhirCode('789718008'),
         display: 'Cardiology service',
       ),
     ],
@@ -15729,7 +15729,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('792847005'),
+        code: FhirCode('792847005'),
         display: 'Emergency ambulance service',
       ),
     ],
@@ -15738,7 +15738,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('792848000'),
+        code: FhirCode('792848000'),
         display: 'Internal medicine service',
       ),
     ],
@@ -15747,7 +15747,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('792849008'),
+        code: FhirCode('792849008'),
         display: 'Pediatric clinical genetics service',
       ),
     ],
@@ -15756,7 +15756,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('816074000'),
+        code: FhirCode('816074000'),
         display: 'Respiratory medicine service',
       ),
     ],
@@ -15765,7 +15765,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('816075004'),
+        code: FhirCode('816075004'),
         display: 'Prosthetic and orthotic service',
       ),
     ],
@@ -15774,7 +15774,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2351000175106'),
+        code: FhirCode('2351000175106'),
         display: 'Sports medicine service',
       ),
     ],
@@ -15783,7 +15783,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2371000175100'),
+        code: FhirCode('2371000175100'),
         display: 'Anticoagulation service',
       ),
     ],
@@ -15792,7 +15792,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2391000175104'),
+        code: FhirCode('2391000175104'),
         display: 'Bariatric surgery service',
       ),
     ],
@@ -15801,7 +15801,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2401000175102'),
+        code: FhirCode('2401000175102'),
         display: 'Chemical dependency service',
       ),
     ],
@@ -15810,7 +15810,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2411000175104'),
+        code: FhirCode('2411000175104'),
         display: 'Craniofacial service',
       ),
     ],
@@ -15819,7 +15819,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2421000175108'),
+        code: FhirCode('2421000175108'),
         display: 'Acute care inpatient service',
       ),
     ],
@@ -15828,7 +15828,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2431000175106'),
+        code: FhirCode('2431000175106'),
         display: 'Private nursing service',
       ),
     ],
@@ -15837,7 +15837,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2441000175100'),
+        code: FhirCode('2441000175100'),
         display: 'Noninvasive vascular laboratory service',
       ),
     ],
@@ -15846,7 +15846,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2451000175103'),
+        code: FhirCode('2451000175103'),
         display: 'Perinatology service',
       ),
     ],
@@ -15855,7 +15855,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2461000175101'),
+        code: FhirCode('2461000175101'),
         display: 'Pulmonary rehabilitation service',
       ),
     ],
@@ -15864,7 +15864,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2471000175109'),
+        code: FhirCode('2471000175109'),
         display: 'Employee health service',
       ),
     ],
@@ -15873,7 +15873,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2481000175107'),
+        code: FhirCode('2481000175107'),
         display: 'Life management service',
       ),
     ],
@@ -15882,7 +15882,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2621000175106'),
+        code: FhirCode('2621000175106'),
         display: 'Outpatient surgery service',
       ),
     ],
@@ -15891,7 +15891,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2631000175109'),
+        code: FhirCode('2631000175109'),
         display: 'Skilled nursing service',
       ),
     ],
@@ -15900,7 +15900,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('2651000175101'),
+        code: FhirCode('2651000175101'),
         display: 'Women\'s health service',
       ),
     ],
@@ -15909,7 +15909,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3481000175100'),
+        code: FhirCode('3481000175100'),
         display: 'Weight loss service',
       ),
     ],
@@ -15918,7 +15918,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3491000175102'),
+        code: FhirCode('3491000175102'),
         display: 'Long-term care service',
       ),
     ],
@@ -15927,7 +15927,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3511000175109'),
+        code: FhirCode('3511000175109'),
         display: 'Genetics service',
       ),
     ],
@@ -15936,7 +15936,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3531000175102'),
+        code: FhirCode('3531000175102'),
         display: 'Geriatric service',
       ),
     ],
@@ -15945,7 +15945,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3551000175105'),
+        code: FhirCode('3551000175105'),
         display: 'Reproductive service',
       ),
     ],
@@ -15954,7 +15954,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3601000175107'),
+        code: FhirCode('3601000175107'),
         display: 'Pulmonary service',
       ),
     ],
@@ -15963,7 +15963,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3611000175105'),
+        code: FhirCode('3611000175105'),
         display: 'Respite care service',
       ),
     ],
@@ -15972,7 +15972,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3621000175101'),
+        code: FhirCode('3621000175101'),
         display: 'Rheumatology service',
       ),
     ],
@@ -15981,7 +15981,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3641000175109'),
+        code: FhirCode('3641000175109'),
         display: 'Sleep service',
       ),
     ],
@@ -15990,7 +15990,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3661000175108'),
+        code: FhirCode('3661000175108'),
         display: 'Wound care service',
       ),
     ],
@@ -15999,7 +15999,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3741000175102'),
+        code: FhirCode('3741000175102'),
         display: 'Newborn service',
       ),
     ],
@@ -16008,7 +16008,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3751000175100'),
+        code: FhirCode('3751000175100'),
         display: 'Pediatric emergency medical service',
       ),
     ],
@@ -16017,7 +16017,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3761000175103'),
+        code: FhirCode('3761000175103'),
         display: 'Pediatric endocrinology service',
       ),
     ],
@@ -16026,7 +16026,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3771000175106'),
+        code: FhirCode('3771000175106'),
         display: 'Pediatric gastroenterology service',
       ),
     ],
@@ -16035,7 +16035,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3781000175109'),
+        code: FhirCode('3781000175109'),
         display: 'Pediatric infectious disease service',
       ),
     ],
@@ -16044,7 +16044,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3791000175107'),
+        code: FhirCode('3791000175107'),
         display: 'Pediatric nephrology service',
       ),
     ],
@@ -16053,7 +16053,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3801000175108'),
+        code: FhirCode('3801000175108'),
         display: 'Pediatric pulmonology service',
       ),
     ],
@@ -16062,7 +16062,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3831000175104'),
+        code: FhirCode('3831000175104'),
         display: 'Otolaryngology service',
       ),
     ],
@@ -16071,7 +16071,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3841000175105'),
+        code: FhirCode('3841000175105'),
         display: 'Adolescent medicine service',
       ),
     ],
@@ -16080,7 +16080,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('3851000175107'),
+        code: FhirCode('3851000175107'),
         display: 'Reconstructive surgery service',
       ),
     ],
@@ -16089,7 +16089,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('7271000175108'),
+        code: FhirCode('7271000175108'),
         display: 'Outpatient service',
       ),
     ],
@@ -16098,7 +16098,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8191000175103'),
+        code: FhirCode('8191000175103'),
         display: 'Pediatric anesthesiology service',
       ),
     ],
@@ -16108,7 +16108,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8201000175100'),
+        code: FhirCode('8201000175100'),
         display: 'Pediatric allergy and immunology service',
       ),
     ],
@@ -16117,7 +16117,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8221000175106'),
+        code: FhirCode('8221000175106'),
         display: 'Pediatric orthopedic service',
       ),
     ],
@@ -16126,7 +16126,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8231000175109'),
+        code: FhirCode('8231000175109'),
         display: 'Pediatric pathology service',
       ),
     ],
@@ -16135,7 +16135,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8241000175103'),
+        code: FhirCode('8241000175103'),
         display: 'Pediatric radiology service',
       ),
     ],
@@ -16144,7 +16144,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8251000175101'),
+        code: FhirCode('8251000175101'),
         display: 'Pediatric medical toxicology service',
       ),
     ],
@@ -16153,7 +16153,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8261000175104'),
+        code: FhirCode('8261000175104'),
         display: 'Pediatric critical care service',
       ),
     ],
@@ -16162,7 +16162,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('8861000175100'),
+        code: FhirCode('8861000175100'),
         display: 'Telehealth service',
       ),
     ],
@@ -16171,7 +16171,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('23871000087101'),
+        code: FhirCode('23871000087101'),
         display: 'Adult dermatology service',
       ),
     ],
@@ -16180,7 +16180,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('23891000087102'),
+        code: FhirCode('23891000087102'),
         display: 'Adult hematology service',
       ),
     ],
@@ -16189,7 +16189,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('23901000087101'),
+        code: FhirCode('23901000087101'),
         display: 'Hepatology service',
       ),
     ],
@@ -16198,7 +16198,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('23911000087104'),
+        code: FhirCode('23911000087104'),
         display: 'Medication review service',
       ),
     ],
@@ -16207,7 +16207,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('23941000087103'),
+        code: FhirCode('23941000087103'),
         display: 'Narcotic addiction service',
       ),
     ],
@@ -16216,7 +16216,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('23951000087100'),
+        code: FhirCode('23951000087100'),
         display: 'Opioid dependence service',
       ),
     ],
@@ -16225,7 +16225,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24001000087103'),
+        code: FhirCode('24001000087103'),
         display: 'Pediatric plastic surgery service',
       ),
     ],
@@ -16234,7 +16234,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24011000087101'),
+        code: FhirCode('24011000087101'),
         display: 'Vascular imaging service',
       ),
     ],
@@ -16243,7 +16243,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24051000087102'),
+        code: FhirCode('24051000087102'),
         display: 'Breast surgical oncology service',
       ),
     ],
@@ -16253,7 +16253,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24081000087105'),
+        code: FhirCode('24081000087105'),
         display: 'Human immunodeficiency virus nurse practitioner service',
       ),
     ],
@@ -16263,7 +16263,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24101000087102'),
+        code: FhirCode('24101000087102'),
         display: 'HIV (human immunodeficiency virus) social work service',
       ),
     ],
@@ -16272,7 +16272,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24141000087104'),
+        code: FhirCode('24141000087104'),
         display: 'Spine orthopedic surgery service',
       ),
     ],
@@ -16281,7 +16281,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24271000087103'),
+        code: FhirCode('24271000087103'),
         display: 'Adult chronic pain management service',
       ),
     ],
@@ -16291,7 +16291,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24291000087104'),
+        code: FhirCode('24291000087104'),
         display: 'Geriatric chronic pain management service',
       ),
     ],
@@ -16301,7 +16301,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24331000087108'),
+        code: FhirCode('24331000087108'),
         display: 'Narcotic addiction service with chronic pain management',
       ),
     ],
@@ -16311,7 +16311,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('24351000087104'),
+        code: FhirCode('24351000087104'),
         display: 'Pediatric chronic pain management service',
       ),
     ],
@@ -16320,7 +16320,7 @@ final codeableConceptFromProviderRole = {
     coding: [
       Coding(
         system: FhirUri('http://snomed.info/sct'),
-        code: Code('431051000124102'),
+        code: FhirCode('431051000124102'),
         display: 'Dialysis service',
       ),
     ],

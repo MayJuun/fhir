@@ -22,8 +22,8 @@ class ObservationUsCore extends Resource {
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
     String? valueString,
-    Boolean? valueBoolean,
-    Integer? valueInteger,
+    FhirBoolean? valueBoolean,
+    FhirInteger? valueInteger,
     Range? valueRange,
     Ratio? valueRatio,
     SampledData? valueSampledData,
@@ -38,7 +38,7 @@ class ObservationUsCore extends Resource {
     List<CodeableConcept>? interpretation,
     CodeableConcept? bodySite,
     Reference? device,
-    Instant? issued,
+    FhirInstant? issued,
   }) =>
       ObservationUsCore._(Observation(
         id: id,
@@ -84,8 +84,8 @@ class ObservationUsCore extends Resource {
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
     String? valueString,
-    Boolean? valueBoolean,
-    Integer? valueInteger,
+    FhirBoolean? valueBoolean,
+    FhirInteger? valueInteger,
     Range? valueRange,
     Ratio? valueRatio,
     SampledData? valueSampledData,
@@ -101,7 +101,7 @@ class ObservationUsCore extends Resource {
           Coding(
             system: FhirUri(
                 'http://terminology.hl7.org/CodeSystem/observation-category'),
-            code: Code('laboratory'),
+            code: FhirCode('laboratory'),
             display: 'Laboratory',
           ),
         ],
@@ -149,17 +149,17 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('59576-9'),
+              code: FhirCode('59576-9'),
               display: 'Body mass index (BMI) [Percentile] Per age and sex',
             ),
           ],
           text: 'BMI',
         ),
         valueQuantity: Quantity(
-          value: Decimal(bmiPercentForAge),
+          value: FhirDecimal(bmiPercentForAge),
           unit: '%',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('%'),
+          code: FhirCode('%'),
         ),
       );
 
@@ -174,17 +174,17 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('8289-1'),
+              code: FhirCode('8289-1'),
               display: 'Head Occipital-frontal circumference Percentile',
             ),
           ],
           text: 'Head Occipital-frontal circumference Percentile',
         ),
         valueQuantity: Quantity(
-          value: Decimal(headCircumferencePercentile),
+          value: FhirDecimal(headCircumferencePercentile),
           unit: '%',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('%'),
+          code: FhirCode('%'),
         ),
       );
 
@@ -199,17 +199,17 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('77606-2'),
+              code: FhirCode('77606-2'),
               display: 'Weight-for-length Per age and sex',
             ),
           ],
           text: 'Weight-for-length',
         ),
         valueQuantity: Quantity(
-          value: Decimal(weightForHeightPercentile),
+          value: FhirDecimal(weightForHeightPercentile),
           unit: '%',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('%'),
+          code: FhirCode('%'),
         ),
       );
 
@@ -228,17 +228,17 @@ class ObservationUsCore extends Resource {
             coding: [
               Coding(
                 system: FhirUri('http://loinc.org'),
-                code: Code('3151-8'),
+                code: FhirCode('3151-8'),
                 display: 'Inhaled oxygen flow rate',
               ),
             ],
             text: 'Inhaled oxygen flow rate',
           ),
           valueQuantity: Quantity(
-            value: Decimal(litersPerMinute),
+            value: FhirDecimal(litersPerMinute),
             unit: 'liters/min',
             system: FhirUri('http://unitsofmeasure.org'),
-            code: Code('L/min'),
+            code: FhirCode('L/min'),
           ),
         ),
       );
@@ -250,17 +250,17 @@ class ObservationUsCore extends Resource {
             coding: [
               Coding(
                 system: FhirUri('http://loinc.org'),
-                code: Code('3150-0'),
+                code: FhirCode('3150-0'),
                 display: 'Inhaled oxygen concentration',
               ),
             ],
             text: 'Inhaled oxygen concentration',
           ),
           valueQuantity: Quantity(
-            value: Decimal(oxygenFlowRate),
+            value: FhirDecimal(oxygenFlowRate),
             unit: '%',
             system: FhirUri('http://unitsofmeasure.org'),
-            code: Code('%'),
+            code: FhirCode('%'),
           ),
         ),
       );
@@ -272,7 +272,7 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('59408-5'),
+              code: FhirCode('59408-5'),
               display: 'Oxygen saturation in Arterial blood by Pulse oximetry',
             ),
           ],
@@ -280,18 +280,18 @@ class ObservationUsCore extends Resource {
         effectiveDateTime: dateTime,
         subject: subject,
         valueQuantity: Quantity(
-          value: Decimal(o2sat),
+          value: FhirDecimal(o2sat),
           unit: '%',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('%'),
+          code: FhirCode('%'),
         ),
         component: obsComp.isEmpty ? null : obsComp);
   }
 
   factory ObservationUsCore.smokingStatus(
-    Code status,
+    FhirCode status,
     Reference subject,
-    Instant issued,
+    FhirInstant issued,
     SmokingStatus smokingStatus,
   ) {
     return ObservationUsCore(
@@ -300,7 +300,7 @@ class ObservationUsCore extends Resource {
         coding: [
           Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('72166-2'),
+              code: FhirCode('72166-2'),
               display: 'Tobacco smoking status'),
         ],
         text: 'Tobacco smoking status',
@@ -322,7 +322,7 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('9279-1'),
+              code: FhirCode('9279-1'),
               display: 'Respiratory rate',
             ),
           ],
@@ -331,10 +331,10 @@ class ObservationUsCore extends Resource {
         subject: subject,
         effectiveDateTime: dateTime,
         valueQuantity: Quantity(
-          value: Decimal(bpm),
+          value: FhirDecimal(bpm),
           unit: 'breaths/min',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('/min'),
+          code: FhirCode('/min'),
         ),
       );
 
@@ -349,7 +349,7 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('8867-4'),
+              code: FhirCode('8867-4'),
               display: 'Heart rate',
             ),
           ],
@@ -358,10 +358,10 @@ class ObservationUsCore extends Resource {
         subject: subject,
         effectiveDateTime: dateTime,
         valueQuantity: Quantity(
-          value: Decimal(bpm),
+          value: FhirDecimal(bpm),
           unit: 'beats/min',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('/min'),
+          code: FhirCode('/min'),
         ),
       );
 
@@ -376,7 +376,7 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('8310-5'),
+              code: FhirCode('8310-5'),
               display: 'Body temperature',
             ),
           ],
@@ -385,10 +385,10 @@ class ObservationUsCore extends Resource {
         subject: subject,
         effectiveDateTime: dateTime,
         valueQuantity: Quantity(
-          value: Decimal(tempInCelsius),
+          value: FhirDecimal(tempInCelsius),
           unit: 'C',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('Cel'),
+          code: FhirCode('Cel'),
         ),
       );
 
@@ -403,7 +403,7 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('8302-2'),
+              code: FhirCode('8302-2'),
               display: 'Body height',
             ),
           ],
@@ -412,10 +412,10 @@ class ObservationUsCore extends Resource {
         subject: subject,
         effectiveDateTime: dateTime,
         valueQuantity: Quantity(
-          value: Decimal(heightInCentimeters),
+          value: FhirDecimal(heightInCentimeters),
           unit: 'cm',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('cm'),
+          code: FhirCode('cm'),
         ),
       );
 
@@ -430,7 +430,7 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('9843-4'),
+              code: FhirCode('9843-4'),
               display: 'Head Occipital-frontal circumference',
             ),
           ],
@@ -439,10 +439,10 @@ class ObservationUsCore extends Resource {
         subject: subject,
         effectiveDateTime: dateTime,
         valueQuantity: Quantity(
-          value: Decimal(circumferenceInCentimeters),
+          value: FhirDecimal(circumferenceInCentimeters),
           unit: 'cm',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('cm'),
+          code: FhirCode('cm'),
         ),
       );
 
@@ -457,17 +457,17 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('29463-7'),
+              code: FhirCode('29463-7'),
               display: 'Body Weight',
             ),
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('3141-9'),
+              code: FhirCode('3141-9'),
               display: 'Body weight Measured',
             ),
             Coding(
               system: FhirUri('http://snomed.info/sct'),
-              code: Code('27113001'),
+              code: FhirCode('27113001'),
               display: 'Body Weight',
             ),
           ],
@@ -476,10 +476,10 @@ class ObservationUsCore extends Resource {
         subject: subject,
         effectiveDateTime: dateTime,
         valueQuantity: Quantity(
-          value: Decimal(weightInKilograms),
+          value: FhirDecimal(weightInKilograms),
           unit: 'kg',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('kg'),
+          code: FhirCode('kg'),
         ),
       );
 
@@ -494,7 +494,7 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('39456-5'),
+              code: FhirCode('39456-5'),
               display: 'Body mass index (BMI) [Ratio]',
             ),
           ],
@@ -503,10 +503,10 @@ class ObservationUsCore extends Resource {
         subject: subject,
         effectiveDateTime: dateTime,
         valueQuantity: Quantity(
-          value: Decimal(bmi),
+          value: FhirDecimal(bmi),
           unit: 'kg/m2',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('kg/m2'),
+          code: FhirCode('kg/m2'),
         ),
       );
 
@@ -524,21 +524,21 @@ class ObservationUsCore extends Resource {
           coding: [
             Coding(
               system: FhirUri('http://loinc.org'),
-              code: Code('8480-6'),
+              code: FhirCode('8480-6'),
               display: 'Systolic blood pressure',
             ),
             Coding(
               system: FhirUri('http://snomed.info/sct'),
-              code: Code('271649006'),
+              code: FhirCode('271649006'),
               display: 'Systolic blood pressure',
             ),
           ],
         ),
         valueQuantity: Quantity(
-          value: Decimal(systolic),
+          value: FhirDecimal(systolic),
           unit: 'mmHg',
           system: FhirUri('http://unitsofmeasure.org'),
-          code: Code('mm[Hg]'),
+          code: FhirCode('mm[Hg]'),
         ),
       ),
     );
@@ -549,16 +549,16 @@ class ObservationUsCore extends Resource {
             coding: [
               Coding(
                 system: FhirUri('http://loinc.org'),
-                code: Code('8462-4'),
+                code: FhirCode('8462-4'),
                 display: 'Diastolic blood pressure',
               ),
             ],
           ),
           valueQuantity: Quantity(
-            value: Decimal(diastolic),
+            value: FhirDecimal(diastolic),
             unit: 'mmHg',
             system: FhirUri('http://unitsofmeasure.org'),
-            code: Code('mm[Hg]'),
+            code: FhirCode('mm[Hg]'),
           ),
         ),
       );
@@ -569,7 +569,7 @@ class ObservationUsCore extends Resource {
         coding: [
           Coding(
             system: FhirUri('http://loinc.org'),
-            code: Code('85354-9'),
+            code: FhirCode('85354-9'),
             display: 'Blood pressure panel with all children optional',
           ),
         ],
@@ -600,8 +600,8 @@ class ObservationUsCore extends Resource {
   CodeableConcept? get valueCodeableConcept =>
       _observation.valueCodeableConcept;
   String? get valueString => _observation.valueString;
-  Boolean? get valueBoolean => _observation.valueBoolean;
-  Integer? get valueInteger => _observation.valueInteger;
+  FhirBoolean? get valueBoolean => _observation.valueBoolean;
+  FhirInteger? get valueInteger => _observation.valueInteger;
   Range? get valueRange => _observation.valueRange;
   Ratio? get valueRatio => _observation.valueRatio;
   SampledData? get valueSampledData => _observation.valueSampledData;
@@ -617,7 +617,7 @@ class ObservationUsCore extends Resource {
   List<CodeableConcept>? get interpretation => _observation.interpretation;
   CodeableConcept? get bodySite => _observation.bodySite;
   Reference? get device => _observation.device;
-  Instant? get issued => _observation.issued;
+  FhirInstant? get issued => _observation.issued;
 }
 
 class ObservationReferenceRangeUsCore {
@@ -663,8 +663,8 @@ class ObservationComponentUsCore {
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
     String? valueString,
-    Boolean? valueBoolean,
-    Integer? valueInteger,
+    FhirBoolean? valueBoolean,
+    FhirInteger? valueInteger,
     Range? valueRange,
     Ratio? valueRatio,
     SampledData? valueSampledData,
@@ -707,8 +707,8 @@ class ObservationComponentUsCore {
   CodeableConcept? get valueCodeableConcept =>
       _observationComponent.valueCodeableConcept;
   String? get valueString => _observationComponent.valueString;
-  Boolean? get valueBoolean => _observationComponent.valueBoolean;
-  Integer? get valueInteger => _observationComponent.valueInteger;
+  FhirBoolean? get valueBoolean => _observationComponent.valueBoolean;
+  FhirInteger? get valueInteger => _observationComponent.valueInteger;
   Range? get valueRange => _observationComponent.valueRange;
   Ratio? get valueRatio => _observationComponent.valueRatio;
   SampledData? get valueSampledData => _observationComponent.valueSampledData;
@@ -729,7 +729,7 @@ final _vitalSignsCategory = [
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/observation-category'),
-        code: Code('vital-signs'),
+        code: FhirCode('vital-signs'),
         display: 'Vital Signs',
       ),
     ],

@@ -71,7 +71,7 @@ class OrganizationUsCore extends Resource {
   Narrative? get text => _organization.text;
   List<Resource>? get contained => _organization.contained;
   List<Identifier>? get identifier => _organization.identifier;
-  Boolean? get active => _organization.active;
+  FhirBoolean? get active => _organization.active;
   String? get name => _organization.name;
   List<CodeableConcept>? get type => _organization.type;
   List<ContactPoint>? get telecom => _organization.telecom;

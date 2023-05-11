@@ -87,7 +87,7 @@ class BulkRequest with _$BulkRequest {
         if (type.resourceType != null) {
           typeString += typeString.length == 1 ? '_type=' : ',';
           typeString +=
-              '${ResourceUtils.resourceTypeToStringMap[type.resourceType]}${type.id != null ? "/${type.id}" : ""}';
+              '${resourceTypeToStringMap[type.resourceType]}${type.id != null ? "/${type.id}" : ""}';
         }
       }
     }

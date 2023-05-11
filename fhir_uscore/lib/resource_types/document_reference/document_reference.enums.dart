@@ -20,7 +20,7 @@ final codeableConceptFromDocumentReferenceType = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('18842-5'),
+          code: FhirCode('18842-5'),
           display: 'Discharge Summary'),
     ],
   ),
@@ -28,7 +28,7 @@ final codeableConceptFromDocumentReferenceType = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('11488-4'),
+          code: FhirCode('11488-4'),
           display: 'Consult note'),
     ],
   ),
@@ -36,7 +36,7 @@ final codeableConceptFromDocumentReferenceType = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('34117-2'),
+          code: FhirCode('34117-2'),
           display: 'History and physical note'),
     ],
   ),
@@ -44,7 +44,7 @@ final codeableConceptFromDocumentReferenceType = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('11506-3'),
+          code: FhirCode('11506-3'),
           display: 'Progress note'),
     ],
   ),
@@ -52,7 +52,7 @@ final codeableConceptFromDocumentReferenceType = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('28570-0'),
+          code: FhirCode('28570-0'),
           display: 'Procedure note'),
     ],
   ),

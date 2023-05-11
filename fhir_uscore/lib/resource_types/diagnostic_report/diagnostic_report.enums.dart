@@ -51,7 +51,7 @@ final codeableConceptFromDiagnosticReportCategory = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('LP29684-5'),
+          code: FhirCode('LP29684-5'),
           display: 'Radiology'),
     ],
   ),
@@ -59,7 +59,7 @@ final codeableConceptFromDiagnosticReportCategory = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('LP29708-2'),
+          code: FhirCode('LP29708-2'),
           display: 'Cardiology'),
     ],
   ),
@@ -67,7 +67,7 @@ final codeableConceptFromDiagnosticReportCategory = {
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('LP7839-6'),
+          code: FhirCode('LP7839-6'),
           display: 'Pathology'),
     ],
   ),

@@ -23,7 +23,7 @@ final codeableConceptFromConditionClinicalStatus = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical'),
-        code: Code('active'),
+        code: FhirCode('active'),
         display: 'Active',
       ),
     ],
@@ -33,7 +33,7 @@ final codeableConceptFromConditionClinicalStatus = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical'),
-        code: Code('recurrence'),
+        code: FhirCode('recurrence'),
         display: 'Recurrence',
       ),
     ],
@@ -43,7 +43,7 @@ final codeableConceptFromConditionClinicalStatus = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical'),
-        code: Code('relapse'),
+        code: FhirCode('relapse'),
         display: 'Relapse',
       ),
     ],
@@ -53,7 +53,7 @@ final codeableConceptFromConditionClinicalStatus = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical'),
-        code: Code('inactive'),
+        code: FhirCode('inactive'),
         display: 'Inactive',
       ),
     ],
@@ -63,7 +63,7 @@ final codeableConceptFromConditionClinicalStatus = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical'),
-        code: Code('remission'),
+        code: FhirCode('remission'),
         display: 'Remission',
       ),
     ],
@@ -73,7 +73,7 @@ final codeableConceptFromConditionClinicalStatus = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical'),
-        code: Code('resolved'),
+        code: FhirCode('resolved'),
         display: 'Resolved',
       ),
     ],
@@ -101,7 +101,7 @@ final codeableConceptFromConditionVerificationStatus = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/condition-ver-status'),
-        code: Code('unconfirmed'),
+        code: FhirCode('unconfirmed'),
         display: 'Unconfirmed',
       ),
     ],
@@ -111,7 +111,7 @@ final codeableConceptFromConditionVerificationStatus = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/condition-ver-status'),
-        code: Code('provisional'),
+        code: FhirCode('provisional'),
         display: 'Provisional',
       ),
     ],
@@ -121,7 +121,7 @@ final codeableConceptFromConditionVerificationStatus = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/condition-ver-status'),
-        code: Code('differential'),
+        code: FhirCode('differential'),
         display: 'Differential',
       ),
     ],
@@ -131,7 +131,7 @@ final codeableConceptFromConditionVerificationStatus = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/condition-ver-status'),
-        code: Code('confirmed'),
+        code: FhirCode('confirmed'),
         display: 'Confirmed',
       ),
     ],
@@ -141,7 +141,7 @@ final codeableConceptFromConditionVerificationStatus = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/condition-ver-status'),
-        code: Code('refuted'),
+        code: FhirCode('refuted'),
         display: 'Refuted',
       ),
     ],
@@ -151,7 +151,7 @@ final codeableConceptFromConditionVerificationStatus = {
       Coding(
         system: FhirUri(
             'http://terminology.hl7.org/CodeSystem/condition-ver-status'),
-        code: Code('entered-in-error'),
+        code: FhirCode('entered-in-error'),
         display: 'Entered in Error',
       ),
     ],
@@ -173,7 +173,7 @@ final codeableConceptFromConditionCategory = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-category'),
-        code: Code('problem-list-item'),
+        code: FhirCode('problem-list-item'),
         display: 'Problem List Item',
       ),
     ],
@@ -183,7 +183,7 @@ final codeableConceptFromConditionCategory = {
       Coding(
         system:
             FhirUri('http://terminology.hl7.org/CodeSystem/condition-category'),
-        code: Code('encounter-diagnosis'),
+        code: FhirCode('encounter-diagnosis'),
         display: 'Encounter Diagnosis',
       ),
     ],
@@ -193,7 +193,7 @@ final codeableConceptFromConditionCategory = {
       Coding(
         system: FhirUri(
             'http://hl7.org/fhir/us/core/CodeSystem/condition-category'),
-        code: Code('health-concern'),
+        code: FhirCode('health-concern'),
         display: 'Health Concern',
       ),
     ],

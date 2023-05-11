@@ -16,13 +16,12 @@ dependencies:
     path: ../fhir
   hive: ^2.2.3
   path: ^1.8.3
-  path_provider: ^2.0.13
+  # path_provider: ^2.0.13
   sembast: ^3.4.1+1
-  sembast_sqflite: ^2.1.0+1
-  sqflite: ^2.2.6
-  sqflite_common_ffi: ^2.2.2
+  # sembast_sqflite: ^2.1.0+1
+  # sqflite: ^2.2.6
+  # sqflite_common_ffi: ^2.2.2
 
 dev_dependencies:
-  flutter_lints: ^2.0.1
   import_sorter: ^4.6.0
   test: ^1.23.1

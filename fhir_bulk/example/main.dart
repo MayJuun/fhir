@@ -89,8 +89,8 @@ Future<void> requestTest() async {
   request = BulkRequest.patient(
       base: Uri.parse('http://hapi.fhir.org/baseR4'),
       types: [
-        WhichResource(R4ResourceType.Practitioner, Id('abcdef')),
-        WhichResource(R4ResourceType.Organization, Id('ghijkl')),
+        WhichResource(R4ResourceType.Practitioner, FhirId('abcdef')),
+        WhichResource(R4ResourceType.Organization, FhirId('ghijkl')),
       ]);
   response = await request.request(headers: {'test': 'header'});
 
@@ -98,14 +98,14 @@ Future<void> requestTest() async {
       base: Uri.parse('http://hapi.fhir.org/baseR4'),
       since: FhirDateTime('2021-01-01'),
       types: [
-        WhichResource(R4ResourceType.Practitioner, Id('abcdef')),
-        WhichResource(R4ResourceType.Organization, Id('ghijkl')),
+        WhichResource(R4ResourceType.Practitioner, FhirId('abcdef')),
+        WhichResource(R4ResourceType.Organization, FhirId('ghijkl')),
       ]);
   response = await request.request(headers: {'test': 'header'});
 
   request = BulkRequest.group(
     base: Uri.parse('http://hapi.fhir.org/baseR4'),
-    id: Id('12345'),
+    id: FhirId('12345'),
   );
   response = await request.request(headers: {'test': 'header'});
 

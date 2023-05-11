@@ -21,7 +21,7 @@ Future<Resource?> carePlanRequest(
   Client? client,
   List<String> parameters = const <String>[],
   int? count,
-  Instant? since,
+  FhirInstant? since,
   FhirDateTime? at,
 }) async {
   if (carePlanCategory ?? false) {

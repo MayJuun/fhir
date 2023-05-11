@@ -40,5 +40,5 @@ enum MedicationRequestIntent {
   option,
 }
 
-Code medicationRequestEnumToCode(dynamic medReqEnum) =>
-    Code(medReqEnum.toString().split('.').last.replaceAll('_', '-'));
+FhirCode medicationRequestEnumToCode(dynamic medReqEnum) =>
+    FhirCode(medReqEnum.toString().split('.').last.replaceAll('_', '-'));

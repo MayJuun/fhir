@@ -48,7 +48,7 @@ class BundleUsCore extends Resource {
 
     /// [timestamp] The date/time that the bundle was assembled - i.e. when the
     ///  resources were placed in the bundle.
-    Instant? timestamp,
+    FhirInstant? timestamp,
 
     /// [total] If a set of search matches, this is the total number of entries
     /// of type 'match' across all pages in the search.  It does not include
@@ -98,7 +98,7 @@ class BundleUsCore extends Resource {
 
   /// [timestamp] The date/time that the bundle was assembled - i.e. when the
   ///  resources were placed in the bundle.
-  Instant? get timestamp => _bundle.timestamp;
+  FhirInstant? get timestamp => _bundle.timestamp;
 
   /// [total] If a set of search matches, this is the total number of entries
   /// of type 'match' across all pages in the search.  It does not include
@@ -391,7 +391,7 @@ class BundleRequestUsCore {
     /// [ifModifiedSince] Only perform the operation if the last updated date
     /// matches. See the API documentation for ["Conditional
     ///  Read"](http.html#cread).
-    Instant? ifModifiedSince,
+    FhirInstant? ifModifiedSince,
 
     /// [ifMatch] Only perform the operation if the Etag value matches. For more
     /// information, see the API section ["Managing Resource
@@ -438,7 +438,7 @@ class BundleRequestUsCore {
   /// [ifModifiedSince] Only perform the operation if the last updated date
   /// matches. See the API documentation for ["Conditional
   ///  Read"](http.html#cread).
-  Instant? get ifModifiedSince => _bundleRequest.ifModifiedSince;
+  FhirInstant? get ifModifiedSince => _bundleRequest.ifModifiedSince;
 
   /// [ifMatch] Only perform the operation if the Etag value matches. For more
   /// information, see the API section ["Managing Resource
@@ -498,7 +498,7 @@ class BundleResponseUsCore {
 
     /// [lastModified] The date/time that the resource was modified on the
     ///  server.
-    Instant? lastModified,
+    FhirInstant? lastModified,
 
     /// [outcome] An OperationOutcome containing hints and warnings produced as
     ///  part of processing this entry in a batch or transaction.
@@ -537,7 +537,7 @@ class BundleResponseUsCore {
 
   /// [lastModified] The date/time that the resource was modified on the
   ///  server.
-  Instant? get lastModified => _bundleResponse.lastModified;
+  FhirInstant? get lastModified => _bundleResponse.lastModified;
 
   /// [outcome] An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.

@@ -21,5 +21,5 @@ enum ProcedureStatus {
   unknown,
 }
 
-Code procedureStatusToCode(ProcedureStatus status) =>
-    Code(status.toString().split('.').last.replaceAll('_', '-'));
+FhirCode procedureStatusToCode(ProcedureStatus status) =>
+    FhirCode(status.toString().split('.').last.replaceAll('_', '-'));

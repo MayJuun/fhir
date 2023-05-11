@@ -97,7 +97,7 @@ class CapabilityStatementUsCore extends Resource {
     /// [experimental] A Boolean value to indicate that this capability statement
     /// is authored for testing purposes (or education/evaluation/marketing) and
     ///  is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [date] The date  (and optionally time) when the capability statement was
     /// published. The date must change when the business version changes and it
@@ -117,7 +117,7 @@ class CapabilityStatementUsCore extends Resource {
     /// statement from a consumer's perspective. Typically, this is used when the
     /// capability statement describes a desired rather than an actual solution,
     ///  for example as a formal expression of requirements as part of an RFP.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -132,12 +132,12 @@ class CapabilityStatementUsCore extends Resource {
 
     /// [purpose] Explanation of why this capability statement is needed and why
     ///  it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [copyright] A copyright statement relating to the capability statement
     /// and/or its contents. Copyright statements are generally legal restrictions
     ///  on the use and publishing of the capability statement.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [kind] The way that this statement is intended to be used, to describe an
     /// actual running instance of software, a particular product (kind, not
@@ -329,7 +329,7 @@ class CapabilityStatementUsCore extends Resource {
   /// [experimental] A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => _capabilityStatement.experimental;
+  FhirBoolean? get experimental => _capabilityStatement.experimental;
 
   /// [date] The date  (and optionally time) when the capability statement was
   /// published. The date must change when the business version changes and it
@@ -349,7 +349,7 @@ class CapabilityStatementUsCore extends Resource {
   /// statement from a consumer's perspective. Typically, this is used when the
   /// capability statement describes a desired rather than an actual solution,
   ///  for example as a formal expression of requirements as part of an RFP.
-  Markdown? get description => _capabilityStatement.description;
+  FhirMarkdown? get description => _capabilityStatement.description;
 
   /// [useContext] The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -364,12 +364,12 @@ class CapabilityStatementUsCore extends Resource {
 
   /// [purpose] Explanation of why this capability statement is needed and why
   ///  it has been designed as it has.
-  Markdown? get purpose => _capabilityStatement.purpose;
+  FhirMarkdown? get purpose => _capabilityStatement.purpose;
 
   /// [copyright] A copyright statement relating to the capability statement
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the capability statement.
-  Markdown? get copyright => _capabilityStatement.copyright;
+  FhirMarkdown? get copyright => _capabilityStatement.copyright;
 
   /// [kind] The way that this statement is intended to be used, to describe an
   /// actual running instance of software, a particular product (kind, not
@@ -717,7 +717,7 @@ class CapabilityStatementRestUsCore {
 
     /// [documentation] Information about the system's restful capabilities that
     ///  apply across all applications, such as security.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
 
     /// [security] Information about security implementation from an interface
     ///  perspective - what a client needs to know.
@@ -806,7 +806,7 @@ class CapabilityStatementRestUsCore {
 
   /// [documentation] Information about the system's restful capabilities that
   ///  apply across all applications, such as security.
-  Markdown? get documentation => _capabilityStatementRest.documentation;
+  FhirMarkdown? get documentation => _capabilityStatementRest.documentation;
 
   /// [security] Information about security implementation from an interface
   ///  perspective - what a client needs to know.
@@ -883,9 +883,9 @@ class CapabilityStatementSecurityUsCore {
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
-    Boolean? cors,
+    FhirBoolean? cors,
     List<CodeableConcept>? service,
-    Markdown? description,
+    FhirMarkdown? description,
   }) =>
       CapabilityStatementSecurityUsCore._(CapabilityStatementSecurity(
         id: id,
@@ -939,14 +939,14 @@ class CapabilityStatementSecurityUsCore {
 
   /// [cors] Server adds CORS headers when responding to requests - this
   ///  enables Javascript applications to use the server.
-  Boolean? get cors => _capabilityStatementSecurity.cors;
+  FhirBoolean? get cors => _capabilityStatementSecurity.cors;
 
   /// [service] Types of security services that are supported/required by the
   ///  system.
   List<CodeableConcept>? get service => _capabilityStatementSecurity.service;
 
   /// [descriptionElement] Extensions for description
-  Markdown? get description => _capabilityStatementSecurity.description;
+  FhirMarkdown? get description => _capabilityStatementSecurity.description;
 }
 
 /// [CapabilityStatementResourceUsCore] A Capability Statement documents a set of
@@ -999,7 +999,7 @@ class CapabilityStatementResourceUsCore {
     /// overall support for the resource, including any constraints on
     /// cardinality, bindings, lengths or other limitations. See further
     ///  discussion in [Using Profiles](profiling.html#profile-uses).
-    Canonical? profile,
+    FhirCanonical? profile,
 
     /// [supportedProfile] A list of profiles that represent different use cases
     /// supported by the system. For a server, "supported by the system" means the
@@ -1013,7 +1013,7 @@ class CapabilityStatementResourceUsCore {
 
     /// [documentation] Additional information about the resource type used by
     ///  the system.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
 
     /// [interaction] Identifies a restful operation supported by the solution.
     List<CapabilityStatementInteraction>? interaction,
@@ -1028,18 +1028,18 @@ class CapabilityStatementResourceUsCore {
 
     /// [readHistory] A flag for whether the server is able to return past
     ///  versions as part of the vRead operation.
-    Boolean? readHistory,
+    FhirBoolean? readHistory,
 
     /// [updateCreate] A flag to indicate that the server allows or needs to
     /// allow the client to create new identities on the server (that is, the
     /// client PUTs to a location where there is no existing resource). Allowing
     /// this operation means that the server allows the client to create new
     ///  identities on the server.
-    Boolean? updateCreate,
+    FhirBoolean? updateCreate,
 
     /// [conditionalCreate] A flag that indicates that the server supports
     ///  conditional create.
-    Boolean? conditionalCreate,
+    FhirBoolean? conditionalCreate,
 
     /// [conditionalRead] A code that indicates how the server supports
     ///  conditional read.
@@ -1047,7 +1047,7 @@ class CapabilityStatementResourceUsCore {
 
     /// [conditionalUpdate] A flag that indicates that the server supports
     ///  conditional update.
-    Boolean? conditionalUpdate,
+    FhirBoolean? conditionalUpdate,
 
     /// [conditionalDelete] A code that indicates how the server supports
     ///  conditional delete.
@@ -1146,7 +1146,7 @@ class CapabilityStatementResourceUsCore {
   /// overall support for the resource, including any constraints on
   /// cardinality, bindings, lengths or other limitations. See further
   ///  discussion in [Using Profiles](profiling.html#profile-uses).
-  Canonical? get profile => _capabilityStatementResource.profile;
+  FhirCanonical? get profile => _capabilityStatementResource.profile;
 
   /// [supportedProfile] A list of profiles that represent different use cases
   /// supported by the system. For a server, "supported by the system" means the
@@ -1161,7 +1161,7 @@ class CapabilityStatementResourceUsCore {
 
   /// [documentation] Additional information about the resource type used by
   ///  the system.
-  Markdown? get documentation => _capabilityStatementResource.documentation;
+  FhirMarkdown? get documentation => _capabilityStatementResource.documentation;
 
   /// [interaction] Identifies a restful operation supported by the solution.
   List<CapabilityStatementInteraction>? get interaction =>
@@ -1177,18 +1177,18 @@ class CapabilityStatementResourceUsCore {
 
   /// [readHistory] A flag for whether the server is able to return past
   ///  versions as part of the vRead operation.
-  Boolean? get readHistory => _capabilityStatementResource.readHistory;
+  FhirBoolean? get readHistory => _capabilityStatementResource.readHistory;
 
   /// [updateCreate] A flag to indicate that the server allows or needs to
   /// allow the client to create new identities on the server (that is, the
   /// client PUTs to a location where there is no existing resource). Allowing
   /// this operation means that the server allows the client to create new
   ///  identities on the server.
-  Boolean? get updateCreate => _capabilityStatementResource.updateCreate;
+  FhirBoolean? get updateCreate => _capabilityStatementResource.updateCreate;
 
   /// [conditionalCreate] A flag that indicates that the server supports
   ///  conditional create.
-  Boolean? get conditionalCreate =>
+  FhirBoolean? get conditionalCreate =>
       _capabilityStatementResource.conditionalCreate;
 
   /// [conditionalRead] A code that indicates how the server supports
@@ -1197,7 +1197,7 @@ class CapabilityStatementResourceUsCore {
 
   /// [conditionalUpdate] A flag that indicates that the server supports
   ///  conditional update.
-  Boolean? get conditionalUpdate =>
+  FhirBoolean? get conditionalUpdate =>
       _capabilityStatementResource.conditionalUpdate;
 
   /// [conditionalDelete] A code that indicates how the server supports
@@ -1283,7 +1283,7 @@ class CapabilityStatementInteractionUsCore {
     /// operation, such as 'delete is a logical delete' or 'updates are only
     /// allowed with version id' or 'creates permitted from pre-authorized
     ///  certificates only'.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
   }) =>
       CapabilityStatementInteractionUsCore._(CapabilityStatementInteraction(
         id: id,
@@ -1342,7 +1342,8 @@ class CapabilityStatementInteractionUsCore {
   /// operation, such as 'delete is a logical delete' or 'updates are only
   /// allowed with version id' or 'creates permitted from pre-authorized
   ///  certificates only'.
-  Markdown? get documentation => _capabilityStatementInteraction.documentation;
+  FhirMarkdown? get documentation =>
+      _capabilityStatementInteraction.documentation;
 }
 
 /// [CapabilityStatementSearchParamUsCore] A Capability Statement documents a set
@@ -1398,7 +1399,7 @@ class CapabilityStatementSearchParamUsCore {
     /// [[[SearchParameter.url]]]). This element SHALL be populated if the search
     /// parameter refers to a SearchParameter defined by the FHIR core
     ///  specification or externally defined IGs.
-    Canonical? definition,
+    FhirCanonical? definition,
 
     /// [type] The type of value a search parameter refers to, and how the
     ///  content is interpreted.
@@ -1406,7 +1407,7 @@ class CapabilityStatementSearchParamUsCore {
 
     /// [documentation] This allows documentation of any distinct behaviors about
     ///  how the search parameter is used.  For example, text matching algorithms.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
   }) =>
       CapabilityStatementSearchParamUsCore._(CapabilityStatementSearchParam(
         id: id,
@@ -1469,7 +1470,7 @@ class CapabilityStatementSearchParamUsCore {
   /// [[[SearchParameter.url]]]). This element SHALL be populated if the search
   /// parameter refers to a SearchParameter defined by the FHIR core
   ///  specification or externally defined IGs.
-  Canonical? get definition => _capabilityStatementSearchParam.definition;
+  FhirCanonical? get definition => _capabilityStatementSearchParam.definition;
 
   /// [type] The type of value a search parameter refers to, and how the
   ///  content is interpreted.
@@ -1477,7 +1478,8 @@ class CapabilityStatementSearchParamUsCore {
 
   /// [documentation] This allows documentation of any distinct behaviors about
   ///  how the search parameter is used.  For example, text matching algorithms.
-  Markdown? get documentation => _capabilityStatementSearchParam.documentation;
+  FhirMarkdown? get documentation =>
+      _capabilityStatementSearchParam.documentation;
 }
 
 /// [CapabilityStatementOperationUsCore] A Capability Statement documents a set of
@@ -1542,7 +1544,7 @@ class CapabilityStatementOperationUsCore {
     /// [documentation] Documentation that describes anything special about the
     /// operation behavior, possibly detailing different behavior for system, type
     ///  and instance-level invocation of the operation.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
   }) =>
       CapabilityStatementOperationUsCore._(CapabilityStatementOperation(
         id: id,
@@ -1608,12 +1610,13 @@ class CapabilityStatementOperationUsCore {
   /// custom [[[OperationDefinition]]] with a 'base' of the original
   /// OperationDefinition.  The custom definition would describe the specific
   ///  subset of functionality supported.
-  Canonical get definition => _capabilityStatementOperation.definition;
+  FhirCanonical get definition => _capabilityStatementOperation.definition;
 
   /// [documentation] Documentation that describes anything special about the
   /// operation behavior, possibly detailing different behavior for system, type
   ///  and instance-level invocation of the operation.
-  Markdown? get documentation => _capabilityStatementOperation.documentation;
+  FhirMarkdown? get documentation =>
+      _capabilityStatementOperation.documentation;
 }
 
 /// [CapabilityStatementInteraction1UsCore] A Capability Statement documents a set
@@ -1666,7 +1669,7 @@ class CapabilityStatementInteraction1UsCore {
     /// [documentation] Guidance specific to the implementation of this
     /// operation, such as limitations on the kind of transactions allowed, or
     ///  information about system wide search is implemented.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
   }) =>
       CapabilityStatementInteraction1UsCore._(CapabilityStatementInteraction1(
         id: id,
@@ -1723,7 +1726,8 @@ class CapabilityStatementInteraction1UsCore {
   /// [documentation] Guidance specific to the implementation of this
   /// operation, such as limitations on the kind of transactions allowed, or
   ///  information about system wide search is implemented.
-  Markdown? get documentation => _capabilityStatementInteraction1.documentation;
+  FhirMarkdown? get documentation =>
+      _capabilityStatementInteraction1.documentation;
 }
 
 /// [CapabilityStatementMessagingUsCore] A Capability Statement documents a set of
@@ -1782,7 +1786,7 @@ class CapabilityStatementMessagingUsCore {
     /// for this endpoint not otherwise documented by the capability statement.
     /// For example, the process for becoming an authorized messaging exchange
     ///  partner.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
 
     /// [supportedMessage] References to message definitions for messages this
     ///  system can send or receive.
@@ -1854,7 +1858,8 @@ class CapabilityStatementMessagingUsCore {
   /// for this endpoint not otherwise documented by the capability statement.
   /// For example, the process for becoming an authorized messaging exchange
   ///  partner.
-  Markdown? get documentation => _capabilityStatementMessaging.documentation;
+  FhirMarkdown? get documentation =>
+      _capabilityStatementMessaging.documentation;
 
   /// [supportedMessage] References to message definitions for messages this
   ///  system can send or receive.
@@ -2061,7 +2066,8 @@ class CapabilityStatementSupportedMessageUsCore {
 
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
-  Canonical get definition => _capabilityStatementSupportedMessage.definition;
+  FhirCanonical get definition =>
+      _capabilityStatementSupportedMessage.definition;
 }
 
 /// [CapabilityStatementDocumentUsCore] A Capability Statement documents a set of
@@ -2114,7 +2120,7 @@ class CapabilityStatementDocumentUsCore {
     /// [documentation] A description of how the application supports or uses the
     /// specified document profile.  For example, when documents are created, what
     ///  action is taken with consumed documents, etc.
-    Markdown? documentation,
+    FhirMarkdown? documentation,
 
     /// [profile] A profile on the document Bundle that constrains which
     ///  resources are present, and their contents.
@@ -2177,9 +2183,9 @@ class CapabilityStatementDocumentUsCore {
   /// [documentation] A description of how the application supports or uses the
   /// specified document profile.  For example, when documents are created, what
   ///  action is taken with consumed documents, etc.
-  Markdown? get documentation => _capabilityStatementDocument.documentation;
+  FhirMarkdown? get documentation => _capabilityStatementDocument.documentation;
 
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
-  Canonical get profile => _capabilityStatementDocument.profile;
+  FhirCanonical get profile => _capabilityStatementDocument.profile;
 }

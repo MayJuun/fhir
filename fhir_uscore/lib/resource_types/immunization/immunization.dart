@@ -79,5 +79,5 @@ class ImmunizationUsCore extends Resource {
   Reference get patient => _immunization.patient;
   FhirDateTime? get occurrenceDateTime => _immunization.occurrenceDateTime;
   String? get occurrenceString => _immunization.occurrenceString;
-  Boolean? get primarySource => _immunization.primarySource;
+  FhirBoolean? get primarySource => _immunization.primarySource;
 }

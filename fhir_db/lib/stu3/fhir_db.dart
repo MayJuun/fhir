@@ -3,13 +3,14 @@ import 'dart:async';
 import 'dart:io';
 
 // Package imports:
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
+// import 'package:path/path.dart';
+// import 'package:path_provider/path_provider.dart';
 import 'package:sembast/sembast.dart';
+import 'package:sembast/sembast_io.dart';
 import 'package:sembast/utils/sembast_import_export.dart';
-import 'package:sembast_sqflite/sembast_sqflite.dart';
-import 'package:sqflite/sqflite.dart' as sqflite;
-import 'package:sqflite_common_ffi/sqflite_ffi.dart' as sqflite_common_ffi;
+// import 'package:sembast_sqflite/sembast_sqflite.dart';
+// import 'package:sqflite/sqflite.dart' as sqflite;
+// import 'package:sqflite_common_ffi/sqflite_ffi.dart' as sqflite_common_ffi;
 
 // Project imports:
 import '../encrypt/aes.dart';
@@ -27,17 +28,17 @@ class FhirDb {
   static FhirDb get instance => _db;
 
   static void prepareForTesting() {
-    sqflite_common_ffi.sqfliteFfiInit();
-    _db._dbFactory =
-        getDatabaseFactorySqflite(sqflite_common_ffi.databaseFactoryFfi);
+    // sqflite_common_ffi.sqfliteFfiInit();
+    _db._dbFactory = databaseFactoryIo;
+    // getDatabaseFactorySqflite(sqflite_common_ffi.databaseFactoryFfi);
   }
 
   /// Completer to transform synchronous -> asynchronous (I hate completers)
   Completer<Database>? _dbOpenCompleter;
 
   /// Database Factory
-  DatabaseFactory _dbFactory =
-      getDatabaseFactorySqflite(sqflite.databaseFactory);
+  DatabaseFactory _dbFactory = databaseFactoryIo;
+  // getDatabaseFactorySqflite(sqflite.databaseFactory);
 
   /// Update old password to new
   Future updatePassword(String? oldPw, String? newPw) async =>
@@ -62,8 +63,9 @@ class FhirDb {
     var db = await _getDb('fhir.db', password);
     await db.close();
 
-    final appDocDir = await getApplicationDocumentsDirectory();
-    await File(join(appDocDir.path, 'fhir.db')).delete();
+    // final appDocDir = await getApplicationDocumentsDirectory();
+    // await File(join(appDocDir.path, 'fhir.db')).delete();
+    await File('fhir.db').delete();
 
     // Setting the completer to null will lead to
     // creating a new database the next time we try to access it.
@@ -80,10 +82,11 @@ class FhirDb {
 
   Future<Database> _getDb(String path, String? pw) async {
     /// Platform-specific directory
-    final appDocDir = await getApplicationDocumentsDirectory();
+    // final appDocDir = await getApplicationDocumentsDirectory();
 
     /// Db path
-    final dbPath = join(appDocDir.path, path);
+    // final dbPath = join(appDocDir.path, path);
+    final dbPath = 'fhir.db';
 
     /// check if there is a codec and pw
     final codec = pw == null ? null : _codec(pw);
@@ -101,7 +104,7 @@ class FhirDb {
 
   Future _updatePw(String? oldPw, String? newPw) async {
     /// Platform-specific directory
-    final appDocDir = await getApplicationDocumentsDirectory();
+    // final appDocDir = await getApplicationDocumentsDirectory();
 
     /// Get the old Db
     var db = await _getDb('fhir.db', oldPw);
@@ -114,11 +117,13 @@ class FhirDb {
 
     /// Create a copy of the old db - in case something messes up while we're
     /// changing to the new password
-    await File(join(appDocDir.path, 'fhir.db'))
-        .copy(join(appDocDir.path, 'old_fhir.db'));
+    // await File(join(appDocDir.path, 'fhir.db'))
+    //     .copy(join(appDocDir.path, 'old_fhir.db'));
+    await File('fhir.db').copy('old_fhir.db');
 
     /// Get the path to the original Db
-    final dbPath = join(appDocDir.path, 'fhir.db');
+    // final dbPath = join(appDocDir.path, 'fhir.db');
+    final dbPath = 'fhir.db';
 
     /// Create the new Db with the new pw and codec
     db = await importDatabase(
@@ -129,7 +134,8 @@ class FhirDb {
     );
 
     /// Delete the old Db after the Db has successfully updated
-    await File(join(appDocDir.path, 'old_fhir.db')).delete();
+    // await File(join(appDocDir.path, 'old_fhir.db')).delete();
+    await File('old_fhir.db').delete();
 
     /// Clearing the completer, reinstantiating it, and complete the Db
     _dbOpenCompleter = null;

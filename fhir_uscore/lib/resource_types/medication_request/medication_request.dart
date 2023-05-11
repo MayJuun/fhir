@@ -15,7 +15,7 @@ class MedicationRequestUsCore extends Resource {
     required MedicationRequestStatus status,
     required MedicationRequestIntent intent,
     List<Resource>? contained,
-    Boolean? reportedBoolean,
+    FhirBoolean? reportedBoolean,
     Reference? reportedReference,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
@@ -49,7 +49,7 @@ class MedicationRequestUsCore extends Resource {
   factory MedicationRequestUsCore.simple({
     required MedicationRequestStatus status,
     required MedicationRequestIntent intent,
-    Boolean? reportedBoolean,
+    FhirBoolean? reportedBoolean,
     Reference? reportedReference,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
@@ -101,7 +101,7 @@ class MedicationRequestUsCore extends Resource {
   FhirCode? get status => _medicationRequest.status;
   FhirCode? get intent => _medicationRequest.intent;
   List<Resource>? get contained => _medicationRequest.contained;
-  Boolean? get reportedBoolean => _medicationRequest.reportedBoolean;
+  FhirBoolean? get reportedBoolean => _medicationRequest.reportedBoolean;
   Reference? get reportedReference => _medicationRequest.reportedReference;
   CodeableConcept? get medicationCodeableConcept =>
       _medicationRequest.medicationCodeableConcept;

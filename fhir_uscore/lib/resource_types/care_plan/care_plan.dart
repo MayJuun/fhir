@@ -145,7 +145,7 @@ class CarePlanUsCore extends Resource {
       Coding(
         system:
             FhirUri('http://hl7.org/fhir/us/core/CodeSystem/careplan-category'),
-        code: Code('assess-plan'),
+        code: FhirCode('assess-plan'),
       )
     ]));
     return CarePlanUsCore(

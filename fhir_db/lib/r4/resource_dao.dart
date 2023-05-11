@@ -7,57 +7,41 @@ import 'package:fhir_db/r4/database_mode.dart' as mode;
 import 'fhir_db.dart';
 
 class ResourceDao {
-  ResourceDao({
-    this.databaseMode = mode.DatabaseMode.PERSISTENCE_DB,
-    bool isForTesting = false,
-  }) {
-    if (isForTesting) FhirDb.prepareForTesting();
+  /// Private Constructor
+  ResourceDao._() {
+    _fhirDb = FhirDb();
   }
 
-  mode.DatabaseMode databaseMode;
+  /// Singleton Accessor
+  FhirDb get instance => _fhirDb;
 
-  late StoreRef<String, Map<String, dynamic>> _resourceStore;
-  final _typesStore = StoreRef<String, List>.main();
-  final _history = StoreRef<String, Map<String, dynamic>>.main();
+  /// The actual database
+  late FhirDb _fhirDb;
+
+  /// Singleton Instance
+  static final ResourceDao _provider = ResourceDao._();
+
+  /// Singleton Factory
+  factory ResourceDao() => _provider;
+
+  /// Initalizes the database, configure its path, and return it
+  Future<FhirDb> init(String? password) async {
+    await _fhirDb.initDb(password);
+    return _fhirDb;
+  }
 
   /// update database password
-  Future updatePw(String? oldPw, String? newPw) async =>
-      await FhirDb.instance.updatePassword(oldPw, newPw);
+  Future updatePw(String? oldPassword, String? newPassword) async =>
+      await instance.updatePassword(oldPassword, newPassword);
 
-  /// accessing the actual database instance
-  Future<Database> _db(String? password) async =>
-      await FhirDb.instance.database(password);
-
-  /// allows one store per resourceType (Patient, Observation, etc.)
-  void _setStoreType(String resourceType) =>
-      _resourceStore = stringMapStoreFactory.store(resourceType);
-
-  /// get list of resourceTypes stored in DB
-  Future<List<String>> _getResourceTypes(String? password) async {
-    if (await _typesStore.record('resourceTypes').exists(await _db(password))) {
-      final typeList =
-          await _typesStore.record('resourceTypes').get(await _db(password));
-      if (typeList != null) {
-        return typeList.map((type) => type.toString()).toList();
-      }
-    }
-    return <String>[];
-  }
+  Set<R4ResourceType> getTypes(String? password) => instance.types;
 
   /// keeps track of the resourceTypes that are currently in the db
-  Future _addResourceType(String? password, R4ResourceType resourceType) async {
-    final resourceTypes = await _getResourceTypes(password);
-
-    final type = Resource.resourceTypeToString(resourceType);
-
-    if (!resourceTypes.contains(type)) {
-      resourceTypes.add(type);
-    }
-
-    await _typesStore
-        .record('resourceTypes')
-        .put(await _db(password), resourceTypes);
-  }
+  Future<bool> _addResourceType(
+    String? password,
+    R4ResourceType resourceType,
+  ) async =>
+      instance.addType(resourceType, password);
 
   /// Saves a [Resource] to the local Db, [password] is optional (but after set,
   /// it must always be used everytime), will update the meta fields of the
@@ -66,14 +50,9 @@ class ResourceDao {
     if (resource != null) {
       if (resource.resourceType != null) {
         await _addResourceType(password, resource.resourceType!);
-
-        _setStoreType(resource.resourceTypeString ?? 'resources');
-
         return resource.id == null
             ? await _insert(password, resource)
-            : (await find(null,
-                        resourceType: resource.resourceType, id: resource.id))
-                    .isEmpty
+            : await instance.exists(null, resource.resourceType!, resource.id!)
                 ? await _insert(password, resource)
                 : await _update(password, resource);
       } else {
@@ -87,39 +66,25 @@ class ResourceDao {
   /// function used to save a new resource in the db
   Future<Resource> _insert(String? password, Resource resource) async {
     final newResource = resource.updateVersion().newIdIfNoId();
-    await _resourceStore
-        .record(newResource.id.toString())
-        .put(await _db(password), newResource.toJson());
+    await instance.save(password, resource);
     return newResource;
   }
 
-  /// functions used to update a resource who has already been saved into the
+  /// functions used to update a resource which has already been saved into the
   /// db, will also save the old version
   Future<Resource> _update(String? password, Resource resource) async {
     if (resource.resourceTypeString != null) {
       if (resource.id != null) {
         final dbResource =
-            await _resourceStore.record(resource.id!).get(await _db(password));
+            await instance.get(password, resource.resourceType!, resource.id!);
         if (dbResource != null) {
-          final oldResource = Resource.fromJson(dbResource);
-          final historyId =
-              '${Resource.resourceTypeToString(oldResource.resourceType!)}'
-              '/${resource.id}/_history/${oldResource.meta?.versionId}';
-          await _history
-              .record(historyId)
-              .put(await _db(password), oldResource.toJson());
-          Resource newResource;
-          switch (databaseMode) {
-            case mode.DatabaseMode.PERSISTENCE_DB:
-              newResource = resource.updateVersion(oldMeta: oldResource.meta);
-              break;
-            case mode.DatabaseMode.CACHE_DB:
-              newResource = resource;
-              break;
-          }
-          await _resourceStore
-              .record(resource.id!)
-              .put(await _db(password), newResource.toJson(), merge: true);
+          final oldResource = dbResource;
+          await instance.saveHistory(password, oldResource);
+          final oldMeta = oldResource['meta'] == null
+              ? null
+              : FhirMeta.fromJson(oldResource['meta']);
+          final newResource = resource.updateVersion(oldMeta: oldMeta);
+          await instance.save(password, newResource);
           return newResource;
         } else {
           return _insert(password, resource);
@@ -167,17 +132,9 @@ class ResourceDao {
         finder = Finder(filter: Filter.equals(field!, value));
       }
 
-      final type = Resource.resourceTypeToString(
-          resource?.resourceType ?? resourceType!);
-      if (type == null) {
-        throw const FormatException('Must have either: '
-            '\n1) a resource with a resourceType'
-            '\n2) a resourceType and an Id'
-            '\n3) a resourceType, a specific field, and the value of interest');
-      } else {
-        _setStoreType(type);
-        return await _search(password, finder);
-      }
+      final type = resource?.resourceType ?? resourceType!;
+
+      return await _search(password, type, finder);
     } else {
       throw const FormatException('Must have either: '
           '\n1) a resource with a resourceType'
@@ -187,7 +144,7 @@ class ResourceDao {
   }
 
   /// returns all resources of a specific type
-  Future<List<Resource>> getResourceType(
+  Future<List<Resource>> getAllResourcesByType(
     String? password, {
     List<R4ResourceType>? resourceTypes,
     List<String>? resourceTypeStrings,
@@ -212,45 +169,41 @@ class ResourceDao {
 
     final List<Resource> resourceList = [];
     for (final type in typeList) {
-      _setStoreType(Resource.resourceTypeToString(type));
-      final finder = Finder(sortOrders: [SortOrder('id')]);
-      resourceList.addAll(await _search(password, finder));
+      final newResources = await _fhirDb.getAllResourcesOfType(password, type);
+      resourceList.addAll(newResources.map((e) => Resource.fromJson(e)));
     }
     return resourceList;
   }
 
   /// returns all resources in the [db], including historical versions
-  Future<List<Resource>> getAll(String? password) async {
-    final resourceTypes = await _getResourceTypes(password);
+  Future<List<Resource>> getAllCurrentResources(String? password) async =>
+      (await _fhirDb.getAllCurrentResources(password))
+          .map((e) => Resource.fromJson(e))
+          .toList();
 
-    final resourceList =
-        await getResourceType(password, resourceTypeStrings: resourceTypes);
-    return resourceList;
-  }
+  // TODO(Dokotela): getAllResources including historical versions
+  // TODO(Dokotela): getHistoricalVersions - of a single resource
 
   /// Delete specific resource
-  Future<int> delete(
+  Future<bool> delete(
     String? password,
     Resource? resource,
     R4ResourceType? resourceType,
     String? id,
     String? field,
     String? value,
+    Finder? finder,
   ) async {
-    if ((resource != null && resource.resourceType != null) ||
-        (resourceType != null && id != null) ||
-        (resourceType != null && field != null && value != null)) {
-      Finder finder;
-      if (resource != null) {
-        finder = Finder(filter: Filter.equals('id', '${resource.id}'));
-      } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', id));
-      } else {
-        finder = Finder(filter: Filter.equals(field!, value));
-      }
-      _setStoreType(Resource.resourceTypeToString(
-          resource?.resourceType ?? resourceType!));
-      return await _resourceStore.delete(await _db(password), finder: finder);
+    if (resource != null &&
+        resource.resourceType != null &&
+        resource.id != null) {
+      return await _fhirDb.deleteById(
+          password, resource.resourceType!, resource.id!);
+    } else if (resourceType != null && id != null) {
+      return await _fhirDb.deleteById(password, resourceType, id);
+    } else if (resourceType != null && finder != null) {
+      finder = Finder(filter: Filter.equals(field!, value));
+      return await _fhirDb.delete(password, resourceType, finder);
     } else {
       throw const FormatException('Must have either: '
           '\n1) a resource with a resourceType'
@@ -262,50 +215,50 @@ class ResourceDao {
   /// pass in a resourceType or a resource, and db will delete all resources of
   /// that type - Note: will NOT delete any _historical stores (must pass in
   /// _history as the type for this to happen)
-  Future deleteSingleType(String? password,
-      {R4ResourceType? resourceType, Resource? resource}) async {
+  Future<bool> deleteSingleType(
+    String? password, {
+    R4ResourceType? resourceType,
+    Resource? resource,
+  }) async {
     if (resourceType != null || resource?.resourceType != null) {
-      final String deleteType = Resource.resourceTypeToString(
-          resourceType ?? resource!.resourceType!);
-
-      _setStoreType(deleteType);
-      await _resourceStore.delete(await _db(password));
-      await _removeResourceTypes(password, [deleteType]);
+      resourceType ??= resource?.resourceType;
+      return _fhirDb.deleteSingleType(password, resourceType!);
     }
+    return false;
   }
 
   /// Deletes all resources, including historical versions
-  Future deleteAllResources(String? password) async {
-    final resourceTypes = await _getResourceTypes(password);
-
-    for (var type in resourceTypes) {
-      _setStoreType(type);
-      await _resourceStore.delete(await _db(password));
+  Future<bool> deleteAllResources(String? password) async {
+    for (final type in getTypes(password)) {
+      final deleted = await deleteSingleType(password, resourceType: type);
+      if (!deleted) {
+        return false;
+      }
     }
-
-    await _history.delete(await _db(password));
-    await _removeResourceTypes(password, resourceTypes);
+    return true;
   }
 
   /// remove the resourceType from the list of types stored in the db
-  Future _removeResourceTypes(String? password, List types) async {
-    final resourceTypes = await _getResourceTypes(password);
-    for (var type in types) {
-      resourceTypes.remove(type.toString());
+  Future<bool> removeResourceTypes(
+    String? password,
+    List<R4ResourceType> types,
+  ) async {
+    for (final type in types) {
+      final deleted = await deleteSingleType(password, resourceType: type);
+      if (!deleted) {
+        return false;
+      }
     }
-    await _typesStore.delete(await _db(password));
-    await _typesStore
-        .record('resourceTypes')
-        .put(await _db(password), resourceTypes);
+    return true;
   }
 
   /// ultimate search function, must pass in finder
-  Future<List<Resource>> _search(String? password, Finder finder) async {
-    final recordSnapshots =
-        await _resourceStore.find(await _db(password), finder: finder);
-    return recordSnapshots.map((snapshot) {
-      final resource = Resource.fromJson(snapshot.value);
-      return resource;
-    }).toList();
-  }
+  Future<List<Resource>> _search(
+    String? password,
+    R4ResourceType resourceType,
+    Finder finder,
+  ) async =>
+      (await _fhirDb.search(password, resourceType, finder))
+          .map((e) => Resource.fromJson(e))
+          .toList();
 }

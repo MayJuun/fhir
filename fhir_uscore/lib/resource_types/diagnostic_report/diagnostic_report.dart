@@ -18,7 +18,7 @@ class DiagnosticReportUsCore extends Resource {
     Reference? encounter,
     FhirDateTime? effectiveDateTime,
     Period? effectivePeriod,
-    Instant? issued,
+    FhirInstant? issued,
     List<Reference>? performer,
     List<Reference>? result,
     List<Attachment>? presentedForm,
@@ -27,7 +27,7 @@ class DiagnosticReportUsCore extends Resource {
         id: id,
         meta: meta,
         text: text,
-        status: Code(diagnosticReportStatusToCode[status]),
+        status: FhirCode(diagnosticReportStatusToCode[status]),
         category: category,
         code: code,
         subject: subject,
@@ -57,7 +57,7 @@ class DiagnosticReportUsCore extends Resource {
             Coding(
                 system:
                     FhirUri('http://terminology.hl7.org/CodeSystem/v2-0074'),
-                code: Code('LAB'))
+                code: FhirCode('LAB'))
           ])
         ],
         code: code,
@@ -78,7 +78,7 @@ class DiagnosticReportUsCore extends Resource {
     Reference? encounter,
     FhirDateTime? effectiveDateTime,
     Period? effectivePeriod,
-    Instant? issued,
+    FhirInstant? issued,
     List<Reference>? performer,
     List<Attachment>? presentedForm,
   }) {
@@ -111,7 +111,7 @@ class DiagnosticReportUsCore extends Resource {
   Reference? get encounter => _diagnosticReport.encounter;
   FhirDateTime? get effectiveDateTime => _diagnosticReport.effectiveDateTime;
   Period? get effectivePeriod => _diagnosticReport.effectivePeriod;
-  Instant? get issued => _diagnosticReport.issued;
+  FhirInstant? get issued => _diagnosticReport.issued;
   List<Reference>? get performer => _diagnosticReport.performer;
   List<Reference>? get result => _diagnosticReport.result;
   List<Attachment>? get presentedForm => _diagnosticReport.presentedForm;

@@ -72,7 +72,7 @@ Future<Resource?> makeRequest(
   /// [since] - Only include resource versions that were created at or after the
   ///   given instant in time
 
-  Instant? since,
+  FhirInstant? since,
 
   /// [at] - Only include resource versions that were current at some point
   ///   during the time period specified in the date time value
@@ -217,8 +217,8 @@ Future<Resource?> makeRequest(
 OperationOutcome _operationOutcome(String errorString) =>
     OperationOutcome(issue: [
       OperationOutcomeIssue(
-        severity: Code('error'),
-        code: Code('unknown'),
+        severity: FhirCode('error'),
+        code: FhirCode('unknown'),
         details: CodeableConcept(text: 'Failed to make restful request'),
         diagnostics: errorString,
       )

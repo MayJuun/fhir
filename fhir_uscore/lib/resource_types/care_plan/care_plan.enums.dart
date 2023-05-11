@@ -30,5 +30,5 @@ enum CarePlanIntent {
   option,
 }
 
-Code codeFromEnum(dynamic carePlanEnum) =>
-    Code(carePlanEnum.toString().split('.').last.replaceAll('_', '-'));
+FhirCode codeFromEnum(dynamic carePlanEnum) =>
+    FhirCode(carePlanEnum.toString().split('.').last.replaceAll('_', '-'));
