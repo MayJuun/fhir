@@ -9,8 +9,6 @@ environment:
 
 dependencies:
   fhir: ^0.9.3
-  fhir_auth: ^0.9.3
-  fhir_path: ^0.9.4
   collection: ^1.16.0
   crypto: ^3.0.2
   freezed_annotation: ^2.2.0
@@ -18,9 +16,7 @@ dependencies:
   intl: ^0.18.0
   json_annotation: ^4.8.0
   riverpod_annotation: ^1.1.1
-  shared_preferences: ^2.0.17
   universal_html: ^2.0.8
-  url_launcher: ^6.1.8
   validators: ^3.0.0
 
 dev_dependencies:
