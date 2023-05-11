@@ -1,26 +1,25 @@
 import 'dart:io';
 
-import 'package:fhir_db/r4/fhir_hive_dao.dart';
-import 'package:fhir_db/r4/resource_dao.dart';
+import 'package:fhir_db/r4.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 
 import 'listening_controller.dart';
 
 /// spec: https://github.com/dart-lang/samples/blob/master/server/simple/bin/server.dart
 Future main() async {
-  /// Initialize Sembast/SQFlite database
-  final resourceDao = ResourceDao();
-  await resourceDao.init(null);
+  /// Initialize Sembast
+  final sembastDao = SembastDao();
+  await sembastDao.init(null, '.');
 
   /// Clear
-  await resourceDao.deleteAllResources(null);
+  await sembastDao.deleteAllResources(null);
 
   /// Initialize Hive database
-  final fhirHiveDao = FhirHiveDao();
-  await fhirHiveDao.init();
+  final hiveDao = HiveDao();
+  await hiveDao.init('.');
 
   /// Clear
-  await fhirHiveDao.clear(null);
+  await hiveDao.clear(null);
 
   /// If the "PORT" environment variable is set, lisconfig['clientApis'][element]ten to it. Otherwise, 8080.
   /// https://cloud.google.com/run/docs/reference/container-contract#port

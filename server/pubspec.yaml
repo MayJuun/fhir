@@ -8,7 +8,9 @@ environment:
 dependencies:
   fhir:
     path: ../fhir
+  fhir_bulk:
+    path: ../fhir_bulk
   fhir_db: 
-    path: ../fhir_db
+    path: ../../fhir_db
   shelf: ^1.4.1
   shelf_router: ^1.1.4
