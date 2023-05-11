@@ -1,6 +1,6 @@
 // Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
-import 'package:flutter_web_auth/flutter_web_auth.dart';
+import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 
 // Project imports:
 import 'base_authentication.dart';
@@ -16,7 +16,7 @@ class MobileAuthentication implements BaseAuthentication {
     required Uri authorizationUrl,
     required FhirUri redirectUri,
   }) async {
-    return await FlutterWebAuth.authenticate(
+    return await FlutterWebAuth2.authenticate(
       callbackUrlScheme: redirectUri.value!.scheme,
       url: authorizationUrl.toString(),
     );

@@ -17,7 +17,12 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  flutter_web_auth: ^0.5.0
+  # flutter_web_auth_2: ^2.1.4
+  flutter_web_auth_2:
+    git:
+      url: https://github.com/FireJuun/flutter_web_auth_2.git
+      ref: fix_macos_example
+      path: flutter_web_auth_2
   freezed_annotation: ^2.2.0
   google_sign_in: ^6.0.2
   http: ^0.13.5

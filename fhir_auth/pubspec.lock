@@ -206,14 +206,23 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-  flutter_web_auth:
+  flutter_web_auth_2:
     dependency: "direct main"
     description:
-      name: flutter_web_auth
-      sha256: a69fa8f43b9e4d86ac72176bf747b735e7b977dd7cf215076d95b87cb05affdd
+      path: flutter_web_auth_2
+      ref: fix_macos_example
+      resolved-ref: "0fe634e4f41d230e12d570ea1878ab53512a3feb"
+      url: "https://github.com/FireJuun/flutter_web_auth_2.git"
+    source: git
+    version: "2.1.4"
+  flutter_web_auth_2_platform_interface:
+    dependency: transitive
+    description:
+      name: flutter_web_auth_2_platform_interface
+      sha256: f6fa7059ff3428c19cd756c02fef8eb0147131c7e64591f9060c90b5ab84f094
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "2.1.4"
   flutter_web_plugins:
     dependency: "direct main"
     description: flutter
@@ -768,6 +777,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  window_to_front:
+    dependency: transitive
+    description:
+      name: window_to_front
+      sha256: "7aef379752b7190c10479e12b5fd7c0b9d92adc96817d9e96c59937929512aee"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   xml:
     dependency: transitive
     description:
