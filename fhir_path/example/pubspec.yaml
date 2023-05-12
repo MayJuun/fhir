@@ -8,13 +8,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # fhir: ^0.9.7
-  fhir:
-    path: ../../fhir
+  fhir: ^0.9.7
   fhir_path:
     path: ../../fhir_path
   google_fonts: ^4.0.3
-  # url_launcher: ^6.1.11
   yaml_writer: ^1.0.3
 
 dev_dependencies:

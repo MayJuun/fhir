@@ -5,9 +5,7 @@ environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
-  # fhir: ^0.9.7
-  fhir:
-    path: ../../fhir
+  fhir: ^0.9.7
   fhir_path:
     path: ../../fhir_path
   flutter:

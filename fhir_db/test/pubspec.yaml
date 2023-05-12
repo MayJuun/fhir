@@ -6,11 +6,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  fhir: ^0.9.7
   fhir_db:
     path: ../../fhir_db
-  # fhir: ^0.9.7
-  fhir:
-    path: ../../fhir
 
 dev_dependencies:
   test: ^1.23.1

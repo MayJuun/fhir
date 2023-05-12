@@ -1,15 +1,16 @@
 name: mobileauthdemo
+description: A Dart/Flutter package for authorization & authentication, includes SMART on FHIR and Google sign-in
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.9.5
+  fhir: ^0.9.7
   # fhir:
   #   path: ../../../fhir
-  fhir_at_rest: ^0.9.5
-  # fhir_at_rest:
-  #   path: ../../../fhir_at_rest
+  fhir_at_rest:
+    path: ../../../fhir_at_rest
   fhir_auth:
     path: ../../../fhir_auth
   flutter:
